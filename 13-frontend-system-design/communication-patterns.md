@@ -18,6 +18,8 @@ Choose communication based on interaction requirements, not trend.
 
 ## Realtime decision guide
 
+> 📖 **Deep Dive Implementation:** For production-grade implementations (React hooks, Node.js servers, CSWSH security, heartbeat ping-pong, and Apache Kafka cluster integration), see [**Real-Time Architectures: WebSockets, SSE & Apache Kafka**](../04-api-security/websockets-sse-and-kafka-realtime.md).
+
 ```mermaid
 flowchart TD
   R[Need updates?] -->|No| HTTP[Request/response HTTP]

@@ -12,6 +12,7 @@ Explore dedicated deep-dive blueprints for modern high-scale API engineering:
 - ⚖️ [**Load Balancing & High Availability Architecture**](load-balancing.md) — Layer 4 vs. Layer 7 balancing, Round Robin, Least Connections, Consistent Hashing, SSL/TLS termination, active health probes, and zero-downtime deployments.
 - 🚦 [**Rate Limiting & Throttling Strategies**](rate-limiting-and-throttling.md) — Token Bucket, Leaky Bucket, Sliding Window Counter algorithms, distributed Redis Lua implementations, `RateLimit-*` headers, and exponential backoff.
 - 🔁 [**Idempotent Request Architecture**](idempotent-requests.md) — Defeating double-spend charges and network retry corruption with `Idempotency-Key` headers, Redis distributed locks (`SET NX EX`), and database state machines.
+- 📡 [**Real-Time Architectures: WebSockets, Server-Sent Events & Kafka**](websockets-sse-and-kafka-realtime.md) — Full-duplex WebSockets with CSWSH protection and heartbeat, unidirectional Server-Sent Events (SSE) with `Last-Event-ID` resume, and Apache Kafka distributed event streaming.
 
 ---
 
