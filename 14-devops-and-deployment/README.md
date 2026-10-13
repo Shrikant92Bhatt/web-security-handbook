@@ -26,16 +26,19 @@ A modern full-stack web application (**React frontend + Node.js backend + Postgr
 
 This module delivers end-to-end, battle-tested blueprints for full-stack production operations:
 
-### 1. 🐙 [GitHub Actions CI/CD Pipeline for Full-Stack Applications](./github-actions-cicd-fullstack.md)
+### 1. 🚀 [Complete Step-by-Step Guide: How to Deploy a Full-Stack App](./how-to-deploy-fullstack-app.md)
+* **What's Inside:** Complete, terminal-by-terminal walkthrough deploying React + Node.js + PostgreSQL + NGINX + SSL using both **Docker Compose** and **Bare-Metal PM2**, covering domain DNS setup, Certbot SSL automation, zero-downtime rolling updates, and nightly database backups.
+
+### 2. 🐙 [GitHub Actions CI/CD Pipeline for Full-Stack Applications](./github-actions-cicd-fullstack.md)
 * **What's Inside:** Complete multi-stage `.github/workflows/ci-cd.yml` pipeline with linting, unit/integration testing, Docker multi-stage builds, Gitleaks secret scanning, Trivy vulnerability audits, database migrations execution, and zero-secret OIDC cloud deployments.
 
-### 2. ⚙️ [PM2 Process Manager, RabbitMQ Message Queues & Serverless Architecture](./pm2-rabbitmq-and-serverless.md)
+### 3. ⚙️ [PM2 Process Manager, RabbitMQ Message Queues & Serverless Architecture](./pm2-rabbitmq-and-serverless.md)
 * **What's Inside:** 
   * **PM2:** Multi-core cluster mode (`instances: 'max'`), memory ceiling guards, and zero-downtime rolling reloads (`pm2 reload`).
   * **RabbitMQ:** Asynchronous AMQP publisher/consumer with prefetch limits, manual acknowledgments, and Dead Letter Exchanges (DLX) to capture poison pills.
   * **Serverless Functions:** Event-driven AWS Lambda / Google Cloud Functions with warm database connection pooling.
 
-### 3. ☁️ [Multi-Cloud Deployment Guide: Hostinger VPS, GCP & AWS](./multi-cloud-deployment-hostinger-gcp-aws.md)
+### 4. ☁️ [Multi-Cloud Deployment Guide: Hostinger VPS, GCP & AWS](./multi-cloud-deployment-hostinger-gcp-aws.md)
 * **What's Inside:**
   * **Hostinger VPS:** Ubuntu server hardening, non-root user, UFW firewall, Docker Compose (React + Node.js + PostgreSQL + NGINX SSL).
   * **Google Cloud Platform (GCP):** Cloud Run serverless container autoscaling, Cloud SQL PostgreSQL private VPC integration, Cloud SQL Auth Proxy, and Cloud Secret Manager.
