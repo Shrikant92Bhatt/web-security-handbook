@@ -2,6 +2,9 @@
 
 Protect confidentiality, integrity, availability, and privacy throughout data collection, processing, storage, export, logging, backup, and deletion.
 
+## 📚 Deep Dive Guides in This Section
+- 📖 [Database Types, Indexing Internals & Decision Framework](./database-types-and-indexing-deep-dive.md) — Comprehensive masterclass on Relational, NoSQL, Key-Value, Time-Series & Vector DBs, plus B+Tree, Hash, GIN, GiST, BRIN, and LSM-Tree indexing trade-offs.
+
 ## Controls
 - Classify data and minimize collection and retention.
 - Use TLS in transit and appropriate encryption at rest; manage keys separately from encrypted data.

@@ -23,8 +23,8 @@ A categorized, diagram-driven handbook for frontend and full-stack engineers, es
 | [03 Authorization](03-authorization/README.md) | IDOR/BOLA, RBAC/ABAC, tenant isolation |
 | [04 API security](04-api-security/README.md) | Validation, rate limits, GraphQL, WebSockets |
 | [05 Injection attacks](05-injection-attacks/README.md) | SQL/NoSQL injection, SSRF, command injection, SSTI |
-| [06 HTTP and network security](06-http-network-and-headers/README.md) | TLS, headers, CORS, caching, proxy trust |
-| [07 Data and database security](07-data-and-database/README.md) | Least privilege, encryption, backups, logging |
+| [06 HTTP and network security](06-http-network-and-headers/README.md) | TLS 1.3, PKI Browser Trust, NGINX Reverse Proxy & Hardening, HTTP Security Headers |
+| [07 Data and database security](07-data-and-database/README.md) | DB Types (Relational, Document, Key-Value, Vector), Indexing (B+Tree, Hash, GIN, BRIN, LSM), Encryption |
 | [08 File handling](08-file-upload-and-serialization/README.md) | Uploads, path traversal, serialization |
 | [09 Cloud and DevSecOps](09-cloud-infrastructure-devsecops/README.md) | IAM, secrets, CI/CD, containers, dependencies |
 | [10 Modern applications](10-modern-apps-and-microfrontends/README.md) | SSR, micro-frontends, AI/RAG, tool boundaries |

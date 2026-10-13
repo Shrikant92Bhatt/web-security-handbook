@@ -2,6 +2,10 @@
 
 Transport security and response headers reduce exposure but do not replace application authorization or safe coding. Configure headers deliberately and test behavior in real deployment paths, including reverse proxies and CDNs.
 
+## 📚 Deep Dive Guides in This Section
+- 📖 [HTTPS, TLS 1.3 & PKI: How Browsers Verify Website Security](./https-tls-pki-browser-trust.md) — Step-by-step cryptographic walkthrough of Root CA stores, X.509 chains of trust, OCSP stapling, Certificate Transparency, and why browser warnings trigger.
+- 📖 [NGINX Reverse Proxy, Load Balancing & Production Hardening](./nginx-reverse-proxy-and-hardening.md) — Enterprise configuration blueprint for TLS termination, rate limiting, upstream clusters, security headers, and DDoS defense.
+
 ## Review
 - Enforce HTTPS and configure TLS through a supported platform; evaluate HSTS before rollout.
 - Set CSP, frame-ancestors, nosniff, and an appropriate referrer policy according to application needs.
