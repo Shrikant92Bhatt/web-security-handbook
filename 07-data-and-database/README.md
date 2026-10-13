@@ -4,6 +4,7 @@ Protect confidentiality, integrity, availability, and privacy throughout data co
 
 ## 📚 Deep Dive Guides in This Section
 - 📖 [Database Types, Indexing Internals & Decision Framework](./database-types-and-indexing-deep-dive.md) — Comprehensive masterclass on Relational, NoSQL, Key-Value, Time-Series & Vector DBs, plus B+Tree, Hash, GIN, GiST, BRIN, and LSM-Tree indexing trade-offs.
+- 📖 [Zero-Downtime Database Migrations & Safe Schema Evolution](./zero-downtime-database-migrations.md) — Production playbook for the Expand and Contract pattern, safe PostgreSQL DDL (`CREATE INDEX CONCURRENTLY`, `NOT VALID` constraints), advisory locking, and non-blocking batch backfills.
 
 ## Controls
 - Classify data and minimize collection and retention.
