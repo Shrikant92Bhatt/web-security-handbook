@@ -4,6 +4,7 @@ Protect confidentiality, integrity, availability, and privacy throughout data co
 
 ## 📚 Deep Dive Guides in This Section
 - 📖 [Database Types, Indexing Internals & Decision Framework](./database-types-and-indexing-deep-dive.md) — Comprehensive masterclass on Relational, NoSQL, Key-Value, Time-Series & Vector DBs, plus B+Tree, Hash, GIN, GiST, BRIN, and LSM-Tree indexing trade-offs.
+- 📖 [Redis In-Memory Architecture, Caching & Node.js Integration](./redis-architecture-caching-and-node-integration.md) — Sub-millisecond caching, single-threaded event loop internals, Cache Stampede/Avalanche defenses, distributed locking (Redlock), atomic Lua rate limiting, and production Node.js `ioredis` architecture.
 - 📖 [Zero-Downtime Database Migrations & Safe Schema Evolution](./zero-downtime-database-migrations.md) — Production playbook for the Expand and Contract pattern, safe PostgreSQL DDL (`CREATE INDEX CONCURRENTLY`, `NOT VALID` constraints), advisory locking, and non-blocking batch backfills.
 
 ## Controls
