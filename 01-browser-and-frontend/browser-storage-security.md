@@ -291,3 +291,22 @@ describe('Storage Security & Cookie Hardening Suite', () => {
 - [ ] **`SameSite` Attribute Set:** Is `SameSite` set to `Strict` (preferred) or `Lax` to prevent cross-site cookie leakage?
 - [ ] **`__Host-` Prefix Used:** Is the `__Host-` prefix utilized on top-level session cookies to prevent cookie-tossing from subdomains?
 - [ ] **In-Memory Access Tokens:** Are frontend access tokens kept in memory variables/closures with short TTLs (15 min max)?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Where to Store Tokens in Frontend? LocalStorage vs Cookies (Web Dev Simplified)](https://www.youtube.com/watch?v=2pp11E94K8g) — Detailed breakdown of XSS vs CSRF trade-offs when choosing browser storage.
+- 🎥 [Cookies vs Local Storage vs Session Storage Explained (Hussein Nasser)](https://www.youtube.com/watch?v=wXPhb4q1k_s) — Networking and browser internals view of cookie headers, memory allocation, and lifecycle.
+- 🎥 [Secure Cookie Security: HttpOnly, SameSite, and Cookie Prefixes (ByteByteGo)](https://www.youtube.com/watch?v=GHRNEv_zZ7c) — Production architecture guide on `__Host-` and `__Secure-` cookie defenses.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 6265bis: Cookies: HTTP State Management Mechanism](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis) — The definitive RFC specifying modern cookie prefixes and SameSite rules.
+- 📜 [MDN Web Docs: Using HTTP Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) — Complete browser documentation on cookie flags and client-side security limits.
+- 📜 [OWASP Cheat Sheet: HTML5 Web Storage Security](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html#local-storage) — Official security warnings and best practices for localStorage and sessionStorage.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Exploiting cross-site scripting to steal cookies](https://portswigger.net/web-security/cross-site-scripting/exploiting/lab-stealing-cookies) — Learn how missing `HttpOnly` flags allow immediate credential theft.
+- 🎯 [OWASP Juice Shop: Insecure Storage Challenge](https://owasp.org/www-project-juice-shop/) — Discover and exploit sensitive customer tokens improperly dumped into HTML5 localStorage.
+

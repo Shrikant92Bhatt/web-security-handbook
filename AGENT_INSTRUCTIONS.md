@@ -56,3 +56,8 @@ Each updated markdown file must follow this exact 6-part structure:
 
 ### 6. 📋 Code Review Checklist
 - Quick bulleted audit checklist for pull requests.
+
+### 7. 🎥 Curated Video Walkthroughs & Primary References
+- High-impact curated videos (PortSwigger, Computerphile, Hussein Nasser, OWASP, LiveOverflow).
+- Primary official specifications (IETF RFCs, MDN Web Docs, W3C, OWASP Cheat Sheet Series).
+- Hands-on interactive lab exercises (PortSwigger Web Security Academy lab links).

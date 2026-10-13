@@ -213,3 +213,21 @@ describe('JWT Security Regression Suite', () => {
 - [ ] **Issuer & Audience Checked:** Are `iss` and `aud` claims validated on every request?
 - [ ] **Short Expiration Time:** Are access tokens configured with lifetimes <= 15 minutes?
 - [ ] **Refresh Token Rotation:** Does the refresh flow issue a new refresh token on every use and revoke the family on token reuse?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [JSON Web Tokens (JWT) Explained (Computerphile - Dr. Mike Pound)](https://www.youtube.com/watch?v=7Q17ubqL2hs) — The mathematical and cryptographic foundations of JWT signatures and tampering.
+- 🎥 [JWT Vulnerabilities & Exploits: alg: none and Key Confusion (PortSwigger Academy)](https://www.youtube.com/watch?v=sI9f_V5U0tM) — Practical exploitation walkthrough showing RS256-to-HS256 key confusion attacks.
+- 🎥 [Why JWTs Suck for Web Authentication (Randall Degges)](https://www.youtube.com/watch?v=J5bIPtEbS0Q) — Engineering critique of stateless tokens in browsers vs. secure session cookies.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [RFC 7519: JSON Web Token (JWT) Specification](https://datatracker.ietf.org/doc/html/rfc7519) — The authoritative IETF standard.
+- 📜 [RFC 8725: JSON Web Token Best Current Practices](https://datatracker.ietf.org/doc/html/rfc8725) — Mandatory security guidelines to prevent common implementation vulnerabilities.
+- 📜 [OWASP JSON Web Token Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html) — Secure token verification patterns.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: JWT authentication bypass via unverified signature](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature) — Practice forging administrator tokens without a valid secret.
+- 🎯 [PortSwigger Lab: JWT authentication bypass via flawed signature verification (alg: none)](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification) — Hands-on testing of `alg: none` bypasses.

@@ -183,3 +183,21 @@ describe('XSS Sanitization & Sinks Suite', () => {
 - [ ] **No Dynamic `eval()` or `new Function()`:** Are dynamic code execution functions strictly banned by lint rules?
 - [ ] **Safe SVG Rendering:** Are user-uploaded SVGs treated as raw images (`<img src="...svg">`) or parsed with XML serializers that strip `<script>` tags?
 - [ ] **CSP Layer Deployed:** Is a Content Security Policy deployed with `default-src 'self'` and nonces to catch any sanitization omissions?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Cross-Site Scripting (XSS) Explained (Computerphile - Dr. Mike Pound)](https://www.youtube.com/watch?v=L5l9lSnNMxg) — Foundational explanation of DOM manipulation and session theft mechanics.
+- 🎥 [XSS in React: How dangerouslySetInnerHTML and javascript: URLs Get Exploited (Fireship)](https://www.youtube.com/watch?v=ns1LX6mEvyM) — Visual demonstration of modern frontend React XSS sinks and bypasses.
+- 🎥 [DOM-Based XSS & Source-to-Sink Analysis (LiveOverflow)](https://www.youtube.com/watch?v=gT_u8N2qC3w) — Step-by-step reverse engineering of DOM sinks using DevTools sources.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Cross-Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) — Gold standard framework encoding and sanitization rules.
+- 📜 [DOMPurify GitHub Repository & Documentation (Cure53)](https://github.com/cure53/DOMPurify) — Production sanitization library documentation and configuration options.
+- 📜 [PortSwigger Web Security: Cross-Site Scripting](https://portswigger.net/web-security/cross-site-scripting) — Complete guide across Stored, Reflected, and DOM-based attacks.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: DOM XSS in document.write sink using source location.search](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink) — Interactive DOM source-to-sink injection lab.
+- 🎯 [PortSwigger Lab: Stored XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded) — Exploit persistent stored comment fields.

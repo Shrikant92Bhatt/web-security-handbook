@@ -52,3 +52,22 @@ Discuss cursor pagination, ranking latency, skeleton/loading states, media lazy 
 - Global state can simplify cross-route sharing, but overuse creates coupling; keep local state local.
 
 References: [System Design Handbook — Frontend System Design](https://www.systemdesignhandbook.com/guides/frontend-system-design/), [Namaste FSD curriculum repository](https://github.com/namastedev/namaste-frontend-system-design).
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Frontend System Design: Design Facebook / Twitter Feed (ByteByteGo)](https://www.youtube.com/watch?v=kY31Wn6Vw6I) — End-to-end HLD covering cursor pagination, optimistic mutations, image lazy loading, and caching.
+- 🎥 [Design an E-Commerce Web App Frontend Architecture (Chirag Goel)](https://www.youtube.com/watch?v=rc3JGT56kd4) — High-level design breakdown of cart synchronization, SEO SSR rendering, and checkout flows.
+- 🎥 [Micro-Frontends Architecture at Scale (Jack Herrington)](https://www.youtube.com/watch?v=s_Fs4AXsTnA) — Real-world enterprise case study of independent deployment, Module Federation, and shared state.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [System Design Primer: System Architecture Foundations](https://github.com/donnemartin/system-design-primer) — Open-source industry guide on scalability, caches, CDNs, and proxies.
+- 📜 [BFF Architectural Pattern (Sam Newman)](https://samnewman.io/patterns/architectural/bff/) — Definitive guide to tailoring Backend-for-Frontend services for web and mobile clients.
+- 📜 [W3C Architecture of the World Wide Web](https://www.w3.org/TR/webarch/) — Foundational principles of web protocol design and resource representation.
+
+### 🧪 Interactive Hands-On Training Labs & Case Studies
+- 🎯 [GreatFrontEnd HLD Interactive Practice Platform](https://www.greatfrontend.com/system-design) — Practice full 45-minute architectural whiteboard simulations.
+- 🎯 [NamasteDev HLD Case Studies & Code Samples](https://github.com/namastedev/namaste-frontend-system-design) — Complete reference implementations for streaming feeds, dashboards, and portals.
+

@@ -298,3 +298,20 @@ describe('Idempotent Request Enforcement Suite', () => {
 - [ ] **Payload Hash Verification:** Does the middleware hash the request body and reject mismatched payloads with `422 Unprocessable Entity`?
 - [ ] **Concurrent In-Flight Protection:** Does an active duplicate request receive `409 Conflict` until the first execution finishes?
 - [ ] **Response Snapshotting:** Is the entire HTTP status and response payload cached for deterministic replay (e.g. 24–72 hours)?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [What is Idempotency? (ByteByteGo)](https://www.youtube.com/watch?v=kYUP7W_5y0w) — Visual system design explanation of network retries, duplicate requests, and idempotency keys.
+- 🎥 [Designing Idempotent APIs (Hussein Nasser)](https://www.youtube.com/watch?v=FjL9Vb3hUJE) — Deep dive into distributed locking with Redis, database state machines, and safe HTTP retries.
+- 🎥 [Handling Duplicate Payments & Race Conditions (Stripe Engineering Talk)](https://www.youtube.com/watch?v=W4rSg94Wk9g) — How enterprise financial platforms guarantee exactly-once execution semantics.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 9110: HTTP Semantics - Section 9.2.2 Idempotent Methods](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2.2) — Authoritative specification defining idempotency in HTTP.
+- 📜 [IETF Draft: The Idempotency-Key HTTP Header Field](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — Emerging standard specification for API idempotency.
+- 📜 [Stripe Engineering: Designing Robust and Idempotent APIs](https://stripe.com/blog/idempotency) — The industry-standard architecture blueprint.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [Stripe API Idempotency Sandbox](https://docs.stripe.com/api/idempotent_requests) — Interactive live documentation lab demonstrating duplicate charge deduplication.

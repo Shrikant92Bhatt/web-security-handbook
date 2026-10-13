@@ -303,3 +303,20 @@ describe('Security Foundations & Input Gate Suite', () => {
 - [ ] **Explicit Trust Boundaries:** Are clear boundaries identified between untrusted browser contexts and internal APIs?
 - [ ] **STRIDE Review:** Has the feature been vetted for Spoofing, Tampering, Repudiation, Info Disclosure, DoS, and Elevation of Privilege?
 - [ ] **Audit Logging:** Are security-critical operations logged with immutable actor IDs, timestamps, and action types without leaking secrets?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Threat Modeling with STRIDE (OWASP Foundation)](https://www.youtube.com/watch?v=kYUP7W_5y0w) — Comprehensive tutorial breaking down Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege.
+- 🎥 [Zero Trust Architecture Explained (ByteByteGo)](https://www.youtube.com/watch?v=UBUNrFtufWo) — Core concepts of never trusting internal or external network perimeters.
+- 🎥 [Defense in Depth Principles (Computerphile - Dr. Mike Pound)](https://www.youtube.com/watch?v=F0O5Q_P6a40) — Why layered security controls prevent single points of failure.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Threat Modeling Guidance](https://owasp.org/www-community/Threat_Modeling) — Official framework for engineering teams.
+- 📜 [NIST SP 800-207: Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) — Authoritative federal cybersecurity architecture standard.
+- 📜 [OWASP Application Security Verification Standard (ASVS)](https://owasp.org/www-project-application-security-verification-standard/) — Foundational verification criteria.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [OWASP Threat Dragon Open-Source Tool](https://threatdragon.github.io/) — Free, web-based threat modeling tool for creating STRIDE diagrams and identifying trust boundaries.

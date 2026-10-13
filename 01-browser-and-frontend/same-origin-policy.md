@@ -303,3 +303,20 @@ describe('Same-Origin Message Security Validator', () => {
 - [ ] **Explicit Target Origin:** Does every outgoing `targetWindow.postMessage(data, targetOrigin)` specify the explicit URL rather than `'*'`?
 - [ ] **Payload Sanitization:** Is `event.data` validated against a strict schema (e.g., Zod or TypeScript type guards) before updating component state?
 - [ ] **No `document.domain` Manipulation:** Is `document.domain` modification avoided (deprecated in modern browsers due to security flaws)?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Same Origin Policy - Why can't I access that? (Computerphile - Dr. Mike Pound)](https://www.youtube.com/watch?v=0xP_uJ4_y5g) — Brilliant visual explanation of scheme, host, and port tuple checks.
+- 🎥 [Browser Security: Same Origin Policy & Sandboxing (Google Chrome Developers)](https://www.youtube.com/watch?v=mG4N_f-819g) — Chrome team's breakdown of process isolation and renderer security.
+- 🎥 [Exploiting window.postMessage Flaws (LiveOverflow)](https://www.youtube.com/watch?v=9oB80vG9jP0) — Walkthrough of attacking missing `event.origin` validation in real web apps.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Docs: Same-Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) — Authoritative MDN specification and origin inheritance guide.
+- 📜 [HTML Living Standard: Origin](https://html.spec.whatwg.org/multipage/origin.html#origin) — The official WHATWG origin definition.
+- 📜 [OWASP Cheat Sheet: HTML5 Security](https://cheatsheetseries.owasp.org/cheatsheets/HTML5_Security_Cheat_Sheet.html) — Secure `postMessage` implementation standards.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: DOM XSS using web messages](https://portswigger.net/web-security/dom-based/controlling-the-web-message-source/lab-dom-xss-using-web-messages) — Exploit an insecure `window.postMessage` handler.

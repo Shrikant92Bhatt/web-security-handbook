@@ -285,3 +285,23 @@ describe('Clickjacking & Framing Defense Suite', () => {
 - [ ] **No Client-Side JS Only:** Are framing protections enforced via HTTP response headers and NOT relying solely on JavaScript frame-busting?
 - [ ] **SameSite Cookies:** Are session cookies configured with `SameSite=Lax` or `SameSite=Strict` as a secondary defense layer?
 - [ ] **Granular Partner Embeds:** If third-party embedding is required (e.g., checkout widget), are allowed parent origins explicitly enumerated (e.g., `frame-ancestors https://partner.com`)?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Clickjacking Attacks & UI Redressing Explained (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=b4b2B7qV3rA) — Visual demonstration of CSS transparency overlays, cursor alignment, and iframe attacks.
+- 🎥 [Clickjacking Vulnerability Walkthrough & Frame Busting Bypass (LiveOverflow)](https://www.youtube.com/watch?v=3m_4iWl8G8s) — Deep technical look at frame buster bypasses and sandbox attributes.
+- 🎥 [Clickjacking in 100 Seconds: How Hackers Steal Your Clicks (Cyber In-Depth)](https://www.youtube.com/watch?v=1FfLg3x_l4k) — Concise overview of framing risks and modern CSP mitigations.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [W3C Content Security Policy Level 3: frame-ancestors Directive](https://www.w3.org/TR/CSP3/#directive-frame-ancestors) — Authoritative specification defining parent frame restrictions.
+- 📜 [MDN Web Docs: X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) — Legacy header semantics, compatibility matrix, and deprecation details.
+- 📜 [OWASP Cheat Sheet: Clickjacking Defense](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html) — Comprehensive guide on defense-in-depth against UI redressing.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Basic clickjacking with CSRF token protection](https://portswigger.net/web-security/clickjacking/lab-basic-csrf-protected) — Craft an exploit page with an opacity overlay to force victim clicks.
+- 🎯 [PortSwigger Lab: Clickjacking with prefilled form input](https://portswigger.net/web-security/clickjacking/lab-prefilled-form-input) — Construct an overlay that auto-submits sensitive credentials.
+- 🎯 [PortSwigger Lab: Exploiting clickjacking with frame buster script bypass](https://portswigger.net/web-security/clickjacking/lab-frame-buster-script) — Neutralize JavaScript-based frame busters using HTML5 sandbox attributes.
+

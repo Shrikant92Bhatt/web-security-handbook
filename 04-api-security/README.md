@@ -227,3 +227,22 @@ describe('API Security & Bounds Suite', () => {
 - [ ] **Compression Enabled:** Is Brotli/Gzip compression enabled to minimize network transit time?
 - [ ] **Rate Limiting Active:** Are rate limiters configured on all public and authenticated endpoints?
 - [ ] **Idempotency Keys:** Do state-changing mutation endpoints (especially payments, orders, transfers) require an `Idempotency-Key`?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [API Security Best Practices & Gateway Patterns (ByteByteGo)](https://www.youtube.com/watch?v=1r_A_B_k3l4) — Essential system design guide covering rate limiting, authentication gateways, and API boundaries.
+- 🎥 [REST API Design, Performance & Security (Hussein Nasser)](https://www.youtube.com/watch?v=7Q17ubqLfaM) — Deep exploration of HTTP protocol nuances, payload parsing exhaustion, and network bottlenecks.
+- 🎥 [OWASP API Security Top 10 Walkthrough (FreeCodeCamp)](https://www.youtube.com/watch?v=1FfLg3x_l4k) — End-to-end breakdown of BOLA, broken authentication, mass assignment, and SSRF in modern APIs.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP API Security Project Top 10 (2023 Official)](https://owasp.org/www-project-api-security/) — The primary industry benchmark for REST, GraphQL, and gRPC security.
+- 📜 [IETF RFC 9110: HTTP Semantics](https://datatracker.ietf.org/doc/html/rfc9110) — The definitive internet standard governing HTTP methods, status codes, and headers.
+- 📜 [OWASP Cheat Sheet: REST Security](https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html) — Pragmatic defensive engineering rules for API developers.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [OWASP crAPI (Completely Ridiculous API)](https://github.com/OWASP/crAPI) — Hands-on Docker lab to practice discovering and securing API Top 10 vulnerabilities.
+- 🎯 [PortSwigger Lab: Exploiting server-side parameter pollution in REST APIs](https://portswigger.net/web-security/api-testing/lab-exploiting-server-side-parameter-pollution-in-rest-api) — Exploit query string overrides and hidden internal backend APIs.
+

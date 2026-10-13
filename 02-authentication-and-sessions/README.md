@@ -299,3 +299,22 @@ describe('Authentication Engine Suite', () => {
 - [ ] **Asymmetric Cryptography:** Are public/private key pairs used across distributed microservices instead of sharing shared symmetric HMAC secrets?
 - [ ] **Session ID Regeneration:** Does every successful authentication regenerate the session identifier to neutralize session fixation?
 - [ ] **Short Expirations:** Are access tokens configured with short lifetimes (5–15 minutes) paired with secure refresh token rotation?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Authentication vs Authorization in System Design (ByteByteGo)](https://www.youtube.com/watch?v=1r_A_B_k3l4) — Clear mental model comparing stateful session stores vs stateless token architectures.
+- 🎥 [JWT Authentication: How It Works & Why It Breaks (Hussein Nasser)](https://www.youtube.com/watch?v=7Q17ubqLfaM) — Network and server architectural analysis of cryptographic signing, claims, and revocation.
+- 🎥 [Session Fixation & Hijacking Attacks Explained (Computerphile)](https://www.youtube.com/watch?v=T1QEs32Rezk) — Step-by-step breakdown of how session identifiers are captured and abused.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 7519: JSON Web Token (JWT) Specification](https://datatracker.ietf.org/doc/html/rfc7519) — Authoritative specification for token claims, headers, and validation rules.
+- 📜 [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — Gold standard guidelines for session regeneration, timeouts, and storage.
+- 📜 [NIST SP 800-63B: Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html) — Enterprise identity, authenticator assurance levels, and credential handling standards.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: JWT authentication bypass via unverified signature](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature) — Exploit systems that decode tokens without verifying cryptographic integrity.
+- 🎯 [PortSwigger Lab: JWT authentication bypass via flawed signature verification](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification) — Forge administrative privileges exploiting missing algorithm constraints.
+

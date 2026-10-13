@@ -37,3 +37,21 @@ Designed for experienced frontend engineers preparing for tech-lead or senior sy
 - The design includes loading, empty, failure, retry, and offline states where relevant.
 - Trade-offs are justified; no unnecessary complexity is introduced.
 - Testing, monitoring, deployment, and evolution are considered.
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Namaste Frontend System Design Complete Walkthrough (Akshay Saini)](https://www.youtube.com/watch?v=RCZ8mvsKEu4) — Foundation series covering all 15 study days from protocols to mock interviews.
+- 🎥 [Senior Frontend System Design Interview Masterclass (Chirag Goel)](https://www.youtube.com/watch?v=rc3JGT56kd4) — High-scoring mock interview walkthroughs for FAANG/Tier-1 frontend engineering loops.
+- 🎥 [System Design Interview: An Insider's Guide (ByteByteGo)](https://www.youtube.com/watch?v=kY31Wn6Vw6I) — Structured communication techniques for technical lead assessments.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [Frontend System Design Interview Playbook](https://www.systemdesignhandbook.com/guides/frontend-system-design-interview/) — Comprehensive 4-stage interview timing and pacing blueprint.
+- 📜 [MDN Web Platform Documentation](https://developer.mozilla.org/en-US/docs/Web) — Authoritative living standard for all browser APIs and network behaviors.
+
+### 🧪 Interactive Hands-On Training Labs & Mock Interviews
+- 🎯 [NamasteDev FSD Community & Exercises](https://namastedev.com/learn/namaste-frontend-system-design) — Structured repository with 15-day hands-on assignments.
+- 🎯 [GreatFrontEnd Practice Modules](https://www.greatfrontend.com/system-design) — Interactive mock interview simulator and rubric evaluation.
+

@@ -223,3 +223,22 @@ describe('ABAC Policy Decision Point Suite', () => {
 - [ ] **Context Included:** Does authorization consider context attributes (time, network, device security posture, tenant) where required?
 - [ ] **Default Deny:** Does the policy engine default to `DENY` if an unknown condition or missing attribute is encountered?
 - [ ] **Audit Trail:** Are authorization rejections logged with user ID, resource ID, and violated policy rule?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [RBAC vs ABAC vs ReBAC Explained (ByteByteGo)](https://www.youtube.com/watch?v=1r_A_B_k3l4) — Clear comparative architecture for choosing authorization paradigms in modern distributed systems.
+- 🎥 [Google Zanzibar: Building a Global Authorization System](https://www.youtube.com/watch?v=f_VvQhP4Q7U) — Architectural breakdown of Relationship-Based Access Control (ReBAC) and distributed graph traversals.
+- 🎥 [Open Policy Agent (OPA) Crash Course (TechWorld with Nana)](https://www.youtube.com/watch?v=R6tV_W_6u_4) — Hands-on tutorial decoupling policy evaluation from microservice application code.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [NIST SP 800-162: Attribute Based Access Control Definition & Considerations](https://csrc.nist.gov/publications/detail/sp/800-162/final) — Federal standard defining PDP, PEP, PIP, and PAP roles.
+- 📜 [Google Zanzibar Research Paper (2019)](https://research.google/pubs/pub48190/) — Groundbreaking whitepaper powering Google Drive, YouTube, and Cloud IAM authorization.
+- 📜 [Open Policy Agent (OPA) Official Documentation](https://www.openpolicyagent.org/docs/latest/) — Standard policy-as-code declarative engine.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [Open Policy Agent Playground](https://play.openpolicyagent.org/) — Interactive live Rego sandbox to test complex ABAC/RBAC policies.
+- 🎯 [PortSwigger Lab: User role controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-role-controlled-by-request-parameter) — Attack insecure role definitions in cookies/JSON payloads.
+

@@ -25,3 +25,22 @@ flowchart LR
 ```
 
 References: [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/), [MDN postMessage](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage).
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Micro-Frontends Architecture Explained: Module Federation & Webpack (Jack Herrington)](https://www.youtube.com/watch?v=s_Fs4AXsTnA) — Real-world architecture sharing dependencies and sandboxing micro-apps.
+- 🎥 [OWASP Top 10 for LLM & AI Applications (Snyk / Cyber In-Depth)](https://www.youtube.com/watch?v=1FfLg3x_l4k) — Deep dive into prompt injection, insecure output handling, and indirect data poisoning.
+- 🎥 [Cross-Window Communication: postMessage Security Flaws (LiveOverflow)](https://www.youtube.com/watch?v=3m_4iWl8G8s) — Exploit walkthrough demonstrating origin validation bypasses in iframe event listeners.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Top 10 for Large Language Model (LLM) Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — Authoritative security standard for AI-integrated web applications.
+- 📜 [Webpack Module Federation Architecture Guide](https://module-federation.io/) — Official documentation for federated dynamic runtime dependencies.
+- 📜 [MDN Web Docs: Window.postMessage() API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) — Cross-origin messaging security guidelines and origin checking requirements.
+
+### 🧪 Interactive Hands-On Training Labs & Tools
+- 🎯 [PortSwigger Lab: DOM XSS using web messages](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-dom-xss-using-web-messages) — Exploit missing origin checks in `window.addEventListener('message')`.
+- 🎯 [PortSwigger Lab: DOM XSS using web messages and a JavaScript URL](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-dom-xss-using-web-messages-and-a-javascript-url) — Chain postMessage listener sinks to execute arbitrary JavaScript.
+

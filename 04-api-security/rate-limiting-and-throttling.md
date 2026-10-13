@@ -288,3 +288,20 @@ describe('Distributed Rate Limiting Suite', () => {
 - [ ] **Standard Headers Sent:** Does the gateway return `RateLimit-Limit`, `RateLimit-Remaining`, `RateLimit-Reset`, and `Retry-After`?
 - [ ] **Tiered Scoping:** Are limits based on verified User IDs for authenticated users and IP addresses for anonymous requests?
 - [ ] **Client Jitter Configured:** Do frontend API clients implement exponential backoff with full jitter upon receiving 429 responses?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [System Design: Rate Limiting Algorithms (ByteByteGo)](https://www.youtube.com/watch?v=FU4Wisl4544) — Visual step-by-step animation of Token Bucket, Leaky Bucket, and Sliding Window Counter.
+- 🎥 [Distributed Rate Limiting with Redis & Lua (Hussein Nasser)](https://www.youtube.com/watch?v=cw_562y0b8A) — Why non-atomic checks create race conditions and how Redis Lua scripts solve them.
+- 🎥 [Exponential Backoff And Jitter (AWS Architecture Talk)](https://www.youtube.com/watch?v=4dqpzWq4i1A) — Demonstrating how jitter prevents thundering herd retry waves against recovering servers.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 6585: Additional HTTP Status Codes - Section 4: 429 Too Many Requests](https://www.rfc-editor.org/rfc/rfc6585.html#section-4) — Official HTTP status specification.
+- 📜 [IETF Draft: RateLimit Header Fields for HTTP](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) — Standardized `RateLimit-*` response headers.
+- 📜 [Stripe API Documentation: Rate Limits](https://stripe.com/docs/rate-limits) — Real-world enterprise tiering and 429 error handling.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [Redis Rate Limiter Playground](https://redis.io/glossary/rate-limiting/) — Official Redis rate-limiting design patterns and code walkthroughs.

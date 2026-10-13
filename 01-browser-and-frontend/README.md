@@ -526,3 +526,21 @@ Use this audit checklist when reviewing pull requests touching frontend routing,
 - [ ] **Token Storage Location:** Are long-lived sensitive tokens kept OUT of `localStorage` and `sessionStorage`?
 - [ ] **Cookie Hardening:** Are session cookies configured with `HttpOnly`, `Secure`, `SameSite=Strict` (or `Lax`), and the `__Host-` prefix?
 - [ ] **CSP Policy:** Is a Content Security Policy deployed with `default-src 'self'`, script nonces or hashes, and restricted `object-src 'none'`?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Same-Origin Policy & CORS Explained (Hussein Nasser)](https://www.youtube.com/watch?v=PNtSZZoPTNE) — Detailed network architectural walkthrough of browser isolation mechanisms.
+- 🎥 [Content Security Policy (CSP) Crash Course (Traversy Media)](https://www.youtube.com/watch?v=5rKbz3xJ05E) — Hands-on guide to configuring secure CSP headers in Express and Single Page Apps.
+- 🎥 [Clickjacking Attacks & UI Redressing (LiveOverflow)](https://www.youtube.com/watch?v=E_npx_mP4fU) — Demonstrating how invisible iframes and opacity tricks manipulate victim actions.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Docs: Web Security Guidelines](https://developer.mozilla.org/en-US/docs/Web/Security) — Comprehensive MDN guide to browser client isolation.
+- 📜 [OWASP Top 10 Client-Side Security Risks](https://owasp.org/www-project-top-10-client-side-security-risks/) — Enterprise framework for frontend threat modeling.
+- 📜 [W3C PostMessage Specification](https://html.spec.whatwg.org/multipage/web-messaging.html#web-messaging) — Authoritative HTML5 inter-window messaging standard.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Web Security Academy: Clickjacking Labs](https://portswigger.net/web-security/clickjacking) — Practice creating transparent clickjacking overlay exploits in a safe sandbox.
+- 🎯 [PortSwigger Web Security Academy: CORS Labs](https://portswigger.net/web-security/cors) — Exploit insecure origin reflection and bypass flawed wildcard configurations.

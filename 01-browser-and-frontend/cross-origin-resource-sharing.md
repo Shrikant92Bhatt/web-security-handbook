@@ -316,3 +316,21 @@ describe('CORS Policy Enforcement Suite', () => {
 - [ ] **No `null` Origin Allowed:** Is the string `'null'` explicitly banned from the accepted origin list?
 - [ ] **Preflight Caching:** Is `Access-Control-Max-Age` configured (e.g., `86400` seconds / 24 hours) to avoid severe latency degradation?
 - [ ] **Restricted Headers & Methods:** Are `Access-Control-Allow-Methods` and `Access-Control-Allow-Headers` restricted only to the verbs and headers actually needed?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [CORS Explained in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=4KHiSt0oLJ0) — Rapid, visual breakdown of why browsers enforce CORS and how preflights work.
+- 🎥 [What is CORS? Cross-Origin Resource Sharing Tutorial (Hussein Nasser)](https://www.youtube.com/watch?v=PNtSZZoPTNE) — Deep networking dive into preflight handshakes, TCP sockets, and backend header exchange.
+- 🎥 [CORS Vulnerabilities & Exploits Explained (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=wgkyPrvNWKQ) — Live security walkthrough of unanchored regexes, origin reflection, and `null` origin exploitation.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [W3C Fetch Specification: CORS Architecture](https://fetch.spec.whatwg.org/#http-cors-protocol) — The definitive, authoritative browser standard.
+- 📜 [MDN Web Docs: Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) — Complete reference for headers, simple vs. preflighted requests.
+- 📜 [OWASP Cheat Sheet: Cross-Origin Resource Sharing Prevention](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Origin_Resource_Sharing_Cheat_Sheet.html) — Secure backend configuration rules.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: CORS vulnerability with basic origin reflection](https://portswigger.net/web-security/cors/lab-basic-origin-reflection-vulnerability) — Practice stealing API keys via reflected origins.
+- 🎯 [PortSwigger Lab: CORS vulnerability with trusted null origin](https://portswigger.net/web-security/cors/lab-null-origin-whitelisted-attack) — Exploit sandboxed iframe `null` origins in practice.

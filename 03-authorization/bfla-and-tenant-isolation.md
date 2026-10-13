@@ -177,3 +177,22 @@ describe('Function-Level Authorization Suite', () => {
 - [ ] **Row-Level Security (RLS):** Is database-level RLS or query middleware active to prevent cross-tenant data bleed?
 - [ ] **Tenant Scoping in Background Workers:** Do Redis message queues and Bull/Kafka consumers validate tenant context before processing jobs?
 - [ ] **Superadmin Logging:** Are all high-privilege administrative actions recorded in tamper-evident audit logs?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Broken Function Level Authorization (BFLA) Deep Dive (API Security)](https://www.youtube.com/watch?v=kY31Wn6Vw6I) — Real-world exploits targeting hidden endpoints, HTTP method confusion, and administrative routing flaws.
+- 🎥 [Multi-Tenant Database Architecture & PostgreSQL Row Level Security (Hussein Nasser)](https://www.youtube.com/watch?v=F0_k239Xw4U) — Step-by-step implementation of multi-tenant isolation, shared schemas, and kernel-level RLS policies.
+- 🎥 [OWASP API Security Top 10: API5 Broken Function Level Authorization (Tanya Janca)](https://www.youtube.com/watch?v=1FfLg3x_l4k) — Pragmatic defensive engineering guide for securing internal and administrative APIs.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP API Security Top 10: API5:2023 Broken Function Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa5-broken-function-level-authorization/) — Official threat catalog, attack scenarios, and remediation blueprints.
+- 📜 [PostgreSQL Documentation: Row Level Security Policies](https://www.postgresql.org/docs/current/ddl-rowsecurity.html) — Authoritative guide for declarative tenant scoping at the database layer.
+- 📜 [AWS Well-Architected Framework: SaaS Lens Multi-Tenant Data Isolation](https://docs.aws.amazon.com/whitepapers/latest/saas-architecture-fundamentals/multi-tenant-data-isolation.html) — Enterprise cloud tenant isolation design patterns.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Unprotected admin functionality with unpredictable URL](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url) — Discover and abuse hidden administrative functions leaking in frontend scripts.
+- 🎯 [OWASP crAPI (completely ridiculous API) Project](https://github.com/OWASP/crAPI) — Realistic microservices sandbox designed specifically to practice finding BFLA and multi-tenant authorization bypasses.
+

@@ -294,3 +294,21 @@ describe('Content Security Policy Suite', () => {
 - [ ] **Base-Uri None or Self:** Is `base-uri 'none'` (or `'self'`) set to prevent malicious base-tag URL hijacking?
 - [ ] **Frame-Ancestors Defined:** Is `frame-ancestors` declared in CSP rather than relying solely on obsolete `X-Frame-Options`?
 - [ ] **Telemetry Configured:** Is `report-to` or `report-uri` active to catch CSP breakage and identify live injection attempts?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Content Security Policy (CSP) Explained by a Security Pro (Fireship)](https://www.youtube.com/watch?v=kYUP7W_5y0w) — High-level, visual overview of CSP directives and injection prevention.
+- 🎥 [Defeating XSS with Strict CSP (Google Chrome Developers - Lukas Weichselbaum)](https://www.youtube.com/watch?v=mG4N_f-819g) — The foundational talk introducing Nonce-based Strict CSP (`'strict-dynamic'`) and why allowlists fail.
+- 🎥 [CSP Bypasses & How to Fix Them (LiveOverflow)](https://www.youtube.com/watch?v=E_npx_mP4fU) — Demonstrating how JSONP, base-tag injection, and CDN allowlists can be exploited.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [W3C Content Security Policy Level 3 Specification](https://www.w3.org/TR/CSP3/) — Authoritative W3C specification standard.
+- 📜 [MDN Web Docs: Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) — Comprehensive reference for all directive headers.
+- 📜 [Google Web.dev: Strict CSP Guide](https://web.dev/articles/strict-csp) — Production engineering guide to deploying nonce-based policies in enterprise web apps.
+
+### 🧪 Interactive Hands-On Training Labs & Tools
+- 🎯 [Google CSP Evaluator Tool](https://csp-evaluator.withgoogle.com/) — Free automated scanner to audit your CSP configuration for subtle bypasses.
+- 🎯 [PortSwigger Lab: Reflected XSS with CSP bypass via dangling markup](https://portswigger.net/web-security/cross-site-scripting/content-security-policy/lab-dangling-markup-injection) — Hands-on exploitation of incomplete CSP boundaries.

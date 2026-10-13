@@ -227,3 +227,22 @@ describe('Session Lifecycle & Fixation Suite', () => {
 - [ ] **`saveUninitialized: false`:** Is anonymous session auto-creation disabled?
 - [ ] **Cookie Cleared on Logout:** Does the logout endpoint both destroy server session storage and clear the client cookie header?
 - [ ] **Concurrent Session Bounds:** Is there a limit on concurrent active sessions per user account?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Session Fixation & Hijacking Attacks Explained (Computerphile)](https://www.youtube.com/watch?v=T1QEs32Rezk) — Step-by-step visual demonstration of session ID adoption and pre-authentication traps.
+- 🎥 [Session Management Vulnerabilities & Fixation (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=r0fNnL8_3oM) — Detailed walkthrough of cookie manipulation and session expiration flaws.
+- 🎥 [Sessions vs JWTs: Which is Better? (Fireship)](https://www.youtube.com/watch?v=UBUNrFtufWo) — Concise, rapid comparison of server-side Redis sessions vs stateless cryptographic tokens.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Cheat Sheet: Session Management](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) — Industry gold standard on ID regeneration, idle/absolute timeouts, and revoking tokens.
+- 📜 [OWASP Web Security Testing Guide: Testing for Session Fixation (WSTG-SESS-03)](https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/03-Testing_for_Session_Fixation) — Detailed pentesting and verification procedures.
+- 📜 [IETF RFC 6265bis: Cookie State Management Mechanism](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis) — Strict browser security attributes for cookie storage.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Session hijacking via cookie manipulation](https://portswigger.net/web-security/authentication/other-mechanisms/lab-session-hijacking) — Exploit predictable session keys to hijack active user accounts.
+- 🎯 [OWASP WebGoat: Session Management Lessons](https://owasp.org/www-project-webgoat/) — Practice exploiting unregenerated session IDs and missing timeout controls.
+

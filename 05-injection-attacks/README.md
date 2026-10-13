@@ -193,3 +193,23 @@ describe('SQL Injection Prevention Suite', () => {
 - [ ] **Context-Aware HTML Escaping:** Are frontend sinks using safe text APIs rather than `dangerouslySetInnerHTML`?
 - [ ] **Strict Egress Validation (SSRF):** Do outbound webhooks and image fetchers validate resolved IP addresses against private/loopback/cloud-metadata ranges?
 - [ ] **No Shell Invocations:** Is `child_process.exec()` avoided in favor of `execFile()` with fixed argument arrays?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [SQL Injection Explained (Computerphile)](https://www.youtube.com/watch?v=ciNHn38EyRc) — Classic, intuitive breakdown of breaking SQL parsers and logic inversion.
+- 🎥 [Cross-Site Scripting (XSS) in 100 Seconds (Fireship)](https://www.youtube.com/watch?v=EoaDgUgS6QA) — Fast-paced visualization of reflected, stored, and DOM-based injection paths.
+- 🎥 [Server-Side Request Forgery (SSRF) Architecture & Attacks (Hussein Nasser)](https://www.youtube.com/watch?v=F_YwK1N3jZ8) — Deep networking analysis of DNS resolution, egress gateways, and metadata exfiltration.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Top 10: A03:2021 – Injection](https://owasp.org/Top10/A03_2021-Injection/) — Comprehensive threat analysis of code, command, and data injection flaws.
+- 📜 [OWASP Cheat Sheet: SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) — Query parameterization guidelines across major runtimes.
+- 📜 [CWE-89: Improper Neutralization of Special Elements used in an SQL Command](https://cwe.mitre.org/data/definitions/89.html) — Definitive weakness classification and mitigation catalogue.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: SQL injection vulnerability allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data) — Practice manipulating SQL query conditions to bypass product release filters.
+- 🎯 [PortSwigger Lab: Reflected XSS into HTML context](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded) — Inject arbitrary scripts into unencoded reflections.
+- 🎯 [PortSwigger Lab: Basic SSRF against the local server](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost) — Bypass boundary firewalls by targeting 127.0.0.1 admin consoles.
+

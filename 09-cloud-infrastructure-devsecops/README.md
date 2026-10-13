@@ -243,3 +243,21 @@ docker run --rm company/api /bin/sh
 - [ ] **Read-Only Root Filesystem:** Is `readOnlyRootFilesystem: true` enabled in Kubernetes manifests?
 - [ ] **Dropped Linux Capabilities:** Are container capabilities dropped (`cap_drop: ALL`)?
 - [ ] **Automated CI Security Scanners:** Are SAST (Semgrep), SCA (Trivy), and Secret Scanning (Gitleaks) blocking pull requests on High/Critical findings?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [GitHub Actions OIDC: Stop Using Long-Lived Cloud Keys! (DevOps Toolkit)](https://www.youtube.com/watch?v=F5aX_gN19Z4) — Production setup tutorial on configuring GitHub Actions Workload Identity with AWS IAM.
+- 🎥 [Docker Container Security Best Practices (Bret Fisher - Docker Captain)](https://www.youtube.com/watch?v=Qf_c2KzFz4A) — Non-root users, distroless runtimes, and dropping capabilities.
+- 🎥 [DevSecOps Explained: Building a Security Pipeline (Fireship)](https://www.youtube.com/watch?v=5rKbz3xJ05E) — Visual overview of SAST, DAST, SCA, and automated secret scanning.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [AWS Documentation: Using IAM OIDC Identity Providers](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_create_oidc.html) — Workload identity configuration guide.
+- 📜 [Google Container Tools: Distroless Images](https://github.com/GoogleContainerTools/distroless) — Official distroless base images documentation.
+- 📜 [OWASP DevSecOps Guideline Project](https://owasp.org/www-project-devsecops-guideline/) — Complete enterprise CI/CD security pipeline framework.
+
+### 🧪 Interactive Hands-On Training Labs & Tools
+- 🎯 [Gitleaks Secret Scanner CLI](https://github.com/gitleaks/gitleaks) — Scan Git repositories and directories for passwords, API tokens, and private keys.
+- 🎯 [Trivy Container & Dependency Vulnerability Scanner](https://github.com/aquasecurity/trivy) — Comprehensive scanner for Docker images, file systems, and Git repositories.

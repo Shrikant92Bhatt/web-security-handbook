@@ -191,3 +191,23 @@ describe('Object-Level Authorization Enforcement Suite', () => {
 - [ ] **Opaque Rejections:** Are unauthorized access attempts rejected with `404 Not Found` rather than `403 Forbidden` to prevent object existence enumeration?
 - [ ] **Non-Sequential IDs:** Are resources addressed using UUIDv4 or K-Sortable ULIDs rather than auto-incrementing sequential integers?
 - [ ] **Background Job Scoping:** Do asynchronous queues and scheduled cron jobs enforce tenant isolation?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Access Control & Authorization Models in Modern Architecture (ByteByteGo)](https://www.youtube.com/watch?v=1r_A_B_k3l4) — Comparative breakdown of RBAC, ABAC, ReBAC, and multi-tenant isolation patterns.
+- 🎥 [Broken Object Level Authorization (BOLA/IDOR) Deep Dive (Hussein Nasser)](https://www.youtube.com/watch?v=kY31Wn6Vw6I) — Deep architectural analysis of why API gateways cannot replace database row-level authorization.
+- 🎥 [Access Control Vulnerabilities & Bypasses (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=cI_U0p7b9gY) — Comprehensive walkthrough of vertical vs horizontal privilege escalation.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Top 10: A01:2021 – Broken Access Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control/) — The #1 most critical web security vulnerability category.
+- 📜 [OWASP Cheat Sheet: Authorization Best Practices](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — Concrete engineering rules for policy enforcement points (PEP) and decisions (PDP).
+- 📜 [NIST Special Publication 800-162: Guide to Attribute Based Access Control](https://csrc.nist.gov/publications/detail/sp/800-162/final) — Federal enterprise authorization standard.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: User ID controlled by request parameter (IDOR)](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter) — Practice finding and exploiting horizontal privilege escalations.
+- 🎯 [PortSwigger Lab: Unprotected admin functionality](https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality) — Bypass weak path-based authorization to gain administrative rights.
+- 🎯 [PortSwigger Lab: Method-based access control bypass](https://portswigger.net/web-security/access-control/lab-method-based-access-control-can-be-circumvented) — Exploit HTTP method spoofing (GET vs POST) to circumvent security filters.
+

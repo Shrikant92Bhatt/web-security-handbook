@@ -51,3 +51,22 @@ flowchart TD
 Track LCP, INP, CLS and route-level performance. Set budgets appropriate to the product and device mix; investigate regressions rather than blindly optimizing one metric. Lighthouse is useful for diagnostics, but real-user monitoring shows production variation.
 
 References: [web.dev Learn Performance](https://web.dev/learn/performance/), [MDN HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching), [web.dev Core Web Vitals](https://web.dev/articles/vitals).
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [HTTP Caching & CDN Invalidation Explained (Hussein Nasser)](https://www.youtube.com/watch?v=HiBdZ9DVVio) — Deep dive into `Cache-Control`, `stale-while-revalidate`, conditional GETs, and ETags.
+- 🎥 [How CDNs & Browser Caching Work (ByteByteGo)](https://www.youtube.com/watch?v=BqqfQnyflgg) — Architectural breakdown of edge caching, point of presence (PoP), and cache stampede mitigations.
+- 🎥 [Core Web Vitals Masterclass: Optimizing LCP, INP, and CLS (Google Chrome Developers)](https://www.youtube.com/watch?v=1FfLg3x_l4k) — Engineering strategies to profile main-thread blocking time and optimize layout shifts.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 9111: HTTP Caching](https://datatracker.ietf.org/doc/html/rfc9111) — The authoritative RFC governing HTTP client, proxy, and gateway caches.
+- 📜 [MDN Web Docs: HTTP Caching Architecture](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) — Practical guide on private vs public caches and revalidation.
+- 📜 [Google Web.dev: Core Web Vitals Guide](https://web.dev/articles/vitals) — Definitive criteria for Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift.
+
+### 🧪 Interactive Hands-On Training Labs & Tools
+- 🎯 [Google PageSpeed Insights & Performance Profiler](https://pagespeed.web.dev/) — Live diagnostic tool assessing real-user field data (CrUX) and lab metrics.
+- 🎯 [WebPageTest Interactive Audit](https://www.webpagetest.org/) — Waterfall trace analyzer for script execution, connection waterfalls, and asset loading.
+

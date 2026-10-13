@@ -217,3 +217,20 @@ curl -i http://localhost:4000/ready
 - [ ] **Zero-Downtime Signal Handling:** Does the application catch `SIGTERM` and wait 5–15 seconds to allow load balancer draining before shutting down?
 - [ ] **Least Connections or Consistent Hashing:** Is the load balancing algorithm matched to the workload (least-conn for variable APIs, hash for WebSockets)?
 - [ ] **TLS Offloading Validated:** Is public TLS terminated at the load balancer while enforcing HTTPS redirection on HTTP port 80?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Load Balancers Explained (ByteByteGo)](https://www.youtube.com/watch?v=s_o8dwzRlu4) — Visual system design overview of Layer 4 vs. Layer 7 balancing and high-availability architecture.
+- 🎥 [Layer 4 vs Layer 7 Load Balancing (Hussein Nasser)](https://www.youtube.com/watch?v=aKMLgFVxZYk) — Technical deep-dive into TCP proxies vs HTTP reverse proxies, TLS termination, and kernel socket buffering.
+- 🎥 [Consistent Hashing Algorithm (Gaurav Sen)](https://www.youtube.com/watch?v=zaRkONvyGr8) — Mathematical breakdown of consistent hashing rings for distributed caching and stateful routing.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [NGINX Documentation: HTTP Load Balancing Guide](https://docs.nginx.com/nginx/admin-guide/load-balancer/http-load-balancer/) — Production configuration patterns for NGINX.
+- 📜 [Envoy Proxy Architecture: Load Balancing](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/overview) — High-performance cloud-native L7 service mesh load balancing.
+- 📜 [AWS Architecture: Elastic Load Balancing Deep Dive](https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/how-elastic-load-balancing-works.html) — ALB and NLB reference architectures.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [NGINX Docker Load Balancing Playground](https://github.com/nginxinc/docker-nginx) — Run a 3-node containerized web cluster locally behind an NGINX reverse proxy.

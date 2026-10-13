@@ -19,3 +19,22 @@ flowchart LR
 ```
 
 References: [MDN HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP), [MDN CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP), [MDN CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [HTTP Security Headers Explained: HSTS, CSP, X-Frame-Options (ByteByteGo)](https://www.youtube.com/watch?v=GHRNEv_zZ7c) — Visual breakdown of the most critical browser defense headers and how they prevent exploitation.
+- 🎥 [TLS/HTTPS Handshake Deep Dive (Hussein Nasser)](https://www.youtube.com/watch?v=86cQjh4aX1U) — Deep networking analysis of TLS 1.3 certificates, key exchanges, and downgrade attack prevention.
+- 🎥 [HTTP Request Smuggling & Header Manipulation (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=wXPhb4q1k_s) — Exploit demonstration of frontend reverse proxy vs backend discrepancy flaws.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Docs: HTTP Headers Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) — Comprehensive encyclopedia of all standard HTTP response headers.
+- 📜 [IETF RFC 6797: HTTP Strict Transport Security (HSTS)](https://datatracker.ietf.org/doc/html/rfc6797) — Authoritative standard on mandatory TLS enforcement and preloading.
+- 📜 [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/) — Standard configuration blueprints for enterprise reverse proxies and web applications.
+
+### 🧪 Interactive Hands-On Training Labs & Tools
+- 🎯 [Mozilla Observatory](https://observatory.mozilla.org/) — Free automated scanner to audit and grade your domain's live HTTP security headers.
+- 🎯 [PortSwigger Lab: HTTP Request Smuggling basic CL.TE vulnerability](https://portswigger.net/web-security/request-smuggling/lab-basic-cl-te) — Hands-on lab exploiting Content-Length vs Transfer-Encoding header ambiguities.
+

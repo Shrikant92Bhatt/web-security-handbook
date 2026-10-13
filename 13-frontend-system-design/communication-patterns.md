@@ -63,3 +63,22 @@ sequenceDiagram
 - How do pagination and rate limits affect API contracts?
 
 References: [MDN WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API), [MDN Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events), [MDN WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API), [MDN Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [WebSockets vs SSE vs Long Polling (ByteByteGo)](https://www.youtube.com/watch?v=1bXyG2pT7R8) — Visual comparison of connection lifecycles, HTTP headers, and server concurrency.
+- 🎥 [REST vs GraphQL vs gRPC: What to Choose in 2024 (Hussein Nasser)](https://www.youtube.com/watch?v=I43nshX7wZ8) — Deep networking analysis of payload size, serializing JSON vs Protobuf, and HTTP/2 multiplexing.
+- 🎥 [WebRTC Crash Course: Peer-to-Peer Realtime Communication (Hussein Nasser)](https://www.youtube.com/watch?v=FExZvpVvYxA) — Detailed breakdown of STUN, TURN, ICE candidates, and SDP offer/answer handshakes.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Docs: WebSockets API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) — Full API reference for client socket handling, error recovery, and binary streams.
+- 📜 [MDN Web Docs: Server-Sent Events (EventSource)](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) — Single-direction HTTP event streaming spec and reconnection logic.
+- 📜 [MDN Web Docs: WebRTC API](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API) — Peer-to-peer data channels and audio/video streaming standards.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [Postman WebSocket Echo & Realtime Testing Sandbox](https://www.postman.com/postman/workspace/published-postman-templates/documentation/631643-f69797be-2178-4395-97df-66a7b3db0c5a) — Practice building and debugging live WebSocket connections.
+- 🎯 [Socket.io Interactive Chat Walkthrough](https://socket.io/get-started/chat) — Step-by-step implementation of real-time event broadcasting and rooms.
+

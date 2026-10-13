@@ -201,3 +201,21 @@ describe('BOLA / IDOR Verification Suite', () => {
 - [ ] **Opaque 404 Responses:** Does unauthorized access return `404 Not Found` rather than `403 Forbidden` to prevent object existence enumeration?
 - [ ] **Indirect References:** Are sequential integer IDs converted to UUIDv4, ULIDs, or session-scoped indirect tokens?
 - [ ] **Mutations Checked:** Are `UPDATE` and `DELETE` queries strictly scoped by ownership so users cannot modify or delete others' objects?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [What is IDOR? Insecure Direct Object References Explained (PwnFunction)](https://www.youtube.com/watch?v=3cx9kH_jJc4) — Beautifully animated visual explainer on how object ID manipulation works.
+- 🎥 [Broken Object Level Authorization (BOLA) - OWASP API #1 (Hussein Nasser)](https://www.youtube.com/watch?v=Xh0m2qZ88nI) — Deep dive into why BOLA is the most prevalent API flaw in production microservices.
+- 🎥 [How to Find and Exploit IDOR Vulnerabilities (NahamSec)](https://www.youtube.com/watch?v=b_gK7L-m8m8) — Real-world bug bounty hunting patterns and authorization testing workflows.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP API Security Project: API1:2023 Broken Object Level Authorization](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/) — Official OWASP standard documentation.
+- 📜 [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — Enterprise patterns for data-layer access enforcement.
+- 📜 [PortSwigger Web Security: Insecure Direct Object References (IDOR)](https://portswigger.net/web-security/access-control/idor) — Comprehensive theory and attack vectors.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Insecure direct object references](https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references) — Practice extracting sensitive user chat transcripts via static ID manipulation.
+- 🎯 [PortSwigger Lab: User ID controlled by request parameter](https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter) — Hands-on horizontal privilege escalation lab.

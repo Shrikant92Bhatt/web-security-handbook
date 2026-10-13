@@ -242,3 +242,21 @@ describe('File Upload Security Suite', () => {
 - [ ] **Strict Size Caps:** Does the upload parser enforce strict byte size limits to prevent disk exhaustion?
 - [ ] **No Native Deserialization:** Is arbitrary native deserialization (`pickle`, `node-serialize`) completely absent from the codebase?
 - [ ] **Safe Download Headers:** Are user-uploaded files served with `Content-Disposition: attachment` and `X-Content-Type-Options: nosniff`?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [File Upload Vulnerabilities: Bypassing Restrictions (PortSwigger Academy)](https://www.youtube.com/watch?v=F0O5Q_P6a40) — Live demonstration of executing shells via extension and MIME-type manipulation.
+- 🎥 [Insecure Deserialization Explained (PwnFunction)](https://www.youtube.com/watch?v=jwzeJu8R4qg) — Visual animation of how serialized object trees lead to arbitrary code execution.
+- 🎥 [Secure File Upload Architecture with S3 Presigned URLs (Hussein Nasser)](https://www.youtube.com/watch?v=yGYe_6eXj48) — Step-by-step engineering tutorial bypassing web server memory and streaming straight to object storage.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP File Upload Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html) — Gold standard upload defense architecture.
+- 📜 [OWASP Deserialization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html) — Safe data interchange and parsing guidelines.
+- 📜 [AWS S3: Uploading Objects Using Presigned URLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/PresignedUrlUploadObject.html) — Official AWS guide.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Remote code execution via web shell upload](https://portswigger.net/web-security/file-upload/lab-file-upload-remote-code-execution-via-web-shell-upload) — Practice exploiting unrestricted upload folders.
+- 🎯 [PortSwigger Lab: Web shell upload via path traversal](https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-path-traversal) — Practice uploading shells via `../` traversal.

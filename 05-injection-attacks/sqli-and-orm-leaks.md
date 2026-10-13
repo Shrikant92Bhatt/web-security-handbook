@@ -165,3 +165,23 @@ describe('ORM Column Injection Prevention Suite', () => {
 - [ ] **No String Concatenation in Queries:** Are all database queries constructed using parameterized placeholders or type-safe ORM query builders?
 - [ ] **Least-Privilege DB User:** Does the application database user lack administrative privileges (`SUPERUSER`, `DROP DATABASE`, `ALTER SYSTEM`)?
 - [ ] **Error Masking:** Are internal database error messages (`pg-error: syntax error at or near...`) caught and replaced with generic user messages?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [SQL Injection Vulnerabilities & Attacks Explained (Computerphile)](https://www.youtube.com/watch?v=ciNHn38EyRc) — Iconic demonstration of SQL syntax breaking, string literals, and comment terminations.
+- 🎥 [Can ORMs Truly Prevent SQL Injection? (Hussein Nasser)](https://www.youtube.com/watch?v=F0_k239Xw4U) — In-depth architectural analysis showing how raw query extensions and dynamic sort columns reintroduce injection flaws.
+- 🎥 [Blind SQL Injection with Time Delays (PortSwigger Web Security Academy)](https://www.youtube.com/watch?v=Kz693j_tD3M) — Step-by-step exploit demonstration extracting data bit-by-bit when no query errors are rendered.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Cheat Sheet: SQL Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) — Gold standard defensive rules covering prepared statements and stored procedures.
+- 📜 [OWASP Cheat Sheet: Query Parameterization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html) — Code implementation patterns across JavaScript/Node.js, Python, Java, and Go.
+- 📜 [Prisma ORM: Raw Database Access Security Guidelines](https://www.prisma.io/docs/orm/prisma-client/queries/raw-database-access) — Safe usage of `$queryRaw` tagged templates vs `$queryRawUnsafe`.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: SQL injection vulnerability allowing retrieval of hidden data](https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data) — Exploit a product category filter using `' OR 1=1--`.
+- 🎯 [PortSwigger Lab: SQL injection UNION attack, retrieving data from other tables](https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables) — Extract password hashes from underlying administrative tables.
+- 🎯 [PortSwigger Lab: Blind SQL injection with time delays](https://portswigger.net/web-security/sql-injection/blind/lab-time-delays) — Trigger conditional sleep pauses inside database query engines.
+

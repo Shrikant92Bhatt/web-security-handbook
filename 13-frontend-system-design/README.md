@@ -81,3 +81,22 @@ The diagram is a starting point, not a universal architecture. A small product m
 - [NamasteDev curriculum repository](https://github.com/namastedev/namaste-frontend-system-design)
 - [Frontend system design interview guide](https://www.systemdesignhandbook.com/guides/frontend-system-design-interview/)
 - [MDN Web APIs and web platform documentation](https://developer.mozilla.org/en-US/docs/Web)
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Namaste Frontend System Design: Fundamentals, LLD, HLD (Akshay Saini)](https://www.youtube.com/watch?v=RCZ8mvsKEu4) — Complete masterclass curriculum covering networking, state management, performance, and scaling frontend architectures.
+- 🎥 [Launching Namaste Frontend System Design & Interview Strategy (Chirag Goel)](https://www.youtube.com/watch?v=rc3JGT56kd4) — Comprehensive walkthrough of solving frontend system design prompts in senior/staff tech interviews.
+- 🎥 [Frontend System Design Framework & Architecture (ByteByteGo)](https://www.youtube.com/watch?v=kY31Wn6Vw6I) — Structured 4-step framework for tackling any frontend architecture challenge.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Platform Documentation & Living Standards](https://developer.mozilla.org/en-US/docs/Web) — Authoritative DOM, CSS, JavaScript, and Network specifications.
+- 📜 [Google Web.dev: Core Web Vitals & Web Performance](https://web.dev/explore/fast) — Official metrics and optimization patterns for LCP, INP, and CLS.
+- 📜 [W3C Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/) — Global enterprise accessibility compliance standards.
+
+### 🧪 Interactive Hands-On Training Labs & Repositories
+- 🎯 [NamasteDev Frontend System Design Hands-On Repository](https://github.com/namastedev/namaste-frontend-system-design) — Production code implementations of virtualized feeds, autocomplete, and real-time sockets.
+- 🎯 [GreatFrontEnd System Design Interview Practice](https://www.greatfrontend.com/system-design) — Real-world interactive challenges with grading rubrics.
+

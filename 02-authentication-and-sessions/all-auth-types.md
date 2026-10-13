@@ -209,3 +209,21 @@ describe('Global Session Revocation Suite', () => {
 - [ ] **Phishing-Resistant MFA:** Are critical systems adopting FIDO2/WebAuthn Passkeys over insecure SMS verification?
 - [ ] **Service-to-Service mTLS:** Are internal microservices communicating over mutual TLS rather than unauthenticated internal HTTP?
 - [ ] **Cryptographic Strength:** Are password hashes computed with modern memory-hard algorithms (**Argon2id** or **bcrypt** with cost >= 12), and NOT MD5/SHA-256?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Authentication vs Authorization (Hussein Nasser)](https://www.youtube.com/watch?v=I0ptz8Bwtm4) — Crisp breakdown of identity vs privilege boundaries and stateful vs stateless mechanisms.
+- 🎥 [How Passkeys and WebAuthn Actually Work (Fireship)](https://www.youtube.com/watch?v=b4b8m8zU7cA) — Clear visual explanation of FIDO2 challenge-response public key cryptography.
+- 🎥 [Session vs Token Based Authentication (ByteByteGo)](https://www.youtube.com/watch?v=UBUNrFtufWo) — System design comparison of scaling stateful sessions vs stateless tokens.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [W3C Web Authentication (WebAuthn) Level 3 Specification](https://www.w3.org/TR/webauthn-3/) — Official specification for public key credentials.
+- 📜 [FIDO Alliance: Passkey Implementation Guidance](https://fidoalliance.org/passkeys/) — Enterprise implementation patterns for biometric credentials.
+- 📜 [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html) — Comprehensive identity security standards.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [WebAuthn.io (Duo Security Lab)](https://webauthn.io/) — Interactive playground to test biometric passkey registration and verification in your browser.
+- 🎯 [PortSwigger Lab: 2FA simple bypass](https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass) — Practice exploiting flawed multi-factor authentication flows.

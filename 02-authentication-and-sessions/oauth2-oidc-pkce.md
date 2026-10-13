@@ -205,3 +205,23 @@ describe('OAuth PKCE Security Engine', () => {
 - [ ] **Nonce in OIDC:** Is a `nonce` included in authorization and verified inside the `id_token` claims?
 - [ ] **Exact Redirect URI Matching:** Does the IdP enforce exact string matching on callback URLs (no wildcard subdomains)?
 - [ ] **No Implicit Flow:** Is the deprecated `response_type=token` completely disabled in the IdP configuration?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [OAuth 2.0 and OpenID Connect in Plain English (Okta / Nate Barbettini)](https://www.youtube.com/watch?v=9964UnTzDr4) — The gold standard breakdown of tokens, scopes, claims, flows, and trust boundaries.
+- 🎥 [OAuth 2.0 with PKCE Explained (ByteByteGo)](https://www.youtube.com/watch?v=CHzERullHe8) — Visual system architecture explaining code verifier, code challenge, and auth code injection defense.
+- 🎥 [Why Implicit Flow is Dead: Auth Code + PKCE (Aaron Parecki)](https://www.youtube.com/watch?v=5cQNwifDq1U) — Authoritative explanation from IETF OAuth Working Group member on deprecating token URL leakage.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [IETF RFC 7636: Proof Key for Code Exchange (PKCE)](https://datatracker.ietf.org/doc/html/rfc7636) — Official RFC defining code verifiers and SHA-256 challenges.
+- 📜 [IETF RFC 9700: OAuth 2.0 Security Best Current Practice](https://www.rfc-editor.org/rfc/rfc9700) — Mandatory RFC requirements obsoleting implicit grant and securing redirects.
+- 📜 [OpenID Connect Core 1.0 Specification](https://openid.net/specs/openid-connect-core-1_0.html) — Standard defining ID tokens, userinfo endpoints, and claims.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: OAuth authentication bypass via OAuth profile linking](https://portswigger.net/web-security/oauth/lab-oauth-authentication-bypass-via-oauth-profile-linking) — Exploit missing user verification when linking third-party identity accounts.
+- 🎯 [PortSwigger Lab: Forced OAuth profile linking (Missing State CSRF)](https://portswigger.net/web-security/oauth/lab-oauth-forced-profile-linking) — Attack authorization callbacks lacking state CSRF tokens.
+- 🎯 [PortSwigger Lab: OAuth account hijacking via redirect_uri flaw](https://portswigger.net/web-security/oauth/lab-oauth-account-hijacking-via-redirect-uri) — Steal authorization codes using flawed open redirect validation.
+

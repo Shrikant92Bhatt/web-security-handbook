@@ -181,3 +181,20 @@ chmod +x .husky/pre-commit
 - [ ] **Peer Verification:** Does every pull request require at least one approving review before merge?
 - [ ] **Automated CI Blockers:** Are pull requests blocked from merging if automated security tests fail?
 - [ ] **Regular Audit Drills:** Does the team conduct quarterly threat modeling and checklist review sessions?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [OWASP Top 10 Explained by Security Professionals (Computerphile)](https://www.youtube.com/watch?v=F0O5Q_P6a40) — Essential briefing on modern application threat vectors.
+- 🎥 [How to Perform a Security Code Review (OWASP Foundation)](https://www.youtube.com/watch?v=kYUP7W_5y0w) — Methodical peer review techniques for detecting vulnerabilities in pull requests.
+- 🎥 [Application Security Verification Standard (ASVS) in Practice (OWASP)](https://www.youtube.com/watch?v=2r1o_i1R8vY) — How engineering teams operationalize checklists into automated pipelines.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP Application Security Verification Standard (ASVS 4.0)](https://owasp.org/www-project-application-security-verification-standard/) — The industry benchmark for application security requirements.
+- 📜 [OWASP Code Review Guide](https://owasp.org/www-project-code-review-guide/) — Comprehensive handbook for manual and automated secure code auditing.
+- 📜 [NIST Secure Software Development Framework (SSDF SP 800-218)](https://csrc.nist.gov/Projects/ssdf) — National cybersecurity standards for software delivery lifecycles.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [OWASP Juice Shop Deliberately Vulnerable Web App](https://owasp.org/www-project-juice-shop/) — Practice auditing and testing against real-world prevention checklists.

@@ -206,3 +206,21 @@ describe('SSRF Egress Security Suite', () => {
 - [ ] **IMDSv2 Enforced:** Is AWS IMDSv2 (`http-tokens: required`) enforced on all EC2 instances and ECS tasks?
 - [ ] **Disable HTTP Redirects:** Does the outbound HTTP client disable automatic redirects (`maxRedirects: 0`), or re-validate every redirect hop?
 - [ ] **Network Egress Firewalls:** Are production worker nodes egress-restricted at the VPC security group level to prevent direct intranet scanning?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [Server-Side Request Forgery (SSRF) Explained (PwnFunction)](https://www.youtube.com/watch?v=D1S-G8rGdc4) — Crisp animated walkthrough showing how web servers are manipulated into internal proxies.
+- 🎥 [SSRF to AWS Cloud Takeover (LiveOverflow)](https://www.youtube.com/watch?v=ar-Gk1m_oQo) — Real-world exploit chain demonstrating AWS EC2 metadata credential extraction (`169.254.169.254`).
+- 🎥 [What is DNS Rebinding? (Computerphile - Dr. Mike Pound)](https://www.youtube.com/watch?v=FmW_k8kdtoc) — How attackers bypass IP allowlists using fast-flux DNS rebinding.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [OWASP API Security: API7:2023 Server-Side Request Forgery](https://owasp.org/API-Security/editions/2023/en/0xa7-server-side-request-forgery/) — Official OWASP API security reference.
+- 📜 [OWASP Server-Side Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html) — Defense-in-depth network architecture rules.
+- 📜 [AWS Documentation: Transitioning to IMDSv2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html) — Official guide to enforcing session-oriented token metadata access.
+
+### 🧪 Interactive Hands-On Training Labs
+- 🎯 [PortSwigger Lab: Basic SSRF against the local server](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost) — Access internal admin interface via loopback manipulation.
+- 🎯 [PortSwigger Lab: Basic SSRF against another back-end system](https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-backend-system) — Scan private internal IP ranges (`192.168.0.X`) through an external facing API.

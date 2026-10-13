@@ -229,3 +229,20 @@ describe('High-Speed API Performance Suite', () => {
 - [ ] **Connection Pooling Configured:** Are database pools configured with max limits, connection timeouts, and keep-alives?
 - [ ] **Cache Stampede Protected:** Do expensive cache-aside keys use distributed mutexes (`SET NX`) or background warmers?
 - [ ] **Compression Enabled:** Is Brotli/Gzip compression enabled with an appropriate minimum byte threshold?
+
+---
+
+## 7. 🎥 Curated Video Walkthroughs & Primary References
+
+### 📺 High-Impact Video Explanations
+- 🎥 [How to Make APIs Insanely Fast (ByteByteGo)](https://www.youtube.com/watch?v=0kL3K8c_qfE) — Top caching, connection pooling, pagination, and compression techniques explained.
+- 🎥 [HTTP Caching Explained: Cache-Control, ETag, Max-Age (Hussein Nasser)](https://www.youtube.com/watch?v=HiB9q_n8Nf0) — Complete networking deep dive into browser and CDN caching semantics.
+- 🎥 [HTTP/2 vs HTTP/3 QUIC (Fireship)](https://www.youtube.com/watch?v=UMwQjdcxlv0) — Fast visual breakdown of transport layer multiplexing and zero-RTT handshakes.
+
+### 📖 Primary Documentation & Specifications
+- 📜 [MDN Web Docs: HTTP Caching Guide](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) — Definitive guide to browser and reverse proxy caching.
+- 📜 [IETF RFC 9111: HTTP Caching Specification](https://www.rfc-editor.org/rfc/rfc9111) — Official IETF internet standard.
+- 📜 [Cloudflare: What is Brotli Compression?](https://www.cloudflare.com/learning/performance/brotli-compression/) — Performance compression mechanics.
+
+### 🧪 Interactive Hands-On Training Labs & Benchmarks
+- 🎯 [Autocannon HTTP Benchmarking Tool](https://github.com/mcollina/autocannon) — Fast Node.js HTTP/1.1 and HTTP/2 benchmarking suite to measure requests/sec and P99 latency.
