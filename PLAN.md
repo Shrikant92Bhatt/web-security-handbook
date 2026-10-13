@@ -46,7 +46,8 @@ Build a practical, source-backed handbook for frontend and full-stack engineers.
 - [x] **Phase 2: Identity & Session Management (`02-authentication-and-sessions`, `03-authorization`):** All auth types (Passkeys, OAuth2/OIDC with PKCE, mTLS, SSO), JWT vulnerabilities, Session Fixation/Hijacking, BOLA / IDOR, RBAC / ABAC / ReBAC / PBAC.
 - [x] **Phase 3: Exploitation & APIs (`04-api-security`, `05-injection-attacks`):** API Speed & Performance, Load Balancing (L4 vs L7), Distributed Rate Limiting (Redis Lua), Idempotent Requests (`Idempotency-Key`), XSS (Stored, Reflected, DOM), SQLi, SSRF.
 - [x] **Platform, Cloud & Checklists (`08-file-upload-and-serialization`, `09-cloud-infrastructure-devsecops`, `12-prevention-checklists`):** Presigned S3 uploads, Magic bytes, Insecure deserialization, Cloud IAM OIDC, Distroless containers, Pod security, Pre-commit Gitleaks, Full production checklists.
-- [ ] **Phase 4: Architecture & Hardening (`06-http-network-and-headers`, `10-modern-apps-and-microfrontends`, `13-frontend-system-design`):** HSTS, Security Headers, Microfrontend isolation, Subresource Integrity (SRI), System Design Security.
+- [x] **Phase 4: Architecture & Hardening (`06-http-network-and-headers`, `07-data-and-database`, `10-modern-apps-and-microfrontends`, `13-frontend-system-design`):** HSTS, NGINX Reverse Proxy & Hardening, HTTPS PKI Browser Trust, DB Types & Indexing (B+Tree, Hash, GIN, BRIN, LSM), Microfrontends.
+- [x] **Phase 5: Full-Stack DevOps & Multi-Cloud Deployment (`14-devops-and-deployment`):** GitHub Actions CI/CD (React + Node + Postgres), PM2 Clustering, RabbitMQ Queues & DLQ, Serverless, Multi-Cloud Deployments (Hostinger VPS, GCP, AWS).
 
 ## Recommended next steps
 1. Review the new [Frontend System Design chapter](13-frontend-system-design/README.md).

@@ -31,6 +31,7 @@ A categorized, diagram-driven handbook for frontend and full-stack engineers, es
 | [11 Security testing and tools](11-security-testing-and-tools/README.md) | SAST, DAST, SCA, ZAP, safe labs |
 | [12 Security prevention checklists](12-prevention-checklists/README.md) | PR, frontend, API, release checklists |
 | [13 Frontend system design](13-frontend-system-design/README.md) | Networking, communication, performance, caching, LLD, HLD, offline support, accessibility, observability |
+| [14 DevOps and deployment](14-devops-and-deployment/README.md) | GitHub Actions CI/CD, React + Node + Postgres, PM2, RabbitMQ, Serverless, Hostinger, GCP, AWS |
 
 ## How to use this handbook
 1. Read the relevant topic and clarify the problem or requirement.
