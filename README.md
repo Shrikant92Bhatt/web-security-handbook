@@ -4,6 +4,7 @@ A categorized, diagram-driven handbook for frontend and full-stack engineers, es
 
 ## Start here
 - [Frontend System Design curriculum](13-frontend-system-design/README.md)
+- [15-day Frontend System Design study plan](13-frontend-system-design/15-day-study-plan.md)
 - [System design videos and learning resources](resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md)
 - [Project plan and execution checklist](PLAN.md)
 - [15-day security bootcamp](bootcamp/README.md)
