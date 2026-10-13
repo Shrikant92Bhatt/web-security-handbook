@@ -41,7 +41,7 @@ Build a practical, source-backed handbook for frontend and full-stack engineers.
 - [ ] Add more worked end-to-end design examples and testable code samples.
 
 ## Phased Systematic Upgrade Roadmap
-- [x] **Step 1: Master Agent Standards:** Added `.cursorrules`, `CONTRIBUTING_GUIDELINES.md`, `AGENT_INSTRUCTIONS.md`, and `AGENTS.md`.
+- [x] **Step 1: Master Standards & Guidelines:** Consolidated into `AGENTS.md` (for AI agents) and `CONTRIBUTING.md` (for contributors).
 - [x] **Phase 1: Foundations & Client-Side (`00-foundations`, `01-browser-and-frontend`):** SOP, CORS, CSP, Clickjacking, Storage Security (Cookies vs LocalStorage vs IndexedDB).
 - [x] **Phase 2: Identity & Session Management (`02-authentication-and-sessions`, `03-authorization`):** All auth types (Passkeys, OAuth2/OIDC with PKCE, mTLS, SSO), JWT vulnerabilities, Session Fixation/Hijacking, BOLA / IDOR, RBAC / ABAC / ReBAC / PBAC.
 - [x] **Phase 3: Exploitation & APIs (`04-api-security`, `05-injection-attacks`):** API Speed & Performance, Load Balancing (L4 vs L7), Distributed Rate Limiting (Redis Lua), Idempotent Requests (`Idempotency-Key`), XSS (Stored, Reflected, DOM), SQLi, SSRF.
