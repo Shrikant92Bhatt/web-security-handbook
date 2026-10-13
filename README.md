@@ -21,7 +21,7 @@ A categorized, diagram-driven handbook for frontend and full-stack engineers, es
 | [01 Browser and frontend security](01-browser-and-frontend/README.md) | XSS, CSP, CSRF, CORS, clickjacking, browser storage |
 | [02 Authentication and sessions](02-authentication-and-sessions/README.md) | Cookies, OAuth/OIDC, JWT, MFA, session lifecycle |
 | [03 Authorization](03-authorization/README.md) | IDOR/BOLA, RBAC/ABAC, tenant isolation |
-| [04 API security](04-api-security/README.md) | Performance, Load Balancing, Rate Limiting, Idempotency, WebSockets, SSE & Kafka |
+| [04 API security](04-api-security/README.md) | Performance, Load Balancing, Rate Limiting, Idempotency, WebSockets & Kafka, OpenAPI/Swagger |
 | [05 Injection attacks](05-injection-attacks/README.md) | SQL/NoSQL injection, SSRF, command injection, SSTI |
 | [06 HTTP and network security](06-http-network-and-headers/README.md) | TLS 1.3, PKI Browser Trust, NGINX Reverse Proxy & Hardening, HTTP Security Headers |
 | [07 Data and database security](07-data-and-database/README.md) | DB Types, Indexing, Redis Caching & Locks, Zero-Downtime Migrations, Encryption |

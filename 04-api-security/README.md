@@ -13,6 +13,7 @@ Explore dedicated deep-dive blueprints for modern high-scale API engineering:
 - 🚦 [**Rate Limiting & Throttling Strategies**](rate-limiting-and-throttling.md) — Token Bucket, Leaky Bucket, Sliding Window Counter algorithms, distributed Redis Lua implementations, `RateLimit-*` headers, and exponential backoff.
 - 🔁 [**Idempotent Request Architecture**](idempotent-requests.md) — Defeating double-spend charges and network retry corruption with `Idempotency-Key` headers, Redis distributed locks (`SET NX EX`), and database state machines.
 - 📡 [**Real-Time Architectures: WebSockets, Server-Sent Events & Kafka**](websockets-sse-and-kafka-realtime.md) — Full-duplex WebSockets with CSWSH protection and heartbeat, unidirectional Server-Sent Events (SSE) with `Last-Event-ID` resume, and Apache Kafka distributed event streaming.
+- 📋 [**OpenAPI & Swagger: Node.js Integration & Security**](openapi-swagger-nodejs-integration.md) — Single source of truth with Zod, interactive Swagger UI (`swagger-ui-express`), production authentication gatekeepers, and automated frontend client generation.
 
 ---
 
