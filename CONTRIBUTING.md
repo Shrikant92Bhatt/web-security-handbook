@@ -2,6 +2,8 @@
 
 Contributions should improve accuracy, clarity, accessibility, and practical usefulness.
 
+For the comprehensive content and quality standards, see [Contributing Guidelines](CONTRIBUTING_GUIDELINES.md) and [.cursorrules](.cursorrules).
+
 ## Topic-page structure
 - Summary and impact
 - How the weakness occurs
