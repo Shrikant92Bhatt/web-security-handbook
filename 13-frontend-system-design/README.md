@@ -2,6 +2,9 @@
 
 A practical curriculum for senior frontend and lead engineers designing scalable, accessible, secure, and maintainable browser applications. It complements the security chapters rather than replacing them.
 
+## Study plan
+Follow the [15-day Frontend System Design study plan](15-day-study-plan.md) and use the [video resource list](../resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md) for guided learning.
+
 ## A repeatable interview framework
 
 1. **Clarify requirements:** user journeys, functional scope, devices, accessibility, offline needs, real-time expectations, and failure modes.
