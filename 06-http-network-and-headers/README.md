@@ -4,7 +4,7 @@ Transport security and response headers reduce exposure but do not replace appli
 
 ## 📚 Deep Dive Guides in This Section
 - 📖 [HTTPS, TLS 1.3 & PKI: How Browsers Verify Website Security](./https-tls-pki-browser-trust.md) — Step-by-step cryptographic walkthrough of Root CA stores, X.509 chains of trust, OCSP stapling, Certificate Transparency, and why browser warnings trigger.
-- 📖 [NGINX Reverse Proxy, Load Balancing & Production Hardening](./nginx-reverse-proxy-and-hardening.md) — Enterprise configuration blueprint for TLS termination, rate limiting, upstream clusters, security headers, and DDoS defense.
+- 📖 [NGINX Masterclass: Architecture, Reverse Proxy, Microcaching & Hardening](./nginx-reverse-proxy-and-hardening.md) — Exhaustive masterclass on epoll event loop architecture, location matching priority, trailing-slash proxying, microcaching, WebSockets/SSE, rate limiting, and troubleshooting 502/504 errors.
 
 ## Review
 - Enforce HTTPS and configure TLS through a supported platform; evaluate HSTS before rollout.
