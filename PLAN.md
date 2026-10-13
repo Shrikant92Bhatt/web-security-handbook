@@ -65,7 +65,7 @@ Before adding a topic, check the actual contents and links in the corresponding 
 
 #### P0.1 Browser and frontend security
 Target: `01-browser-and-frontend/`, `05-injection-attacks/`
-- [ ] Audit and deepen CSRF coverage: threat model, cookie-based sessions, SameSite limitations, anti-CSRF tokens where appropriate, Origin/Referer validation, safe HTTP methods, and test cases.
+- [x] Audit and deepen CSRF coverage: implemented in [cross-site-request-forgery-csrf.md](01-browser-and-frontend/cross-site-request-forgery-csrf.md) with ambient authority threat model, SameSite limitations, Double-Submit Cookie pattern, strict Origin checks, React hooks, and Vitest test suite.
 - [ ] Cover DOM clobbering, safe DOM APIs, context-aware output encoding, Trusted Types, and sanitizer limitations.
 - [ ] Cover unsafe URL handling and open redirects, including scheme validation and redirect allowlists.
 - [ ] Review `postMessage` security: exact origin checks, message schema validation, sender assumptions, iframe sandboxing, and tests.
@@ -78,7 +78,7 @@ Target: `01-browser-and-frontend/`, `05-injection-attacks/`
 Target: `02-authentication-and-sessions/`
 - [ ] Review registration, email verification, password reset, account recovery, MFA enrollment/recovery, and account enumeration.
 - [ ] Deepen session lifecycle: issue, renew, rotate, idle/absolute expiry, revoke, logout, device/session management, and incident-driven revocation.
-- [ ] Explain refresh-token rotation and reuse detection with a safe sequence diagram and server-side test scenarios.
+- [x] Explain refresh-token rotation and reuse detection: implemented in [refresh-token-rotation-and-reuse-detection.md](02-authentication-and-sessions/refresh-token-rotation-and-reuse-detection.md) with RFC 6749 §10.4 token family architecture, Redis store, theft alarm sequence diagram, React concurrency queue, and Vitest test suite.
 - [ ] Review OAuth 2.0/OIDC flows: Authorization Code + PKCE, redirect URI exact matching, state, nonce, issuer/audience validation, token storage, mix-up and replay considerations.
 - [ ] Cover JWT verification policy, key rotation, issuer/audience/expiry, algorithm allowlists, key confusion risks, and revocation trade-offs.
 - [ ] Cover phishing-resistant MFA/passkeys, recovery codes, step-up authentication, and lost-device recovery.
@@ -92,7 +92,7 @@ Target: `03-authorization/`, `04-api-security/`
 - [ ] Add business-logic abuse examples: coupon reuse, booking/payment manipulation, workflow bypass, quota abuse, and replay.
 - [ ] Add race conditions and TOCTOU examples, with transactions, atomic updates, uniqueness constraints, locking trade-offs, and concurrency tests.
 - [ ] Add GraphQL security: object-level authorization, depth/complexity limits, batching abuse, introspection policy, and resource budgets.
-- [ ] Expand WebSocket/SSE security: handshake authentication, Origin checks where applicable, message-level authorization, connection limits, heartbeat/timeouts, and reconnect behavior.
+- [x] Expand WebSocket/SSE security: implemented in [websockets-sse-and-kafka-realtime.md](04-api-security/websockets-sse-and-kafka-realtime.md) with CSWSH protection, heartbeat ping-pong, SSE Last-Event-ID, Kafka consumer groups, and Vitest tests.
 - [ ] Cover webhook signature verification, timestamp/replay protection, idempotency, and secret rotation.
 - [ ] Cover API inventory/version retirement, third-party API consumption, request/response schema validation, pagination limits, and resource consumption controls.
 - [ ] Explain HTTP request smuggling/desynchronization at a conceptual level: parser disagreement, proxy/backend alignment, safe configuration and authorized lab validation.
@@ -236,7 +236,7 @@ Do not mark a topic “complete” based only on the existence of a heading or o
 - [x] Frontend system design overview and related learning resources exist.
 - [x] Core chapters exist for browser security, identity, authorization, APIs, injection, HTTP/network, data, file handling, cloud/DevSecOps, modern applications, testing, and deployment.
 - [ ] Audit existing pages against the chapter definition of done.
-- [ ] Create/update the security coverage matrix and authoring guide.
+- [x] Create/update the security coverage matrix and authoring guide: created docs/SECURITY-COVERAGE-MATRIX.md and docs/CHAPTER-AUTHORING-GUIDE.md.
 - [ ] Verify current standards versions and update source mappings.
 - [ ] Expand priority gaps with substantive explanations, examples, tests, and cross-links.
 - [ ] Validate all internal links, external references, and Mermaid diagrams.

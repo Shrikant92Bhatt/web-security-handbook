@@ -13,6 +13,7 @@ Dive into dedicated deep-dive guides for each pillar of browser security:
 - 🪖 [**Content Security Policy (CSP)**](content-security-policy.md) — CSP Level 3, nonce-based script execution, strict CSP blueprints, violation telemetry, and mitigating XSS.
 - 🖼️ [**Clickjacking & UI Redressing**](clickjacking.md) — Frame-ancestors, invisible overlay mechanics, double-click hijacking, and modern framing defense.
 - 💾 [**Browser Storage Security**](browser-storage-security.md) — Cookies vs. LocalStorage vs. SessionStorage vs. IndexedDB, cookie prefixes (`__Host-`), XSS blast radius, and memory-only token storage patterns.
+- 🎭 [**Cross-Site Request Forgery (CSRF)**](cross-site-request-forgery-csrf.md) — Ambient authority threat model, `SameSite=Lax/Strict` limitations, Double-Submit Cookie pattern, Origin validation, and React/Express implementation.
 
 ---
 

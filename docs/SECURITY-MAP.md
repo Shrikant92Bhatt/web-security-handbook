@@ -5,7 +5,7 @@ Use this map to connect a symptom to likely control areas. This is a learning ai
 | Symptom / risk | Review these areas | Key controls |
 |---|---|---|
 | Untrusted text runs as code | [Browser/frontend](../01-browser-and-frontend/README.md), [injection](../05-injection-attacks/README.md) | Context-aware encoding, safe DOM APIs, CSP |
-| Cross-site action uses a logged-in session | [Browser/frontend](../01-browser-and-frontend/README.md), [sessions](../02-authentication-and-sessions/README.md) | SameSite cookies, CSRF tokens where appropriate, Origin checks |
+| Cross-site action uses a logged-in session | [CSRF](../01-browser-and-frontend/cross-site-request-forgery-csrf.md), [Sessions](../02-authentication-and-sessions/session-management-and-fixation.md) | SameSite cookies, Double-Submit CSRF tokens, Origin checks |
 | User can access another user's record | [Authorization](../03-authorization/README.md), [API security](../04-api-security/README.md) | Server-side object-level authorization and tenant scoping |
 | API is overwhelmed | [API security](../04-api-security/README.md), [cloud/DevSecOps](../09-cloud-infrastructure-devsecops/README.md) | Rate limits, quotas, timeouts, concurrency bounds |
 | Server fetches an attacker-controlled URL | [Injection](../05-injection-attacks/README.md) | Destination allowlists, egress controls, DNS/IP validation |

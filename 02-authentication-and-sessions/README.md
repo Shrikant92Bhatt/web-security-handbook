@@ -12,6 +12,7 @@ Explore in-depth implementation guides for each authentication pillar:
 - 🪙 [**JWT Architecture & Vulnerabilities**](jwt-security.md) — Critical JWT attack vectors (`alg: none`, HMAC vs. RSA key confusion, signature stripping, secret brute-forcing) and short-lived token rotation.
 - 🤝 [**OAuth 2.0 & OIDC with PKCE**](oauth2-oidc-pkce.md) — End-to-end authorization code grant with PKCE (`code_verifier`, `code_challenge`), state/nonce CSRF prevention, and token exchange.
 - ⏳ [**Session Management & Fixation Defense**](session-management-and-fixation.md) — Session fixation exploits, session hijacking, rolling absolute/idle timeouts, multi-device logout, and concurrent login bounds.
+- 🔄 [**Refresh Token Rotation & Reuse Detection**](refresh-token-rotation-and-reuse-detection.md) — Single-use disposable tokens, token family revocation on replay/theft, sliding expiration, Redis family store, and concurrency-safe React Axios interceptors.
 
 ---
 

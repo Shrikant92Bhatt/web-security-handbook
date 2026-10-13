@@ -19,7 +19,7 @@ A categorized, diagram-driven handbook for frontend and full-stack engineers, es
 |---|---|
 | [00 Foundations](00-foundations/README.md) | Threat modeling, assets, trust boundaries, defense in depth |
 | [01 Browser and frontend security](01-browser-and-frontend/README.md) | XSS, CSP, CSRF, CORS, clickjacking, browser storage |
-| [02 Authentication and sessions](02-authentication-and-sessions/README.md) | Cookies, OAuth/OIDC, JWT, MFA, session lifecycle |
+| [02 Authentication and sessions](02-authentication-and-sessions/README.md) | Cookies, OAuth/OIDC, JWT, Refresh Token Rotation, Session Lifecycle |
 | [03 Authorization](03-authorization/README.md) | IDOR/BOLA, RBAC/ABAC, tenant isolation |
 | [04 API security](04-api-security/README.md) | Performance, Load Balancing, Rate Limiting, Idempotency, WebSockets & Kafka, OpenAPI/Swagger |
 | [05 Injection attacks](05-injection-attacks/README.md) | SQL/NoSQL injection, SSRF, command injection, SSTI |
