@@ -1,45 +1,94 @@
-# Web Security and Frontend System Design Handbook
+# Web Security & Engineering Handbook
 
-A categorized, diagram-driven handbook for frontend and full-stack engineers, especially React, Angular, TypeScript, Node.js, APIs, and micro-frontends. It combines application security with senior-level frontend architecture and system design.
+A practical, source-backed handbook for engineers building secure web applications and scalable frontend/full-stack systems.
 
-## Start here
-- [Frontend System Design curriculum](13-frontend-system-design/README.md)
-- [15-day Frontend System Design study plan](13-frontend-system-design/15-day-study-plan.md)
-- [System design videos and learning resources](resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md)
-- [Project plan and execution checklist](PLAN.md)
-- [15-day security bootcamp](bootcamp/README.md)
-- [Security topic map](docs/SECURITY-MAP.md)
-- [Prevention checklists](12-prevention-checklists/README.md)
-- [Security videos and hands-on learning](resources/VIDEOS.md)
-- [Official security references](resources/OFFICIAL_REFERENCES.md)
-- [Glossary](resources/GLOSSARY.md)
+The content is organized like a technical documentation site: browse by domain, follow a guided learning path, or search for a specific concept. Each chapter should help you understand **what it is, how it works, where it fails, how to implement it safely, and how to verify the result**.
 
-## Handbook categories
-| Category | Topics |
+> **Scope note:** This repository contains three related but distinct tracks: application security, frontend system design, and deployment/operations. They are intentionally separated in the navigation so readers can follow one track without confusing architecture topics with security controls.
+
+## Start with a learning path
+
+| I want to… | Start here |
 |---|---|
-| [00 Foundations](00-foundations/README.md) | Threat modeling, assets, trust boundaries, defense in depth |
-| [01 Browser and frontend security](01-browser-and-frontend/README.md) | XSS, CSP, CSRF, CORS, clickjacking, browser storage |
-| [02 Authentication and sessions](02-authentication-and-sessions/README.md) | Cookies, OAuth/OIDC, JWT, Refresh Token Rotation, Session Lifecycle |
-| [03 Authorization](03-authorization/README.md) | IDOR/BOLA, RBAC/ABAC, tenant isolation |
-| [04 API security](04-api-security/README.md) | Performance, Load Balancing, Rate Limiting, Idempotency, WebSockets & Kafka, OpenAPI/Swagger |
-| [05 Injection attacks](05-injection-attacks/README.md) | SQL/NoSQL injection, SSRF, command injection, SSTI |
-| [06 HTTP and network security](06-http-network-and-headers/README.md) | TLS 1.3, PKI Browser Trust, NGINX Reverse Proxy & Hardening, HTTP Security Headers |
-| [07 Data and database security](07-data-and-database/README.md) | DB Types, Indexing, Redis Caching & Locks, Zero-Downtime Migrations, Encryption |
-| [08 File handling](08-file-upload-and-serialization/README.md) | Uploads, path traversal, serialization |
-| [09 Cloud and DevSecOps](09-cloud-infrastructure-devsecops/README.md) | IAM, secrets, CI/CD, containers, dependencies |
-| [10 Modern applications](10-modern-apps-and-microfrontends/README.md) | SSR, micro-frontends, AI/RAG, tool boundaries |
-| [11 Security testing and tools](11-security-testing-and-tools/README.md) | SAST, DAST, SCA, ZAP, safe labs |
-| [12 Security prevention checklists](12-prevention-checklists/README.md) | PR, frontend, API, release checklists |
-| [13 Frontend system design](13-frontend-system-design/README.md) | Networking, communication, performance, caching, LLD, HLD, offline support, accessibility, observability |
-| [14 DevOps and deployment](14-devops-and-deployment/README.md) | GitHub Actions CI/CD, React + Node + Postgres, PM2, RabbitMQ, Serverless, Hostinger, GCP, AWS |
+| Learn web security from the ground up | [Security foundations](00-foundations/README.md) → [Browser security](01-browser-and-frontend/README.md) |
+| Secure login, tokens and sessions | [Authentication & sessions](02-authentication-and-sessions/README.md) |
+| Prevent access-control and API flaws | [Authorization](03-authorization/README.md) → [API security](04-api-security/README.md) |
+| Understand common attack classes | [Injection attacks](05-injection-attacks/README.md) → [File handling](08-file-upload-and-serialization/README.md) |
+| Harden transport, data and infrastructure | [HTTP & network](06-http-network-and-headers/README.md) → [Data](07-data-and-database/README.md) → [Cloud & DevSecOps](09-cloud-infrastructure-devsecops/README.md) |
+| Design modern frontend applications | [Frontend system design](13-frontend-system-design/README.md) |
+| Deploy and operate full-stack applications | [DevOps & deployment](14-devops-and-deployment/README.md) |
+| Practice with a structured schedule | [15-day security bootcamp](bootcamp/README.md) |
 
-## How to use this handbook
-1. Read the relevant topic and clarify the problem or requirement.
-2. Follow the Mermaid data-flow or architecture diagram.
-3. Compare the options and trade-offs before choosing a design.
-4. Apply security, performance, accessibility, and reliability controls.
-5. Validate with tests, measurements, and authorized labs.
-6. Revisit official references for implementation details.
+## Handbook
 
-## Safety and accuracy
-Only test systems you own or are explicitly authorized to assess. Use intentionally vulnerable training environments for security exercises. A checklist, course, or scanner cannot guarantee an application is secure. Video links are learning aids; validate security-sensitive advice against primary documentation.
+### Part I — Web application security
+
+| Chapter | What it covers |
+|---|---|
+| [00 · Foundations](00-foundations/README.md) | Assets, actors, threat modeling, trust boundaries, defense in depth |
+| [01 · Browser & frontend security](01-browser-and-frontend/README.md) | Same-origin policy, CORS, CSP, CSRF, clickjacking, browser storage |
+| [02 · Authentication & sessions](02-authentication-and-sessions/README.md) | Authentication methods, OAuth 2.0/OIDC, JWT, session lifecycle, refresh-token rotation |
+| [03 · Authorization](03-authorization/README.md) | IDOR/BOLA, BFLA, RBAC/ABAC/ReBAC, tenant isolation |
+| [04 · API security](04-api-security/README.md) | Rate limits, idempotency, API contracts, real-time APIs, performance and load balancing |
+| [05 · Injection attacks](05-injection-attacks/README.md) | XSS, SQL injection, SSRF and interpreter boundaries |
+| [06 · HTTP & network security](06-http-network-and-headers/README.md) | TLS, PKI, browser trust, reverse proxies and hardening |
+| [07 · Data & database](07-data-and-database/README.md) | Database models, indexing, Redis, caching, migrations and data protection |
+| [08 · File handling & serialization](08-file-upload-and-serialization/README.md) | Upload validation, path traversal and serialization risks |
+| [09 · Cloud infrastructure & DevSecOps](09-cloud-infrastructure-devsecops/README.md) | IAM, secrets, containers, dependencies and delivery controls |
+| [10 · Modern applications](10-modern-apps-and-microfrontends/README.md) | SSR, micro-frontends, AI/RAG and trust boundaries |
+| [11 · Security testing & tools](11-security-testing-and-tools/README.md) | SAST, DAST, SCA, scanners and authorized labs |
+| [12 · Prevention checklists](12-prevention-checklists/README.md) | Developer, reviewer, API, frontend and release checklists |
+
+### Part II — Frontend system design
+
+| Chapter | What it covers |
+|---|---|
+| [13 · Frontend system design](13-frontend-system-design/README.md) | Communication patterns, HLD, LLD, performance, caching, offline support, accessibility and observability |
+| [15-day study plan](13-frontend-system-design/15-day-study-plan.md) | A structured interview-preparation path |
+
+### Part III — Delivery and operations
+
+| Chapter | What it covers |
+|---|---|
+| [14 · DevOps & deployment](14-devops-and-deployment/README.md) | CI/CD, full-stack deployment, cloud hosting, PM2, RabbitMQ and serverless |
+
+## Reference desk
+
+- [Security topic map](docs/SECURITY-MAP.md) · [Coverage matrix](docs/SECURITY-COVERAGE-MATRIX.md)
+- [Information architecture](docs/INFORMATION-ARCHITECTURE.md) · [Chapter authoring guide](docs/CHAPTER-AUTHORING-GUIDE.md)
+- [Official references](resources/OFFICIAL_REFERENCES.md) · [Glossary](resources/GLOSSARY.md)
+- [Security videos](resources/VIDEOS.md) · [Frontend system design videos](resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md)
+- [Diagrams](diagrams/README.md) · [Labs](labs/README.md) · [Project plan](PLAN.md)
+
+## How to use a chapter
+
+1. Read the overview and prerequisites; identify the asset and trust boundary involved.
+2. Follow the diagram or request flow before reading implementation details.
+3. Compare the intentionally vulnerable example with the secure pattern.
+4. Run or adapt the verification steps in a local, authorized environment.
+5. Review the checklist and follow the links to adjacent concepts and primary references.
+
+## Browse as a documentation site
+
+The repository includes a [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) configuration with hierarchical navigation and built-in search.
+
+```bash
+python -m pip install -r requirements-docs.txt
+python -m mkdocs serve
+```
+
+Open the local address printed by MkDocs. To generate the static site:
+
+```bash
+python -m mkdocs build --strict
+```
+
+## Content and safety principles
+
+- Prefer primary references: OWASP, MDN, W3C/WAI, IETF RFCs, framework documentation and cloud-provider security guidance.
+- Label intentionally vulnerable examples as lab-only and show a safer alternative.
+- Test only systems you own or are explicitly authorized to assess.
+- Explain assumptions, limitations and trade-offs; no checklist or scanner can guarantee security.
+- Treat videos and blog posts as supplementary learning resources, not the sole authority for security-sensitive claims.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) before adding or changing chapters.
