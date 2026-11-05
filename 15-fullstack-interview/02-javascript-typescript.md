@@ -176,4 +176,4 @@ Practise explaining scope, closures, the event loop, Promises, object references
 
 **Try it:** write a function that fetches products, handles an error and returns typed product data. Add checks for the response received from the server.
 
-**Next:** [03 · Frontend — React, Angular & Browser](03-frontend-react-angular.md).
+**Next:** [Core Web Development](core-web-development/README.md), then [Frontend — React, Angular & Browser](03-frontend-react-angular.md).
