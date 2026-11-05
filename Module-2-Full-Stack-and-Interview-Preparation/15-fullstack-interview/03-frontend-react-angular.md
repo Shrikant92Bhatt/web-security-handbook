@@ -32,6 +32,10 @@ function Counter() {
 
 Know when to use local component state, shared app state and a library such as Redux or Zustand. Data from the server, such as a product list, often needs different handling from temporary UI state, such as whether a dialog is open.
 
+### React deep dive
+
+For the complete React 19 curriculum, study the [React — Complete Learning Path](react/README.md), followed by its six chapters on fundamentals, hooks, rendering, Fiber, Redux, testing, SSR and security.
+
 ## Angular
 
 Learn components and templates, services, dependency injection, lifecycle hooks, change detection, RxJS Observables, reactive forms, routing, guards and HTTP interceptors.
