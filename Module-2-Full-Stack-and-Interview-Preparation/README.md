@@ -12,6 +12,8 @@ This module follows the path from web fundamentals to frontend, backend, data, c
 ## Existing learning areas
 
 - [Core full-stack and interview curriculum](15-fullstack-interview/README.md)
+- [Core Web Development](15-fullstack-interview/core-web-development/README.md)
+- [Node.js Backend Engineering](15-fullstack-interview/nodejs/README.md)
 - [Frontend system design](13-frontend-system-design/README.md)
 - [DevOps and deployment](14-devops-and-deployment/README.md)
 
