@@ -28,12 +28,13 @@ Read the chapters in order. Each chapter covers core concepts, how things work, 
 
 1. [HTTP & Web Fundamentals](15-fullstack-interview/01-http-and-web-fundamentals.md)
 2. [JavaScript & TypeScript](15-fullstack-interview/02-javascript-typescript.md)
-3. [Frontend — React, Angular & Browser](15-fullstack-interview/03-frontend-react-angular.md)
-4. [Backend — Node.js & API Design](15-fullstack-interview/04-backend-nodejs.md)
-5. [Databases, SQL, NoSQL & Caching](15-fullstack-interview/05-databases-and-caching.md)
-6. [Cloud, DevOps & Operations](15-fullstack-interview/06-cloud-devops.md)
-7. [Full-Stack & System Design](15-fullstack-interview/07-system-design.md)
-8. [Question Bank & Day-Before Revision](15-fullstack-interview/08-interview-question-bank.md)
+3. [Core Web Development](15-fullstack-interview/core-web-development/README.md)
+4. [Frontend — React, Angular & Browser](15-fullstack-interview/03-frontend-react-angular.md)
+5. [Backend — Node.js & API Design](15-fullstack-interview/04-backend-nodejs.md)
+6. [Databases, SQL, NoSQL & Caching](15-fullstack-interview/05-databases-and-caching.md)
+7. [Cloud, DevOps & Operations](15-fullstack-interview/06-cloud-devops.md)
+8. [Full-Stack & System Design](15-fullstack-interview/07-system-design.md)
+9. [Question Bank & Day-Before Revision](15-fullstack-interview/08-interview-question-bank.md)
 
 ## How to use it
 
