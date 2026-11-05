@@ -89,6 +89,20 @@ function showPrice(product: Product): string {
 
 A type or interface describes data. A union says a value can be one of several types. A generic lets code work with more than one data type. Unknown means you must check a value before using it.
 
+## Detailed TypeScript learning path
+
+This chapter is the quick interview overview. For full explanations, examples and exercises, continue to the dedicated [JavaScript and TypeScript subject guide](../02-javascript-and-typescript/README.md). It is organized from foundations through advanced types and compiler/tooling:
+
+- Foundations: primitive types, annotations, inference, enums and structural typing.
+- Objects and collections: arrays, tuples, objects, Record, Map, Set and index signatures.
+- Functions and generics: function types, overloads, call/construct signatures, constraints and `this`.
+- Interfaces, aliases and classes: composition, access modifiers, abstract classes, inheritance and overrides.
+- Narrowing and utility types: guards, assertions, `satisfies`, Partial, Required, Readonly and related utilities.
+- Advanced type building: `keyof`, `typeof`, conditional, mapped and template-literal types, `infer`.
+- Project setup: strict tsconfig options, modules, namespaces, declaration files, decorators, diagnostics, ts-node and tsx.
+
+The detailed guide includes common mistakes, practical examples, interview questions and quick revision for each subject.
+
 ## Interview questions
 
 - What is the difference between var, let and const?
