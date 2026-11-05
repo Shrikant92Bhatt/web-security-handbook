@@ -289,3 +289,22 @@ Target: `15-fullstack-interview/core-web-development/`, `15-fullstack-interview/
 - [ ] Cross-link browser security concepts to Module 1 rather than duplicating the full security chapters.
 - [ ] Add Core Web Development to MkDocs navigation and verify strict documentation build.
 - [ ] Run internal-link validation and review every new relative link.
+
+
+## 13. Module 2 — Node.js backend expansion
+
+Target: `15-fullstack-interview/nodejs/`, `15-fullstack-interview/04-backend-nodejs.md`, Module 2 README and `mkdocs.yml`.
+
+- [x] Audit the supplied Node.js inventory: runtime, npm, CLI, modules, event loop/libuv, Node APIs, networking, errors, tests, architecture, scaling, frameworks, tools, security, queues, databases and deployment.
+- [x] Add six progressive Node.js chapters: runtime fundamentals; npm/CLI/modules; Node APIs/networking/async; architecture/testing/scalability; frameworks/API design; production/security/advanced topics.
+- [x] Explain V8, libuv, event-loop phases, thread pool, worker threads, child processes and memory diagnostics.
+- [x] Cover npm package management, lockfiles, semantic versioning, CommonJS/ESM, module publishing and supply-chain checks.
+- [x] Cover filesystem, Buffer, streams/backpressure, HTTP, TLS/networking, timers, crypto and process APIs.
+- [x] Cover REST, authentication/authorization, errors, database pools, queues, testing types, design patterns, horizontal scaling and observability.
+- [x] Compare Express, Fastify, NestJS, Koa, Hapi and Feathers by concepts and trade-offs.
+- [x] Cover NVM, linting, JSDoc, Swagger/OpenAPI, debugging, profiling, PM2, serverless, Docker, Kubernetes, IaC, Node-API and WebAssembly.
+- [x] Link the detailed curriculum from the existing backend chapter and add MkDocs navigation.
+- [ ] Add sequence diagrams for event-loop scheduling, request lifecycle, stream backpressure, queue retry/dead-letter flow and graceful shutdown.
+- [ ] Add runnable sample service and tests for API validation, stream upload/download, worker-thread CPU task, queue idempotency and graceful shutdown.
+- [ ] Verify Node examples against the documented Node.js LTS version and test code snippets.
+- [ ] Run MkDocs strict build, internal-link validation and review navigation numbering.
