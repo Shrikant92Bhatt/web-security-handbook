@@ -35,4 +35,6 @@ Start with the [Module 2 learning path](Module-2-Full-Stack-and-Interview-Prepar
 
 Install requirements from `requirements-docs.txt`, then run `python -m mkdocs serve`. Run `python -m mkdocs build --strict` before publishing.
 
+After a full build the complete handbook is also available as a single PDF at `site/pdf/web-security-handbook.pdf`.
+
 Prefer primary sources: OWASP, MDN, W3C/IETF specifications, framework documentation and cloud-provider guidance. Videos supplement, but do not replace, primary references.

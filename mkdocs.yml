@@ -22,6 +22,14 @@ theme:
 
 plugins:
   - search
+  - exporter:
+      formats:
+        pdf:
+          enabled: true
+          concurrency: 4
+          aggregator:
+            enabled: true
+            output: pdf/web-security-handbook.pdf
 
 markdown_extensions:
   - admonition
