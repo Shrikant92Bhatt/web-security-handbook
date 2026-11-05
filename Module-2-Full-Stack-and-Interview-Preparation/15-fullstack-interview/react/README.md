@@ -2,7 +2,7 @@
 
 **In simple words:** This path takes you from writing your first React component to explaining Fiber, Server Components and state-management trade-offs in a senior interview. Every topic in the React evaluation matrix below is covered, in the same Basic → Intermediate → Advanced → Bonus order.
 
-[Module 2 home](../README.md) · [Frontend overview](../03-frontend-react-angular.md) · [Core Web Development](../core-web-development/README.md)
+[Module 2 home](../../README.md) · [Frontend overview](../03-frontend-react-angular.md) · [Core Web Development](../core-web-development/README.md)
 
 **Before you start:** be comfortable with the [JavaScript & TypeScript](../02-javascript-typescript.md) chapter (closures, `this`, promises, modules) and the browser basics in [Core Web Development](../core-web-development/README.md). Examples use **React 19** and TypeScript; older APIs are explained where interviews still ask about them.
 

@@ -2,7 +2,7 @@
 
 **In simple words:** This subject explains how a web page is structured, styled, made interactive, connected to servers, stored locally, rendered and tested. It belongs in Module 2 after JavaScript fundamentals and before React/Angular.
 
-[Module 2 home](../README.md) · [JavaScript & TypeScript](../02-javascript-typescript.md) · [Frontend frameworks](../03-frontend-react-angular.md)
+[Module 2 home](../../README.md) · [JavaScript & TypeScript](../02-javascript-typescript.md) · [Frontend frameworks](../03-frontend-react-angular.md)
 
 ## Learning order
 

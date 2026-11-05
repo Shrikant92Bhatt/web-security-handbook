@@ -275,36 +275,12 @@ Do not label the handbook “complete” or “production-ready” until:
 Start by inspecting `AGENTS.md`, `CONTRIBUTING.md`, all existing chapter README files, and the current link-check/CI setup. Then create or update the coverage matrix and authoring guide. Do not attempt to rewrite the entire handbook in one pass. Choose the highest-priority real gaps, make focused edits with detailed explanations and examples, update all navigation, run available checks, and report evidence plus remaining work.
 
 
-## 12. Module 2 — Core Web Development expansion
+## 14. Module 2 — Core Web Development and Node.js hierarchy merge
 
-Target: `15-fullstack-interview/core-web-development/`, `15-fullstack-interview/02-javascript-typescript.md`, `15-fullstack-interview/03-frontend-react-angular.md`.
-
-- [x] Audit the supplied JavaScript and Client Side JavaScript topic inventory against the current handbook chapters.
-- [x] Expand the JavaScript chapter with values/coercion, scope/hoisting/TDZ, execution contexts, this binding, functions, objects/prototypes, arrays/collections, iterators/generators, promises, event loop, errors, modules, regular expressions and memory concepts.
-- [x] Add a dedicated Core Web Development learning path covering HTML, semantic markup, forms, accessibility foundations, CSS, responsive layout, DOM, browser APIs, events, browser runtime, rendering, networking, storage, service workers, real-time APIs, performance and testing.
-- [x] Separate ECMAScript language features from browser-provided Web APIs.
-- [x] Link Core Web Development between JavaScript/TypeScript and React/Angular in Module 2 navigation.
-- [ ] Split the Core Web Development syllabus into individual detailed chapter files with progressive examples, diagrams, practical exercises and interview questions.
-- [ ] Add runnable HTML/CSS/JavaScript mini-projects and browser-based tests.
-- [ ] Cross-link browser security concepts to Module 1 rather than duplicating the full security chapters.
-- [ ] Add Core Web Development to MkDocs navigation and verify strict documentation build.
-- [ ] Run internal-link validation and review every new relative link.
-
-
-## 13. Module 2 — Node.js backend expansion
-
-Target: `15-fullstack-interview/nodejs/`, `15-fullstack-interview/04-backend-nodejs.md`, Module 2 README and `mkdocs.yml`.
-
-- [x] Audit the supplied Node.js inventory: runtime, npm, CLI, modules, event loop/libuv, Node APIs, networking, errors, tests, architecture, scaling, frameworks, tools, security, queues, databases and deployment.
-- [x] Add six progressive Node.js chapters: runtime fundamentals; npm/CLI/modules; Node APIs/networking/async; architecture/testing/scalability; frameworks/API design; production/security/advanced topics.
-- [x] Explain V8, libuv, event-loop phases, thread pool, worker threads, child processes and memory diagnostics.
-- [x] Cover npm package management, lockfiles, semantic versioning, CommonJS/ESM, module publishing and supply-chain checks.
-- [x] Cover filesystem, Buffer, streams/backpressure, HTTP, TLS/networking, timers, crypto and process APIs.
-- [x] Cover REST, authentication/authorization, errors, database pools, queues, testing types, design patterns, horizontal scaling and observability.
-- [x] Compare Express, Fastify, NestJS, Koa, Hapi and Feathers by concepts and trade-offs.
-- [x] Cover NVM, linting, JSDoc, Swagger/OpenAPI, debugging, profiling, PM2, serverless, Docker, Kubernetes, IaC, Node-API and WebAssembly.
-- [x] Link the detailed curriculum from the existing backend chapter and add MkDocs navigation.
-- [ ] Add sequence diagrams for event-loop scheduling, request lifecycle, stream backpressure, queue retry/dead-letter flow and graceful shutdown.
-- [ ] Add runnable sample service and tests for API validation, stream upload/download, worker-thread CPU task, queue idempotency and graceful shutdown.
-- [ ] Verify Node examples against the documented Node.js LTS version and test code snippets.
-- [ ] Run MkDocs strict build, internal-link validation and review navigation numbering.
+- [x] Preserve the two-module folder hierarchy from PR #4.
+- [x] Move the Core Web Development syllabus into Module 2's interview curriculum folder.
+- [x] Move the six detailed Node.js chapters and their subject index into Module 2's interview curriculum folder.
+- [x] Preserve the TypeScript deep-dive folder and link it from the JavaScript/TypeScript overview.
+- [x] Update frontend prerequisites, backend chapter links, Module 2 indexes and MkDocs navigation to the reorganized paths.
+- [ ] Run MkDocs strict build and full internal-link validation after merge.
+- [ ] Review cross-module security links and all relative paths.

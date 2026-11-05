@@ -1,8 +1,8 @@
 # Module 2 — Full-Stack Engineering & Interview Preparation
 
-This module explains the main parts of a web application in everyday language. Read the chapters in order, try the small examples and answer the interview questions out loud. Use the [Simple-Word Glossary](../resources/GLOSSARY.md) when you meet a new term.
+This module explains the main parts of a web application in everyday language. Read the chapters in order, try the small examples and answer the interview questions out loud. Use the [Simple-Word Glossary](../../resources/GLOSSARY.md) when you meet a new term.
 
-This module complements the primary security module. It covers engineering fundamentals expected from frontend, backend and full-stack developers.
+This module complements the primary security module. It covers engineering fundamentals expected from frontend, backend and full-stack developers, with interview questions and a quick-revision path.
 
 ## Read in this exact order
 
@@ -10,9 +10,11 @@ This module complements the primary security module. It covers engineering funda
 |---:|---|---|
 | 1 | [HTTP & Web Fundamentals](01-http-and-web-fundamentals.md) | Browser lifecycle, DNS, TCP/TLS, HTTP, cookies, caching, CORS |
 | 2 | [JavaScript & TypeScript](02-javascript-typescript.md) | Language fundamentals, runtime, event loop, promises, closures and types |
-| 3 | [Core Web Development](core-web-development/README.md) | HTML, CSS, DOM, browser APIs, rendering, network, storage, performance and accessibility |
-| 4 | [Frontend — React, Angular & Browser](03-frontend-react-angular.md) | Components, rendering, state, hooks, RxJS, forms, framework architecture |
-| 5 | [Backend — Node.js & API Design](04-backend-nodejs.md) | Runtime, npm, APIs, streams, frameworks, testing, queues and production operations |
+| 3 | [Core Web Development](core-web-development/README.md) | HTML, CSS, DOM, browser APIs, rendering, networking, storage and accessibility |
+| 4 | [Frontend — React, Angular & Browser](03-frontend-react-angular.md) | Components, rendering, state, hooks, RxJS, forms, performance |
+|  | [React detailed learning path](react/README.md) | Six detailed chapters covering React core, ecosystem, testing, SSR and advanced topics |
+| 5 | [Backend — Node.js & API Design](04-backend-nodejs.md) | Runtime, npm, APIs, streams, frameworks, testing, queues and production |
+|  | [Node.js detailed learning path](nodejs/README.md) | Six chapters from runtime fundamentals to production engineering |
 | 6 | [Databases & Caching](05-databases-and-caching.md) | SQL, indexes, transactions, isolation, NoSQL, Redis |
 | 7 | [Cloud, DevOps & Operations](06-cloud-devops.md) | Containers, CI/CD, cloud, observability, reliability |
 | 8 | [Full-Stack & System Design](07-system-design.md) | HLD/LLD, scalability, realtime, caching, consistency |
@@ -20,7 +22,7 @@ This module complements the primary security module. It covers engineering funda
 
 ## Chapter format
 
-Every chapter should contain core concepts, a lifecycle/request-flow diagram where useful, compare-and-choose trade-offs, implementation examples, common pitfalls, interview questions, a quick-revision checklist and a practical exercise.
+Every chapter should contain core concepts, a lifecycle/request-flow diagram, compare-and-choose trade-offs, implementation examples, common pitfalls, interview questions, a quick-revision checklist and a practical exercise.
 
 ## Interview answer framework
 

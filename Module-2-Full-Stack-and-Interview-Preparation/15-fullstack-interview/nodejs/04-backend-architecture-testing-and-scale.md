@@ -35,7 +35,7 @@ Separate routing, controllers/handlers, services/use-cases, repositories and inf
 
 Authentication answers "who is calling?" Authorization answers "what may this caller do to this specific resource?" Study sessions, OAuth 2.0/OIDC, JWT validation, Passport strategies and role/policy checks as implementation options. Validate issuer, audience, expiry, signature and allowed algorithms when using JWT. Enforce authorization on the server for every protected operation; frontend route guards are not security boundaries.
 
-Cross-link: [Module 1 — Authentication and sessions](../../02-authentication-and-sessions/README.md) and [Module 1 — Authorization](../../03-authorization/README.md).
+Cross-link: [Module 1 — Authentication and sessions](../../../Module-1-Attack-and-Web-Security/02-authentication-and-sessions/README.md) and [Module 1 — Authorization](../../../Module-1-Attack-and-Web-Security/03-authorization/README.md).
 
 ## 4. Error handling and reliability
 

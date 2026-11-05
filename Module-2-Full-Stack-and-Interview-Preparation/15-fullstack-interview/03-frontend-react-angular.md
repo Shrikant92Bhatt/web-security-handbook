@@ -34,16 +34,7 @@ Know when to use local component state, shared app state and a library such as R
 
 ### React deep dive
 
-The summary above is only a starting point. The **[React — Complete Learning Path](react/README.md)** covers every topic in the React evaluation matrix in detail, with examples, common mistakes and interview questions:
-
-| Chapter | Topics |
-|---|---|
-| [01 · Core Basics](react/01-react-core-basics.md) | Function components, JSX, state and lazy init, lifecycle and render/commit phases, error boundaries, Rules of Hooks and hook types, composition and lifting state |
-| [02 · Core Intermediate](react/02-react-core-intermediate.md) | `createRoot`, `hydrateRoot`, `createPortal`, `flushSync`, `Suspense`, `StrictMode`, `Profiler`, forms and React 19 actions, Context, `memo`/`useMemo`/`useCallback` |
-| [03 · Core Advanced](react/03-react-core-advanced.md) | Custom hooks vs HOCs vs render props, Virtual DOM, reconciliation, keys, Fiber |
-| [04 · Ecosystem Basics & Intermediate](react/04-ecosystem-basics-and-intermediate.md) | TypeScript with React, Redux, React Redux, middleware and thunks, React Router |
-| [05 · Ecosystem Advanced](react/05-ecosystem-advanced.md) | Testing (RTL, Playwright, Cypress), build tools and code splitting, SSR, Server Components, SSG |
-| [06 · Bonus](react/06-bonus-topics.md) | `createElement`, class components and lifecycle, PropTypes, Redux Toolkit, MobX, Zustand/Jotai/XState, Flux, XSS in React, animation |
+For the complete React 19 curriculum, study the [React — Complete Learning Path](react/README.md), followed by its six chapters on fundamentals, hooks, rendering, Fiber, Redux, testing, SSR and security.
 
 ## Angular
 

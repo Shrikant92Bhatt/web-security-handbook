@@ -3,7 +3,7 @@
 A practical curriculum for senior frontend and lead engineers designing scalable, accessible, secure, and maintainable browser applications. It complements the security chapters rather than replacing them.
 
 ## Study plan
-Follow the [15-day Frontend System Design study plan](15-day-study-plan.md) and use the [video resource list](../resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md) for guided learning.
+Follow the [15-day Frontend System Design study plan](15-day-study-plan.md) and use the [video resource list](../../resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md) for guided learning.
 
 ## A repeatable interview framework
 
@@ -41,7 +41,7 @@ The diagram is a starting point, not a universal architecture. A small product m
 | [Low-level design](low-level-design.md) | component contracts, state, design patterns, SOLID, common UI widgets |
 | [High-level design](high-level-design.md) | feeds, chat, e-commerce, video, collaborative editors, dashboards |
 | [Offline, accessibility, and observability](offline-accessibility-observability.md) | PWA, service workers, keyboard/screen reader support, telemetry and alerts |
-| [System design video resources](../resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md) | Namaste FSD introduction, curriculum repo, topic-focused learning links |
+| [System design video resources](../../resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md) | Namaste FSD introduction, curriculum repo, topic-focused learning links |
 
 ## Important architecture decisions
 

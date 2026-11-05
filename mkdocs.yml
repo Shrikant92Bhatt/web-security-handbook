@@ -53,69 +53,75 @@ exclude_docs: |
 nav:
   - Home: README.md
   - Module 1 · Attack & Web Security:
-      - Start here: docs/MODULE-1-ATTACK-SECURITY-PATH.md
-      - Attack catalog: docs/ATTACK-CATALOG.md
-      - Attack playbook template: docs/ATTACK-PLAYBOOK-TEMPLATE.md
-      - 01 · Foundations: 00-foundations/README.md
-      - 02 · Browser & frontend security: 01-browser-and-frontend/README.md
-      - 03 · Authentication & sessions: 02-authentication-and-sessions/README.md
-      - 04 · Authorization: 03-authorization/README.md
-      - 05 · API security: 04-api-security/README.md
-      - 06 · Injection attacks: 05-injection-attacks/README.md
-      - 07 · HTTP & network security: 06-http-network-and-headers/README.md
-      - 08 · Data & database security: 07-data-and-database/README.md
-      - 09 · File handling & serialization: 08-file-upload-and-serialization/README.md
-      - 10 · Cloud infrastructure & DevSecOps: 09-cloud-infrastructure-devsecops/README.md
-      - 11 · Modern applications: 10-modern-apps-and-microfrontends/README.md
-      - 12 · Security testing: 11-security-testing-and-tools/README.md
-      - 13 · Prevention checklists: 12-prevention-checklists/README.md
-      - Security bootcamp: bootcamp/README.md
+      - Start here: Module-1-Attack-and-Web-Security/README.md
+      - Sequential reading path: Module-1-Attack-and-Web-Security/docs/MODULE-1-ATTACK-SECURITY-PATH.md
+      - Attack catalog: Module-1-Attack-and-Web-Security/docs/ATTACK-CATALOG.md
+      - Attack playbook template: Module-1-Attack-and-Web-Security/docs/ATTACK-PLAYBOOK-TEMPLATE.md
+      - 01 · Foundations: Module-1-Attack-and-Web-Security/00-foundations/README.md
+      - 02 · Browser & frontend security: Module-1-Attack-and-Web-Security/01-browser-and-frontend/README.md
+      - 03 · Authentication & sessions: Module-1-Attack-and-Web-Security/02-authentication-and-sessions/README.md
+      - 04 · Authorization: Module-1-Attack-and-Web-Security/03-authorization/README.md
+      - 05 · API security: Module-1-Attack-and-Web-Security/04-api-security/README.md
+      - 06 · Injection attacks: Module-1-Attack-and-Web-Security/05-injection-attacks/README.md
+      - 07 · HTTP & network security: Module-1-Attack-and-Web-Security/06-http-network-and-headers/README.md
+      - 08 · Data & database security: Module-1-Attack-and-Web-Security/07-data-and-database/README.md
+      - 09 · File handling & serialization: Module-1-Attack-and-Web-Security/08-file-upload-and-serialization/README.md
+      - 10 · Cloud infrastructure & DevSecOps: Module-1-Attack-and-Web-Security/09-cloud-infrastructure-devsecops/README.md
+      - 11 · Modern applications: Module-1-Attack-and-Web-Security/10-modern-apps-and-microfrontends/README.md
+      - 12 · Security testing: Module-1-Attack-and-Web-Security/11-security-testing-and-tools/README.md
+      - 13 · Prevention checklists: Module-1-Attack-and-Web-Security/12-prevention-checklists/README.md
+      - Security bootcamp: Module-1-Attack-and-Web-Security/bootcamp/README.md
   - Module 2 · Full-Stack & Interview Prep:
-      - Start here: 15-fullstack-interview/README.md
-      - 01 · HTTP & Web Fundamentals: 15-fullstack-interview/01-http-and-web-fundamentals.md
-      - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
-      - 03 · Core Web Development: 15-fullstack-interview/core-web-development/README.md
-      - 04 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
+      - Start here: Module-2-Full-Stack-and-Interview-Preparation/README.md
+      - Core interview curriculum: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/README.md
+      - 01 · HTTP & Web Fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/01-http-and-web-fundamentals.md
+      - 02 · JavaScript & TypeScript: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/02-javascript-typescript.md
+      - 03 · Core Web Development: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/core-web-development/README.md
+      - TypeScript deep dive:
+          - Subject index: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/README.md
+          - Foundations: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/01-foundations.md
+          - Objects & collections: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/02-objects-and-collections.md
+          - Functions & generics: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/03-functions-and-generics.md
+          - Interfaces & classes: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/04-interfaces-aliases-and-classes.md
+          - Narrowing & utility types: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/05-narrowing-and-utility-types.md
+          - Advanced type building: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/06-advanced-type-building.md
+          - Project setup & tooling: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/07-project-setup-modules-and-tooling.md
+      - 04 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
       - React deep dive:
-          - Overview & coverage map: 15-fullstack-interview/react/README.md
-          - 01 · Core basics: 15-fullstack-interview/react/01-react-core-basics.md
-          - 02 · Core intermediate: 15-fullstack-interview/react/02-react-core-intermediate.md
-          - 03 · Core advanced: 15-fullstack-interview/react/03-react-core-advanced.md
-          - 04 · Ecosystem basics & intermediate: 15-fullstack-interview/react/04-ecosystem-basics-and-intermediate.md
-          - 05 · Ecosystem advanced: 15-fullstack-interview/react/05-ecosystem-advanced.md
-          - 06 · Bonus topics: 15-fullstack-interview/react/06-bonus-topics.md
-      - 05 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
+          - Overview & coverage map: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/README.md
+          - 01 · Core basics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/01-react-core-basics.md
+          - 02 · Core intermediate: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/02-react-core-intermediate.md
+          - 03 · Core advanced: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/03-react-core-advanced.md
+          - 04 · Ecosystem basics & intermediate: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/04-ecosystem-basics-and-intermediate.md
+          - 05 · Ecosystem advanced: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/05-ecosystem-advanced.md
+          - 06 · Bonus topics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/06-bonus-topics.md
+      - 05 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
       - Node.js deep dive:
-          - Learning path: 15-fullstack-interview/nodejs/README.md
-          - Runtime fundamentals: 15-fullstack-interview/nodejs/01-nodejs-fundamentals-and-runtime.md
-          - npm, CLI & modules: 15-fullstack-interview/nodejs/02-npm-cli-modules-and-packages.md
-          - Node APIs & networking: 15-fullstack-interview/nodejs/03-node-apis-networking-and-async.md
-          - Architecture, testing & scale: 15-fullstack-interview/nodejs/04-backend-architecture-testing-and-scale.md
-          - Backend frameworks: 15-fullstack-interview/nodejs/05-backend-frameworks-and-api-design.md
-          - Production & advanced topics: 15-fullstack-interview/nodejs/06-production-security-and-advanced-topics.md
-      - 06 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
-      - 07 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
-      - 08 · Full-Stack & System Design: 15-fullstack-interview/07-system-design.md
-      - 09 · Interview Question Bank: 15-fullstack-interview/08-interview-question-bank.md
-      - Existing frontend system design deep dives:
-          - Overview: 13-frontend-system-design/README.md
-          - Communication patterns: 13-frontend-system-design/communication-patterns.md
-          - High-level design: 13-frontend-system-design/high-level-design.md
-          - Low-level design: 13-frontend-system-design/low-level-design.md
-          - Performance & caching: 13-frontend-system-design/performance-and-caching.md
-          - Offline, accessibility & observability: 13-frontend-system-design/offline-accessibility-observability.md
-      - Existing deployment references:
-          - DevOps & deployment: 14-devops-and-deployment/README.md
-          - GitHub Actions CI/CD: 14-devops-and-deployment/github-actions-cicd-fullstack.md
-          - Full-stack deployment: 14-devops-and-deployment/how-to-deploy-fullstack-app.md
-          - Multi-cloud deployment: 14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
-          - PM2, RabbitMQ & serverless: 14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
-  - Reference:
-      - Security topic map: docs/SECURITY-MAP.md
-      - Security coverage matrix: docs/SECURITY-COVERAGE-MATRIX.md
-      - Information architecture: docs/INFORMATION-ARCHITECTURE.md
-      - Official references: resources/OFFICIAL_REFERENCES.md
+          - Learning path: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/README.md
+          - Runtime fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/01-nodejs-fundamentals-and-runtime.md
+          - npm, CLI & modules: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/02-npm-cli-modules-and-packages.md
+          - Node APIs & networking: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/03-node-apis-networking-and-async.md
+          - Architecture, testing & scale: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/04-backend-architecture-testing-and-scale.md
+          - Backend frameworks: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/05-backend-frameworks-and-api-design.md
+          - Production & advanced topics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/06-production-security-and-advanced-topics.md
+      - 06 · Databases & Caching: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/05-databases-and-caching.md
+      - 07 · Cloud, DevOps & Operations: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/06-cloud-devops.md
+      - 08 · Full-Stack & System Design: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/07-system-design.md
+      - 09 · Interview Question Bank: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/08-interview-question-bank.md
+      - Frontend system design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/README.md
+      - Communication patterns: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/communication-patterns.md
+      - High-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/high-level-design.md
+      - Low-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/low-level-design.md
+      - Performance & caching: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/performance-and-caching.md
+      - Offline, accessibility & observability: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/offline-accessibility-observability.md
+      - DevOps & deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/README.md
+      - GitHub Actions CI/CD: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/github-actions-cicd-fullstack.md
+      - Full-stack deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/how-to-deploy-fullstack-app.md
+      - Multi-cloud deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
+      - PM2, RabbitMQ & serverless: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
+  - Shared reference:
       - Glossary: resources/GLOSSARY.md
+      - Official references: resources/OFFICIAL_REFERENCES.md
       - Security videos: resources/VIDEOS.md
       - Frontend system design videos: resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md
       - Labs: labs/README.md
