@@ -1,6 +1,6 @@
 # Module 2 — Full-Stack Engineering & Interview Preparation
 
-This module explains the main parts of a web application in everyday language. Read the chapters in order, try the small examples and answer the interview questions out loud. Use the [Simple-Word Glossary](../resources/GLOSSARY.md) when you meet a new term.
+This module explains the main parts of a web application in everyday language. Read the chapters in order, try the small examples and answer the interview questions out loud. Use the [Simple-Word Glossary](../../resources/GLOSSARY.md) when you meet a new term.
 
 This module complements the primary security module. It covers engineering fundamentals expected from frontend, backend and full-stack developers, with interview questions and a quick-revision path.
 

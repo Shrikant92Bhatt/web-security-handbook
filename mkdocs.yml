@@ -53,52 +53,41 @@ exclude_docs: |
 nav:
   - Home: README.md
   - Module 1 · Attack & Web Security:
-      - Start here: docs/MODULE-1-ATTACK-SECURITY-PATH.md
-      - Attack catalog: docs/ATTACK-CATALOG.md
-      - Attack playbook template: docs/ATTACK-PLAYBOOK-TEMPLATE.md
-      - 01 · Foundations: 00-foundations/README.md
-      - 02 · Browser & frontend security: 01-browser-and-frontend/README.md
-      - 03 · Authentication & sessions: 02-authentication-and-sessions/README.md
-      - 04 · Authorization: 03-authorization/README.md
-      - 05 · API security: 04-api-security/README.md
-      - 06 · Injection attacks: 05-injection-attacks/README.md
-      - 07 · HTTP & network security: 06-http-network-and-headers/README.md
-      - 08 · Data & database security: 07-data-and-database/README.md
-      - 09 · File handling & serialization: 08-file-upload-and-serialization/README.md
-      - 10 · Cloud infrastructure & DevSecOps: 09-cloud-infrastructure-devsecops/README.md
-      - 11 · Modern applications: 10-modern-apps-and-microfrontends/README.md
-      - 12 · Security testing: 11-security-testing-and-tools/README.md
-      - 13 · Prevention checklists: 12-prevention-checklists/README.md
-      - Security bootcamp: bootcamp/README.md
+      - Start here: Module-1-Attack-and-Web-Security/README.md
+      - Sequential reading path: Module-1-Attack-and-Web-Security/docs/MODULE-1-ATTACK-SECURITY-PATH.md
+      - Attack catalog: Module-1-Attack-and-Web-Security/docs/ATTACK-CATALOG.md
+      - Attack playbook template: Module-1-Attack-and-Web-Security/docs/ATTACK-PLAYBOOK-TEMPLATE.md
+      - 01 · Foundations: Module-1-Attack-and-Web-Security/00-foundations/README.md
+      - 02 · Browser & frontend security: Module-1-Attack-and-Web-Security/01-browser-and-frontend/README.md
+      - 03 · Authentication & sessions: Module-1-Attack-and-Web-Security/02-authentication-and-sessions/README.md
+      - 04 · Authorization: Module-1-Attack-and-Web-Security/03-authorization/README.md
+      - 05 · API security: Module-1-Attack-and-Web-Security/04-api-security/README.md
+      - 06 · Injection attacks: Module-1-Attack-and-Web-Security/05-injection-attacks/README.md
+      - 07 · HTTP & network security: Module-1-Attack-and-Web-Security/06-http-network-and-headers/README.md
+      - 08 · Data & database security: Module-1-Attack-and-Web-Security/07-data-and-database/README.md
+      - 09 · File handling & serialization: Module-1-Attack-and-Web-Security/08-file-upload-and-serialization/README.md
+      - 10 · Cloud infrastructure & DevSecOps: Module-1-Attack-and-Web-Security/09-cloud-infrastructure-devsecops/README.md
+      - 11 · Modern applications: Module-1-Attack-and-Web-Security/10-modern-apps-and-microfrontends/README.md
+      - 12 · Security testing: Module-1-Attack-and-Web-Security/11-security-testing-and-tools/README.md
+      - 13 · Prevention checklists: Module-1-Attack-and-Web-Security/12-prevention-checklists/README.md
+      - Security bootcamp: Module-1-Attack-and-Web-Security/bootcamp/README.md
   - Module 2 · Full-Stack & Interview Prep:
-      - Start here: 15-fullstack-interview/README.md
-      - 01 · HTTP & Web Fundamentals: 15-fullstack-interview/01-http-and-web-fundamentals.md
-      - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
-      - 03 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
-      - 04 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
-      - 05 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
-      - 06 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
-      - 07 · Full-Stack & System Design: 15-fullstack-interview/07-system-design.md
-      - 08 · Interview Question Bank: 15-fullstack-interview/08-interview-question-bank.md
-      - Existing frontend system design deep dives:
-          - Overview: 13-frontend-system-design/README.md
-          - Communication patterns: 13-frontend-system-design/communication-patterns.md
-          - High-level design: 13-frontend-system-design/high-level-design.md
-          - Low-level design: 13-frontend-system-design/low-level-design.md
-          - Performance & caching: 13-frontend-system-design/performance-and-caching.md
-          - Offline, accessibility & observability: 13-frontend-system-design/offline-accessibility-observability.md
-      - Existing deployment references:
-          - DevOps & deployment: 14-devops-and-deployment/README.md
-          - GitHub Actions CI/CD: 14-devops-and-deployment/github-actions-cicd-fullstack.md
-          - Full-stack deployment: 14-devops-and-deployment/how-to-deploy-fullstack-app.md
-          - Multi-cloud deployment: 14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
-          - PM2, RabbitMQ & serverless: 14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
-  - Reference:
-      - Security topic map: docs/SECURITY-MAP.md
-      - Security coverage matrix: docs/SECURITY-COVERAGE-MATRIX.md
-      - Information architecture: docs/INFORMATION-ARCHITECTURE.md
-      - Official references: resources/OFFICIAL_REFERENCES.md
+      - Start here: Module-2-Full-Stack-and-Interview-Preparation/README.md
+      - Core interview curriculum: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/README.md
+      - Frontend system design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/README.md
+      - Communication patterns: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/communication-patterns.md
+      - High-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/high-level-design.md
+      - Low-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/low-level-design.md
+      - Performance & caching: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/performance-and-caching.md
+      - Offline, accessibility & observability: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/offline-accessibility-observability.md
+      - DevOps & deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/README.md
+      - GitHub Actions CI/CD: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/github-actions-cicd-fullstack.md
+      - Full-stack deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/how-to-deploy-fullstack-app.md
+      - Multi-cloud deployment: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
+      - PM2, RabbitMQ & serverless: Module-2-Full-Stack-and-Interview-Preparation/14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
+  - Shared reference:
       - Glossary: resources/GLOSSARY.md
+      - Official references: resources/OFFICIAL_REFERENCES.md
       - Security videos: resources/VIDEOS.md
       - Frontend system design videos: resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md
       - Labs: labs/README.md
