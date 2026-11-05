@@ -273,3 +273,19 @@ Do not label the handbook “complete” or “production-ready” until:
 ## 11. Recommended next actions for the coding tool
 
 Start by inspecting `AGENTS.md`, `CONTRIBUTING.md`, all existing chapter README files, and the current link-check/CI setup. Then create or update the coverage matrix and authoring guide. Do not attempt to rewrite the entire handbook in one pass. Choose the highest-priority real gaps, make focused edits with detailed explanations and examples, update all navigation, run available checks, and report evidence plus remaining work.
+
+
+## 12. Module 2 — Core Web Development expansion
+
+Target: `15-fullstack-interview/core-web-development/`, `15-fullstack-interview/02-javascript-typescript.md`, `15-fullstack-interview/03-frontend-react-angular.md`.
+
+- [x] Audit the supplied JavaScript and Client Side JavaScript topic inventory against the current handbook chapters.
+- [x] Expand the JavaScript chapter with values/coercion, scope/hoisting/TDZ, execution contexts, this binding, functions, objects/prototypes, arrays/collections, iterators/generators, promises, event loop, errors, modules, regular expressions and memory concepts.
+- [x] Add a dedicated Core Web Development learning path covering HTML, semantic markup, forms, accessibility foundations, CSS, responsive layout, DOM, browser APIs, events, browser runtime, rendering, networking, storage, service workers, real-time APIs, performance and testing.
+- [x] Separate ECMAScript language features from browser-provided Web APIs.
+- [x] Link Core Web Development between JavaScript/TypeScript and React/Angular in Module 2 navigation.
+- [ ] Split the Core Web Development syllabus into individual detailed chapter files with progressive examples, diagrams, practical exercises and interview questions.
+- [ ] Add runnable HTML/CSS/JavaScript mini-projects and browser-based tests.
+- [ ] Cross-link browser security concepts to Module 1 rather than duplicating the full security chapters.
+- [ ] Add Core Web Development to MkDocs navigation and verify strict documentation build.
+- [ ] Run internal-link validation and review every new relative link.
