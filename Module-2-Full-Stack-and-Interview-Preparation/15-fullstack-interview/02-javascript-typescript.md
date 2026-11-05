@@ -2,7 +2,7 @@
 
 **In simple words:** JavaScript runs code in the browser and in Node.js. TypeScript adds checks that catch many mistakes while you write code. Example: a Product type can say that every product must have an id, name and price.
 
-[Module 2 home](README.md) · [Previous: HTTP](01-http-and-web-fundamentals.md) · **Chapter 2 of 8**
+[Module 2 home](README.md) · [Previous: HTTP](01-http-and-web-fundamentals.md) · **Chapter 2 of 9**
 
 **In simple words:** JavaScript runs much of the code in a browser and in Node.js. TypeScript adds type checks that help catch mistakes while you write code.
 
@@ -103,6 +103,21 @@ This chapter is the quick interview overview. For full explanations, examples an
 
 The detailed guide includes common mistakes, practical examples, interview questions and quick revision for each subject.
 
+## Detailed TypeScript learning path
+
+This chapter is the quick interview overview. For full explanations, examples and exercises, continue to the dedicated [JavaScript and TypeScript subject guide](../02-javascript-and-typescript/README.md). It is organized from foundations through advanced types and compiler/tooling:
+
+- Foundations: primitive types, annotations, inference, enums and structural typing.
+- Objects and collections: arrays, tuples, objects, Record, Map, Set and index signatures.
+- Functions and generics: function types, overloads, call/construct signatures, constraints and `this`.
+- Interfaces, aliases and classes: composition, access modifiers, abstract classes, inheritance and overrides.
+- Narrowing and utility types: guards, assertions, `satisfies`, Partial, Required, Readonly and related utilities.
+- Advanced type building: `keyof`, `typeof`, conditional, mapped and template-literal types, `infer`.
+- Project setup: strict tsconfig options, modules, namespaces, declaration files, decorators, diagnostics, ts-node and tsx.
+
+The detailed guide includes common mistakes, practical examples, interview questions and quick revision for each subject.
+
+
 ## Interview questions
 
 - What is the difference between var, let and const?
@@ -119,4 +134,4 @@ Practise explaining scope, closures, the event loop, Promises, object references
 
 **Try it:** write a function that fetches products, handles an error and returns typed product data. Add checks for the response received from the server.
 
-**Next:** [03 · Frontend — React, Angular & Browser](03-frontend-react-angular.md).
+**Next:** [Core Web Development](core-web-development/README.md), then [Frontend — React, Angular & Browser](03-frontend-react-angular.md).
