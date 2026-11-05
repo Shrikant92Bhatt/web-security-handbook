@@ -1,103 +1,47 @@
-# Web Security & Engineering Handbook
+# Web Security & Full-Stack Engineering Interview Handbook
 
-A practical, source-backed handbook for engineers building secure web applications and scalable frontend/full-stack systems.
+A sequential, one-stop learning and revision handbook with two distinct modules.
 
-The content is organized like a technical documentation site: browse by domain, follow a guided learning path, or search for a specific concept. Each chapter should help you understand **what it is, how it works, where it fails, how to implement it safely, and how to verify the result**.
+- **Module 1 — Attack & Web Security (primary):** understand attacks first, then families, techniques, variants, root causes, impact, defenses and verification.
+- **Module 2 — Full-Stack Engineering & Interview Prep:** study HTTP, frontend, backend, databases, cloud/DevOps and system design in order, with interview questions and practical exercises.
 
-> **Scope note:** This repository contains three related but distinct tracks: application security, frontend system design, and deployment/operations. They are intentionally separated in the navigation so readers can follow one track without confusing architecture topics with security controls.
+## Choose your module
 
-## Attack-first security learning
+| Module | Purpose | Start |
+|---|---|---|
+| **1 · Attack & Web Security** | Attack taxonomy, prevention, secure coding and testing | [Start Module 1](docs/MODULE-1-ATTACK-SECURITY-PATH.md) |
+| **2 · Full-Stack & Interview Prep** | Technology fundamentals and day-before interview revision | [Start Module 2](15-fullstack-interview/README.md) |
 
-Start with the attack catalog when you want to understand a threat rather than browse by implementation technology. Each topic is classified as **domain → attack family → attack type → variant**, then mapped to OWASP risks and the controls used to prevent and verify it.
+## Module 1 — Attack & Web Security
 
-- [Attack catalog & taxonomy](docs/ATTACK-CATALOG.md) — browse attacks by domain, category, type, variant, mitigation and video.
-- [Attack playbook template](docs/ATTACK-PLAYBOOK-TEMPLATE.md) — the standard structure for every attack article.
+Follow: **domain → attack family → attack type → variant → root cause → impact → mitigation → verification**.
 
-Every attack entry should explain its root cause, prerequisites, impact, safe lab scenario, vulnerable and corrected examples, layered mitigations, regression tests, detection guidance, OWASP/CWE mapping and a relevant learning video. The taxonomy is a learning index; existing in-depth chapters remain canonical.
+- [Attack catalog & taxonomy](docs/ATTACK-CATALOG.md)
+- [Sequential Module 1 reading path](docs/MODULE-1-ATTACK-SECURITY-PATH.md)
+- [Attack playbook template](docs/ATTACK-PLAYBOOK-TEMPLATE.md)
 
-## Start with a learning path
+## Module 2 — Full-Stack Engineering & Interview Prep
 
-| I want to… | Start here |
-|---|---|
-| Learn web security from the ground up | [Security foundations](00-foundations/README.md) → [Browser security](01-browser-and-frontend/README.md) |
-| Secure login, tokens and sessions | [Authentication & sessions](02-authentication-and-sessions/README.md) |
-| Prevent access-control and API flaws | [Authorization](03-authorization/README.md) → [API security](04-api-security/README.md) |
-| Understand common attack classes | [Injection attacks](05-injection-attacks/README.md) → [File handling](08-file-upload-and-serialization/README.md) |
-| Harden transport, data and infrastructure | [HTTP & network](06-http-network-and-headers/README.md) → [Data](07-data-and-database/README.md) → [Cloud & DevSecOps](09-cloud-infrastructure-devsecops/README.md) |
-| Design modern frontend applications | [Frontend system design](13-frontend-system-design/README.md) |
-| Deploy and operate full-stack applications | [DevOps & deployment](14-devops-and-deployment/README.md) |
-| Practice with a structured schedule | [15-day security bootcamp](bootcamp/README.md) |
+Read the chapters in order. Each chapter covers core concepts, how things work, trade-offs, common mistakes, interview questions, quick revision and a practical exercise.
 
-## Handbook
+1. [HTTP & Web Fundamentals](15-fullstack-interview/01-http-and-web-fundamentals.md)
+2. [JavaScript & TypeScript](15-fullstack-interview/02-javascript-typescript.md)
+3. [Frontend — React, Angular & Browser](15-fullstack-interview/03-frontend-react-angular.md)
+4. [Backend — Node.js & API Design](15-fullstack-interview/04-backend-nodejs.md)
+5. [Databases, SQL, NoSQL & Caching](15-fullstack-interview/05-databases-and-caching.md)
+6. [Cloud, DevOps & Operations](15-fullstack-interview/06-cloud-devops.md)
+7. [Full-Stack & System Design](15-fullstack-interview/07-system-design.md)
+8. [Question Bank & Day-Before Revision](15-fullstack-interview/08-interview-question-bank.md)
 
-### Part I — Web application security
+## How to use it
 
-| Chapter | What it covers |
-|---|---|
-| [00 · Foundations](00-foundations/README.md) | Assets, actors, threat modeling, trust boundaries, defense in depth |
-| [01 · Browser & frontend security](01-browser-and-frontend/README.md) | Same-origin policy, CORS, CSP, CSRF, clickjacking, browser storage |
-| [02 · Authentication & sessions](02-authentication-and-sessions/README.md) | Authentication methods, OAuth 2.0/OIDC, JWT, session lifecycle, refresh-token rotation |
-| [03 · Authorization](03-authorization/README.md) | IDOR/BOLA, BFLA, RBAC/ABAC/ReBAC, tenant isolation |
-| [04 · API security](04-api-security/README.md) | Rate limits, idempotency, API contracts, real-time APIs, performance and load balancing |
-| [05 · Injection attacks](05-injection-attacks/README.md) | XSS, SQL injection, SSRF and interpreter boundaries |
-| [06 · HTTP & network security](06-http-network-and-headers/README.md) | TLS, PKI, browser trust, reverse proxies and hardening |
-| [07 · Data & database](07-data-and-database/README.md) | Database models, indexing, Redis, caching, migrations and data protection |
-| [08 · File handling & serialization](08-file-upload-and-serialization/README.md) | Upload validation, path traversal and serialization risks |
-| [09 · Cloud infrastructure & DevSecOps](09-cloud-infrastructure-devsecops/README.md) | IAM, secrets, containers, dependencies and delivery controls |
-| [10 · Modern applications](10-modern-apps-and-microfrontends/README.md) | SSR, micro-frontends, AI/RAG and trust boundaries |
-| [11 · Security testing & tools](11-security-testing-and-tools/README.md) | SAST, DAST, SCA, scanners and authorized labs |
-| [12 · Prevention checklists](12-prevention-checklists/README.md) | Developer, reviewer, API, frontend and release checklists |
+- **First pass:** start at the module landing page and follow Previous / Next links. Avoid jumping around.
+- **Interview prep:** answer questions aloud, draw the architecture or request flow, then complete the exercise.
+- **Day before:** use each chapter's quick-revision checklist and the question bank.
+- **Security practice:** use local labs or systems you are explicitly authorized to test.
 
-### Part II — Frontend system design
+## Documentation site
 
-| Chapter | What it covers |
-|---|---|
-| [13 · Frontend system design](13-frontend-system-design/README.md) | Communication patterns, HLD, LLD, performance, caching, offline support, accessibility and observability |
-| [15-day study plan](13-frontend-system-design/15-day-study-plan.md) | A structured interview-preparation path |
+Install requirements from requirements-docs.txt, then run python -m mkdocs serve. Run python -m mkdocs build --strict before publishing.
 
-### Part III — Delivery and operations
-
-| Chapter | What it covers |
-|---|---|
-| [14 · DevOps & deployment](14-devops-and-deployment/README.md) | CI/CD, full-stack deployment, cloud hosting, PM2, RabbitMQ and serverless |
-
-## Reference desk
-
-- [Security topic map](docs/SECURITY-MAP.md) · [Coverage matrix](docs/SECURITY-COVERAGE-MATRIX.md)
-- [Information architecture](docs/INFORMATION-ARCHITECTURE.md) · [Chapter authoring guide](docs/CHAPTER-AUTHORING-GUIDE.md)
-- [Official references](resources/OFFICIAL_REFERENCES.md) · [Glossary](resources/GLOSSARY.md)
-- [Security videos](resources/VIDEOS.md) · [Frontend system design videos](resources/FRONTEND_SYSTEM_DESIGN_VIDEOS.md)
-- [Diagrams](diagrams/README.md) · [Labs](labs/README.md) · [Project plan](PLAN.md)
-
-## How to use a chapter
-
-1. Read the overview and prerequisites; identify the asset and trust boundary involved.
-2. Follow the diagram or request flow before reading implementation details.
-3. Compare the intentionally vulnerable example with the secure pattern.
-4. Run or adapt the verification steps in a local, authorized environment.
-5. Review the checklist and follow the links to adjacent concepts and primary references.
-
-## Browse as a documentation site
-
-The repository includes a [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) configuration with hierarchical navigation and built-in search.
-
-```bash
-python -m pip install -r requirements-docs.txt
-python -m mkdocs serve
-```
-
-Open the local address printed by MkDocs. To generate the static site:
-
-```bash
-python -m mkdocs build --strict
-```
-
-## Content and safety principles
-
-- Prefer primary references: OWASP, MDN, W3C/WAI, IETF RFCs, framework documentation and cloud-provider security guidance.
-- Label intentionally vulnerable examples as lab-only and show a safer alternative.
-- Test only systems you own or are explicitly authorized to assess.
-- Explain assumptions, limitations and trade-offs; no checklist or scanner can guarantee security.
-- Treat videos and blog posts as supplementary learning resources, not the sole authority for security-sensitive claims.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) before adding or changing chapters.
+Prefer primary sources: OWASP, MDN, W3C/IETF specifications, framework documentation and cloud-provider guidance. Videos supplement, but do not replace, primary references.
