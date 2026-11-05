@@ -1,5 +1,7 @@
 # 07 — Full-Stack and System Design
 
+**In simple words:** System design is planning how the parts of an app work together. Example: a chat app needs a screen, a server, a place to save messages and a way to deliver new messages.
+
 [Module 2 home](README.md) · [Previous: Cloud & DevOps](06-cloud-devops.md) · **Chapter 7 of 8**
 
 **In simple words:** System design is planning how the parts of an application work together. In an interview, explain what you are building, draw the main parts and show how the design handles more users and failures.
