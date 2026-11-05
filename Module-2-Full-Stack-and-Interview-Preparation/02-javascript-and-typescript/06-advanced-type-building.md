@@ -127,7 +127,7 @@ TypeScript includes `Uppercase<S>`, `Lowercase<S>`, `Capitalize<S>` and `Uncapit
 
 ```ts
 type Event = "orderCreated";
-type ConstantName = Uppercase<Event>; // "ORDERC​​REATED"
+type ConstantName = Uppercase<Event>; // "ORDERCREATED"
 type Label = Capitalize<"profile">;    // "Profile"
 ```
 
