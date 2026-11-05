@@ -76,6 +76,14 @@ nav:
       - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
       - 03 · Core Web Development: 15-fullstack-interview/core-web-development/README.md
       - 04 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
+      - React deep dive:
+          - Overview & coverage map: 15-fullstack-interview/react/README.md
+          - 01 · Core basics: 15-fullstack-interview/react/01-react-core-basics.md
+          - 02 · Core intermediate: 15-fullstack-interview/react/02-react-core-intermediate.md
+          - 03 · Core advanced: 15-fullstack-interview/react/03-react-core-advanced.md
+          - 04 · Ecosystem basics & intermediate: 15-fullstack-interview/react/04-ecosystem-basics-and-intermediate.md
+          - 05 · Ecosystem advanced: 15-fullstack-interview/react/05-ecosystem-advanced.md
+          - 06 · Bonus topics: 15-fullstack-interview/react/06-bonus-topics.md
       - 05 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
       - Node.js deep dive:
           - Learning path: 15-fullstack-interview/nodejs/README.md
