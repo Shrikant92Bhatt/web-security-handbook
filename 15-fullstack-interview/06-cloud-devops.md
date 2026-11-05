@@ -1,5 +1,7 @@
 # 06 — Cloud, DevOps and Running an Application
 
+**In simple words:** Cloud services provide computers, storage and networks over the internet. DevOps is how a team tests, releases and looks after its app. Example: every code change runs tests before the new version is sent to the server.
+
 [Module 2 home](README.md) · [Previous: Databases](05-databases-and-caching.md) · **Chapter 6 of 8**
 
 **In simple words:** Cloud providers rent computing, storage and networking to you. DevOps is how a team builds, tests, releases and looks after software.
