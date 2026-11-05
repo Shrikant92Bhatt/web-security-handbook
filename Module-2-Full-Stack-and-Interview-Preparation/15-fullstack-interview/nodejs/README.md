@@ -2,7 +2,7 @@
 
 **In simple words:** Node.js lets JavaScript run on a server. A Node.js backend receives requests, validates data, applies business rules, reads and writes data, communicates with other services and returns responses. This learning path takes you from the runtime basics to production systems.
 
-[Module 2 home](../../README.md) · [Core Web Development](../core-web-development/README.md) · [Previous: Frontend](../03-frontend-react-angular.md)
+[Module 2 home](../../README.md) · [Core Web Development](../core-web-development/README.md) · [Backend overview](../04-backend-nodejs.md)
 
 ## Learning order
 
