@@ -2,7 +2,7 @@
 
 **In simple words:** Frontend code runs in the browser. It displays the page, responds when a user clicks a button and asks the backend for data. Example: clicking Add to cart updates the cart on screen and sends the new order details to the server.
 
-[Module 2 home](README.md) · [Previous: Core Web Development](core-web-development/README.md) · **Chapter 3 of 8**
+[Module 2 home](README.md) · [Previous: Core Web Development](core-web-development/README.md) · **Chapter 4 of 9**
 
 **In simple words:** Frontend code runs in the user's browser. It displays information, responds to clicks and sends requests to the backend. Good frontend code should be easy to use, fast and accessible.
 
