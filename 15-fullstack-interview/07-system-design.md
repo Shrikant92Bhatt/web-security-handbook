@@ -1,38 +1,70 @@
-# 07 — Full-Stack & System Design
+# 07 — Full-Stack and System Design
 
 [Module 2 home](README.md) · [Previous: Cloud & DevOps](06-cloud-devops.md) · **Chapter 7 of 8**
 
-## Design fundamentals
+**In simple words:** System design is planning how the parts of an application work together. In an interview, explain what you are building, draw the main parts and show how the design handles more users and failures.
 
-Requirements and constraints; capacity estimation; HLD vs LLD; component boundaries, API contracts and data models; monolith vs microservices; load balancing, caching, queues, event-driven architecture; availability, graceful degradation, consistency, ordering, deduplication, security, observability and cost.
+## Start with the problem
+
+Before choosing tools, ask who will use the app, what they should be able to do, how many users or requests to expect, what data must be saved and what happens if a service is down.
+
+Do not start by saying "we need microservices" or "we need Kafka". First understand the problem.
+
+## Draw the main parts
+
+~~~text
+Browser / Mobile App
+        |
+   API / Backend
+     /       \
+Database    Cache
+        |
+   Background Worker
+        |
+   Email / Other Services
+~~~
+
+Explain what each part does and why it is needed.
+
+## Make it handle more users
+
+A load balancer sends requests across several servers. A cache avoids repeating expensive reads. A queue lets slow work happen later. A database index helps find records faster. Horizontal scaling means adding more copies of a service. A CDN serves images and other files from places closer to users.
+
+Add these only when the problem needs them.
+
+## Plan for failures
+
+A payment provider may be unavailable. A request may be sent twice. A worker may crash halfway through a job. Explain how your design handles these cases.
+
+Timeouts stop requests waiting forever. Limited retries can help with temporary failures. Idempotency prevents a repeated request from doing the same action twice. Backups help recover lost data. Logs and metrics help find problems.
 
 ## Frontend system design
 
-Component architecture, state ownership, data fetching, pagination, infinite scroll, virtualization, optimistic updates, realtime UI, offline-first behavior, conflict resolution, design systems, micro-frontends, accessibility and performance budgets.
+Discuss page and component structure, where state lives, how data is fetched, loading and error states, pagination, accessibility, performance, testing and what the UI does when the network is offline.
 
-## Practice design prompts
+## Practice questions
 
-- Design a chat application with realtime delivery and offline reconnect.
-- Design a notification system for millions of users.
-- Design a rate limiter shared across multiple API instances.
-- Design a file upload service with resumable uploads and malware scanning.
-- Design an analytics dashboard with high-volume events.
-- Design a multi-tenant SaaS application with strict tenant isolation.
-- Design a frontend architecture for independently deployed teams.
+- Design a chat application.
+- Design a notification system.
+- Design a file upload service.
+- Design a product search page.
+- Design a dashboard that shows live data.
+- Design an app where each company can see only its own data.
 
-## Answer framework
+## How to answer a system-design question
 
-1. Clarify requirements and non-goals.
-2. Estimate scale and identify bottlenecks.
-3. Draw clients, edge, services, data stores and async components.
-4. Define APIs, schemas and key workflows.
-5. Deep-dive into scaling, consistency, failure handling and security.
-6. Explain trade-offs and monitoring.
+1. Repeat the problem in your own words.
+2. Ask questions and state your assumptions.
+3. Draw the browser, API, database and any other needed parts.
+4. Explain one user journey from start to finish.
+5. Explain what happens when traffic grows or a service fails.
+6. Explain security, testing and monitoring.
+7. Say what you would improve if the product became larger.
 
 ## Quick revision
 
-Practise one HLD and one LLD every day. State assumptions and trade-offs; do not draw technology boxes without explaining why they are needed.
+Practise drawing one design in 10–15 minutes. Explain why you chose each part. A simple design with clear reasons is better than a diagram full of tools you cannot explain.
 
-**Practice:** design a ChatGPT-like application with streaming responses, conversation history, retrieval, rate limits, background jobs, tenant isolation and observability.
+**Try it:** design a chat app. Show how a message is sent, saved, delivered to the other user and shown again after reconnecting.
 
 **Next:** [08 · Question Bank & Day-Before Revision](08-interview-question-bank.md).
