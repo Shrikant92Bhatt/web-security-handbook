@@ -76,6 +76,7 @@ nav:
       - Core interview curriculum: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/README.md
       - 01 · HTTP & Web Fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/01-http-and-web-fundamentals.md
       - 02 · JavaScript & TypeScript: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/02-javascript-typescript.md
+      - 03 · Core Web Development: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/core-web-development/README.md
       - TypeScript deep dive:
           - Subject index: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/README.md
           - Foundations: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/01-foundations.md
@@ -85,12 +86,20 @@ nav:
           - Narrowing & utility types: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/05-narrowing-and-utility-types.md
           - Advanced type building: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/06-advanced-type-building.md
           - Project setup & tooling: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/07-project-setup-modules-and-tooling.md
-      - 03 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
-      - 04 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
-      - 05 · Databases & Caching: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/05-databases-and-caching.md
-      - 06 · Cloud, DevOps & Operations: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/06-cloud-devops.md
-      - 07 · Full-Stack & System Design: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/07-system-design.md
-      - 08 · Interview Question Bank: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/08-interview-question-bank.md
+      - 04 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
+      - 05 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
+      - Node.js deep dive:
+          - Learning path: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/README.md
+          - Runtime fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/01-nodejs-fundamentals-and-runtime.md
+          - npm, CLI & modules: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/02-npm-cli-modules-and-packages.md
+          - Node APIs & networking: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/03-node-apis-networking-and-async.md
+          - Architecture, testing & scale: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/04-backend-architecture-testing-and-scale.md
+          - Backend frameworks: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/05-backend-frameworks-and-api-design.md
+          - Production & advanced topics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/06-production-security-and-advanced-topics.md
+      - 06 · Databases & Caching: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/05-databases-and-caching.md
+      - 07 · Cloud, DevOps & Operations: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/06-cloud-devops.md
+      - 08 · Full-Stack & System Design: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/07-system-design.md
+      - 09 · Interview Question Bank: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/08-interview-question-bank.md
       - Frontend system design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/README.md
       - Communication patterns: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/communication-patterns.md
       - High-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/high-level-design.md
