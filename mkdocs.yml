@@ -74,7 +74,8 @@ nav:
       - Start here: 15-fullstack-interview/README.md
       - 01 · HTTP & Web Fundamentals: 15-fullstack-interview/01-http-and-web-fundamentals.md
       - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
-      - 03 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
+      - 03 · Core Web Development: 15-fullstack-interview/core-web-development/README.md
+      - 04 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
       - 04 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
       - 05 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
       - 06 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
