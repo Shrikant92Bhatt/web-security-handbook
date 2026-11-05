@@ -1,5 +1,7 @@
 # 04 — Backend: Node.js and API Design
 
+**In simple words:** The backend runs on the server. It checks requests, applies the app's rules, reads or saves data and sends a response. Example: when a customer places an order, the backend checks stock, saves the order and returns a confirmation.
+
 [Module 2 home](README.md) · [Previous: Frontend](03-frontend-react-angular.md) · **Chapter 4 of 8**
 
 **In simple words:** The backend is the part of an application that runs on the server. It checks requests, applies business rules, reads or saves data and sends a response.
