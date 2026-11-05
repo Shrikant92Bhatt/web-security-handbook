@@ -1,5 +1,7 @@
 # 02 — JavaScript and TypeScript
 
+**In simple words:** JavaScript runs code in the browser and in Node.js. TypeScript adds checks that catch many mistakes while you write code. Example: a Product type can say that every product must have an id, name and price.
+
 [Module 2 home](README.md) · [Previous: HTTP](01-http-and-web-fundamentals.md) · **Chapter 2 of 8**
 
 **In simple words:** JavaScript runs much of the code in a browser and in Node.js. TypeScript adds type checks that help catch mistakes while you write code.
