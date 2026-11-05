@@ -6,6 +6,15 @@ The content is organized like a technical documentation site: browse by domain, 
 
 > **Scope note:** This repository contains three related but distinct tracks: application security, frontend system design, and deployment/operations. They are intentionally separated in the navigation so readers can follow one track without confusing architecture topics with security controls.
 
+## Attack-first security learning
+
+Start with the attack catalog when you want to understand a threat rather than browse by implementation technology. Each topic is classified as **domain → attack family → attack type → variant**, then mapped to OWASP risks and the controls used to prevent and verify it.
+
+- [Attack catalog & taxonomy](docs/ATTACK-CATALOG.md) — browse attacks by domain, category, type, variant, mitigation and video.
+- [Attack playbook template](docs/ATTACK-PLAYBOOK-TEMPLATE.md) — the standard structure for every attack article.
+
+Every attack entry should explain its root cause, prerequisites, impact, safe lab scenario, vulnerable and corrected examples, layered mitigations, regression tests, detection guidance, OWASP/CWE mapping and a relevant learning video. The taxonomy is a learning index; existing in-depth chapters remain canonical.
+
 ## Start with a learning path
 
 | I want to… | Start here |

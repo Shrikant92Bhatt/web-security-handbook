@@ -53,6 +53,9 @@ exclude_docs: |
 nav:
   - Home: README.md
   - Web security:
+      - Attack catalog:
+          - docs/ATTACK-CATALOG.md
+          - Attack playbook template: docs/ATTACK-PLAYBOOK-TEMPLATE.md
       - Foundations:
           - 00-foundations/README.md
       - Browser & frontend:
