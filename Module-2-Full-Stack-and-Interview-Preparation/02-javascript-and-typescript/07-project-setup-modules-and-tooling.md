@@ -51,12 +51,12 @@ Important options:
 |---|---|
 | `strict` | Enables the main strict type-checking options |
 | `noImplicitAny` | Reports places where TypeScript would otherwise infer `any` |
-| `strictNullChecks` | Makes `null` and `undefined` explicit |
+| `strictNullChecks` | Makes `null` and `undefined` explicit |\n| `noImplicitThis` | Reports a `this` value that would otherwise have an implicit `any` type |\n| `strictFunctionTypes` | Checks function parameter types more strictly |\n| `strictBindCallApply` | Checks arguments passed through `bind`, `call` and `apply` |\n| `strictPropertyInitialization` | Checks that class properties are initialized |\n| `useUnknownInCatchVariables` | Treats caught errors as `unknown` until checked |\n| `noImplicitOverride` | Requires `override` when replacing a parent member |\n| `noImplicitReturns` | Reports functions that do not return on every expected path |
 | `exactOptionalPropertyTypes` | Distinguishes an absent optional property from one explicitly set to `undefined` |
 | `noUncheckedIndexedAccess` | Adds `undefined` when reading values by an index that may not exist |
 | `noEmit` | Checks types without generating output |
 | `skipLibCheck` | Skips checking declaration files from dependencies; it does not skip checking your source |
-| `forceConsistentCasingInFileNames` | Catches imports whose filename casing differs |
+| `forceConsistentCasingInFileNames` | Catches imports whose filename casing differs |\n| `downlevelIteration` | Adds helper behavior for iterating certain values when targeting older JavaScript |\n| `preserveConstEnums` | Controls whether const enums are preserved in emitted output |\n| `isolatedModules` | Reports code that cannot be safely processed one file at a time by tools such as Babel or esbuild |\n| `esModuleInterop` | Improves compatibility when importing CommonJS modules |\n| `allowSyntheticDefaultImports` | Allows default-import syntax for modules that may not declare a default export; it does not itself change emitted code |\n| `rootDirs` | Treats multiple folders as one virtual root for module resolution |
 
 ### noImplicitAny and strictNullChecks
 
@@ -158,7 +158,31 @@ Decorators are functions attached to classes or class members to add or change b
 
 A framework such as Angular has its own documented decorator conventions. Do not assume decorator examples from different TypeScript versions or frameworks are interchangeable. Check the framework's supported TypeScript version and configuration.
 
-## 9. ts-node and tsx
+## 9. Decorators: kinds, order and limits
+
+A decorator is a function that is attached to a class or class member. Frameworks use decorators to register routes, inject services or attach metadata.
+
+The exact rules depend on which decorator model the project uses:
+
+- **Class decorator:** receives or can replace the class.
+- **Method decorator:** can inspect or replace a method.
+- **Accessor decorator:** works with a getter or setter.
+- **Property/field decorator:** can observe or influence field initialization depending on the decorator model.
+- **Parameter decorator:** supported by the older TypeScript experimental decorator model; it is not part of the newer standard decorator model.
+
+In the older TypeScript decorator model, decorator expressions are evaluated from top to bottom and the resulting decorator functions are applied from bottom to top. For example, with `@first()` above `@second()`, the expressions are evaluated in source order, then the returned decorators are applied in reverse order. Decorators on a class member are applied before the class decorator.
+
+Important limitations:
+
+- The newer standard decorator model and the older `experimentalDecorators` model have different function signatures and capabilities.
+- The newer model does not support parameter decorators in the same way as the legacy model.
+- Decorators do not automatically validate incoming API data or make a method secure.
+- Metadata emission is a separate compatibility concern. Some frameworks rely on `emitDecoratorMetadata` and `reflect-metadata`; check their exact requirements.
+- Do not copy decorator examples between Angular, NestJS and plain TypeScript without checking the framework and compiler versions.
+
+Use the decorator mode required by your framework. Keep decorator behavior small and easy to trace.
+
+## 10. ts-node and tsx
 
 Both tools help run TypeScript files during development.
 
@@ -174,7 +198,7 @@ npx tsx src/index.ts
 
 A development runner does not automatically replace production build and type-check steps. Keep a separate type-check command such as `tsc --noEmit`.
 
-## 10. Compiler troubleshooting and performance
+## 11. Compiler troubleshooting and performance
 
 When the compiler reports an error:
 1. Read the first useful error and locate the source file and line.
@@ -195,7 +219,7 @@ Useful diagnostic options:
 
 Use these when the project includes unexpected files, type-checking is slow or configuration inheritance is confusing. Do not optimize based on guesses; first identify which part of compilation is slow.
 
-## 11. Utility libraries
+## 12. Utility libraries
 
 Libraries such as type-fest provide reusable advanced TypeScript types. They can reduce repeated code, but first check whether TypeScript already has a built-in utility that does the job. Keep dependencies limited and make sure the team understands any complex type it introduces.
 
