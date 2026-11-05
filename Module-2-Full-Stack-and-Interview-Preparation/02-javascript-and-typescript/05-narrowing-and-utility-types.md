@@ -160,7 +160,7 @@ class CustomerService {}
 type CustomerServiceInstance = InstanceType<typeof CustomerService>;
 ```
 
-### ThisType and Uppercase
+### ThisType, ThisParameterType and Uppercase
 
 ```ts
 type Methods = {
@@ -175,7 +175,7 @@ const methods: Methods & ThisType<Methods> = {
   },
 };
 
-type EventName = Uppercase<"orderCreated">; // "ORDERCREATED"
+type EventName = Uppercase<"orderCreated">; // "ORDERCREATED"\n\nfunction greet(this: { name: string }, greeting: string) {\n  return `${greeting}, ${this.name}`;\n}\ntype GreetThis = ThisParameterType<typeof greet>; // { name: string }
 ```
 
 `ThisType<T>` is a marker used in contextual typing; it does not create a runtime value. It is most useful in APIs that define object methods.
