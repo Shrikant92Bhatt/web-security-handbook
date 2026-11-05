@@ -1,81 +1,93 @@
-# 08 — Interview Question Bank & Day-Before Revision
+# 08 — Interview Questions and Day-Before Revision
 
 [Module 2 home](README.md) · [Previous: System Design](07-system-design.md) · **Chapter 8 of 8**
 
-Use this as a self-test. Answer aloud without notes. Revisit anything you cannot explain, draw and connect to a practical example.
+Use this page the day before an interview. Try to answer each question without reading the chapter first. If you cannot explain a topic with a small example, go back to that chapter.
 
 ## HTTP and browser
 
-- [ ] Walk through browser navigation from URL entry to rendered page.
-- [ ] Explain DNS, TCP, TLS and HTTP/2 vs HTTP/3.
-- [ ] Explain CORS preflight, cookies and browser storage.
-- [ ] Explain cache validation using ETag and Cache-Control.
+- [ ] What happens after you type a website address and press Enter?
+- [ ] What do DNS, TCP and TLS do?
+- [ ] What is the difference between GET, POST, PUT and PATCH?
+- [ ] What is the difference between 401 and 403?
+- [ ] What are cookies and localStorage? When would you use each?
+- [ ] What is CORS? What does it not protect?
 
 ## JavaScript and TypeScript
 
-- [ ] Explain event loop, microtasks and macrotasks.
-- [ ] Explain closures, this, prototypes and memory leaks.
-- [ ] Implement debounce, throttle and a concurrency limiter.
-- [ ] Explain generics, narrowing, discriminated unions and runtime validation.
+- [ ] What is the difference between var, let and const?
+- [ ] What is a closure? Show a small example.
+- [ ] Explain the event loop and Promise callbacks.
+- [ ] How do async/await and error handling work?
+- [ ] What is the difference between any and unknown?
+- [ ] Why should API data be checked while the app is running?
 
 ## React, Angular and frontend
 
-- [ ] Explain React rendering, reconciliation, hooks and effect cleanup.
-- [ ] Explain state ownership and server state vs client state.
-- [ ] Explain Angular change detection, OnPush and RxJS operators.
-- [ ] Explain SSR, hydration, accessibility and Core Web Vitals.
-- [ ] Design a reusable component library or micro-frontend architecture.
+- [ ] What are props and state in React?
+- [ ] What makes a React component render again?
+- [ ] Why should an effect clean up timers or event listeners?
+- [ ] What is Angular change detection?
+- [ ] What is an RxJS Observable?
+- [ ] How would you make a slow page faster?
+- [ ] How do you make a form work with a keyboard?
 
 ## Node.js and backend
 
-- [ ] Explain Node.js event loop and blocking work.
-- [ ] Explain streams, backpressure, worker threads and process clustering.
-- [ ] Design REST APIs with validation, pagination, rate limits and idempotency.
-- [ ] Compare WebSockets, SSE and polling.
-- [ ] Explain queues, retries, DLQs and graceful shutdown.
+- [ ] Explain the Node.js event loop.
+- [ ] Why can a long calculation slow down other requests?
+- [ ] When would you use a worker thread or a queue?
+- [ ] What is a stream?
+- [ ] How would you run multiple copies of an API?
+- [ ] Compare polling, SSE and WebSockets.
+- [ ] How do you avoid creating the same order twice?
 
 ## Databases and caching
 
-- [ ] Explain indexes, composite indexes and query plans.
-- [ ] Explain ACID, isolation levels, locks and deadlocks.
-- [ ] Compare SQL and NoSQL for a concrete domain.
-- [ ] Explain cache-aside, invalidation and cache stampedes.
-- [ ] Design safe zero-downtime migrations.
+- [ ] What are primary and foreign keys?
+- [ ] Why do we add an index?
+- [ ] What is a database transaction?
+- [ ] Explain a transaction using an order example.
+- [ ] When would you use SQL or NoSQL?
+- [ ] What does Redis do?
+- [ ] How do you stop users seeing old cached data?
 
 ## Cloud and system design
 
-- [ ] Explain containers, serverless, IAM and private networking.
-- [ ] Design CI/CD with testing, deployment and rollback.
-- [ ] Explain logs, metrics, traces, SLO, RPO and RTO.
-- [ ] Design a scalable realtime or notification system.
-- [ ] Explain trade-offs in monolith vs microservices and horizontal scaling.
+- [ ] What is a container?
+- [ ] Explain a simple CI/CD pipeline.
+- [ ] Where should API keys be stored?
+- [ ] What are logs, metrics and traces?
+- [ ] Design a simple chat or notification app.
+- [ ] What happens if a database or third-party service is down?
 
-## Security must-know questions
+## Security must-know
 
-- [ ] Explain XSS, CSRF, SQL injection, SSRF and request smuggling.
-- [ ] Explain authentication vs authorization; JWT vs session cookies.
-- [ ] Explain IDOR/BOLA and tenant isolation.
-- [ ] Explain secrets management, dependency risk and least privilege.
-- [ ] Explain how to test and monitor a security fix.
+- [ ] Explain XSS with a simple example.
+- [ ] Explain CSRF and how to reduce its risk.
+- [ ] Explain SQL injection and safe database queries.
+- [ ] What is the difference between authentication and authorization?
+- [ ] What is IDOR/BOLA? Why must the backend check record ownership?
+- [ ] Why should secrets and passwords never be committed to Git?
 
-## Day-before revision plan
+## Day-before plan
 
-1. 60 min — HTTP/browser, JavaScript and TypeScript.
-2. 60 min — React/Angular lifecycle, state, performance and testing.
-3. 60 min — Node.js runtime, APIs, concurrency, queues and scaling.
-4. 45 min — SQL/indexes/transactions and Redis.
-5. 45 min — cloud, CI/CD, observability and system design.
-6. 45 min — attack catalog and top security attacks with mitigations.
-7. 30 min — project stories: architecture decisions, production incident, performance improvement, difficult bug and trade-off.
+1. 45 minutes — HTTP, browser and JavaScript.
+2. 60 minutes — React/Angular, state, performance and testing.
+3. 60 minutes — Node.js, APIs, realtime updates and scaling.
+4. 45 minutes — SQL, indexes, transactions and Redis.
+5. 45 minutes — cloud, deployment and system design.
+6. 45 minutes — security attacks and how to prevent them.
+7. 30 minutes — prepare five stories from your own work: a project you built, a difficult bug, a performance improvement, a production issue and a design decision.
 
-Adjust the split to the role. For frontend-heavy roles, spend more time on JavaScript, React/Angular, browser rendering and frontend system design. For full-stack roles, increase backend, database and cloud practice.
+Change the time based on the role. For a frontend role, spend more time on JavaScript, React/Angular and browser behavior. For a full-stack role, give more time to backend, databases and cloud.
 
 ## Final self-check
 
-- Explain your current architecture in 2–3 minutes.
-- Draw one frontend flow and one backend/system design.
-- Explain one production issue and how you diagnosed it.
-- Discuss security and performance trade-offs in your projects.
-- Ask thoughtful questions about team architecture, quality and operational ownership.
+- [ ] Can I explain my current project in two minutes?
+- [ ] Can I draw its main parts?
+- [ ] Can I explain one problem I fixed and how I found it?
+- [ ] Can I explain why I chose one technology over another?
+- [ ] Can I explain how I keep user data safe?
 
 **Finish:** [Module 1 — Attack & Web Security](../docs/MODULE-1-ATTACK-SECURITY-PATH.md).
