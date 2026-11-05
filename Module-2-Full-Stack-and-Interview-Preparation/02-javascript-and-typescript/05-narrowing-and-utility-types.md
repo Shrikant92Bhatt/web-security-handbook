@@ -175,7 +175,7 @@ const methods: Methods & ThisType<Methods> = {
   },
 };
 
-type EventName = Uppercase<"orderCreated">; // "ORDERC​​REATED"
+type EventName = Uppercase<"orderCreated">; // "ORDERCREATED"
 ```
 
 `ThisType<T>` is a marker used in contextual typing; it does not create a runtime value. It is most useful in APIs that define object methods.
