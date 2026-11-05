@@ -1,5 +1,7 @@
 # 08 — Interview Questions and Day-Before Revision
 
+**In simple words:** Use this chapter to practise explaining topics in your own words. If an answer needs a long list of buzzwords, pause and explain the idea with a small example first.
+
 [Module 2 home](README.md) · [Previous: System Design](07-system-design.md) · **Chapter 8 of 8**
 
 Use this page the day before an interview. Try to answer each question without reading the chapter first. If you cannot explain a topic with a small example, go back to that chapter.
