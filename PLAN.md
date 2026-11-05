@@ -273,3 +273,14 @@ Do not label the handbook “complete” or “production-ready” until:
 ## 11. Recommended next actions for the coding tool
 
 Start by inspecting `AGENTS.md`, `CONTRIBUTING.md`, all existing chapter README files, and the current link-check/CI setup. Then create or update the coverage matrix and authoring guide. Do not attempt to rewrite the entire handbook in one pass. Choose the highest-priority real gaps, make focused edits with detailed explanations and examples, update all navigation, run available checks, and report evidence plus remaining work.
+
+
+## 14. Module 2 — Core Web Development and Node.js hierarchy merge
+
+- [x] Preserve the two-module folder hierarchy from PR #4.
+- [x] Move the Core Web Development syllabus into Module 2's interview curriculum folder.
+- [x] Move the six detailed Node.js chapters and their subject index into Module 2's interview curriculum folder.
+- [x] Preserve the TypeScript deep-dive folder and link it from the JavaScript/TypeScript overview.
+- [x] Update frontend prerequisites, backend chapter links, Module 2 indexes and MkDocs navigation to the reorganized paths.
+- [ ] Run MkDocs strict build and full internal-link validation after merge.
+- [ ] Review cross-module security links and all relative paths.
