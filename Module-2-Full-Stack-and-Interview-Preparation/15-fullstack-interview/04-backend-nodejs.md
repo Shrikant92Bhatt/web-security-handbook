@@ -1,10 +1,14 @@
-# 04 — Backend: Node.js and API Design
+# 05 — Backend: Node.js and API Design
 
 **In simple words:** The backend runs on the server. It checks requests, applies the app's rules, reads or saves data and sends a response. Example: when a customer places an order, the backend checks stock, saves the order and returns a confirmation.
 
 [Module 2 home](README.md) · [Previous: Frontend](03-frontend-react-angular.md) · **Chapter 5 of 9**
 
 **In simple words:** The backend is the part of an application that runs on the server. It checks requests, applies business rules, reads or saves data and sends a response.
+
+## Detailed Node.js learning path
+
+This chapter introduces backend concepts. Continue with the [complete Node.js Backend Engineering curriculum](nodejs/README.md), which covers runtime internals, V8/libuv, npm, modules, Node APIs, streams, networking, frameworks, testing, queues, scaling, security and production deployment in six detailed chapters.
 
 ## How Node.js handles work
 
