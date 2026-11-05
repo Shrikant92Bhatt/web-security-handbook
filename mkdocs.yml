@@ -1,5 +1,5 @@
-site_name: Web Security & Engineering Handbook
-site_description: A practical, source-backed handbook for web security, frontend system design, and delivery engineering.
+site_name: Web Security & Full-Stack Engineering Interview Handbook
+site_description: Sequential attack-first web security and full-stack interview preparation.
 site_url: https://shrikant92bhatt.github.io/web-security-handbook/
 repo_url: https://github.com/Shrikant92Bhatt/web-security-handbook
 repo_name: Shrikant92Bhatt/web-security-handbook
@@ -52,79 +52,50 @@ exclude_docs: |
 
 nav:
   - Home: README.md
-  - Web security:
-      - Foundations:
-          - 00-foundations/README.md
-      - Browser & frontend:
-          - 01-browser-and-frontend/README.md
-          - Same-origin policy: 01-browser-and-frontend/same-origin-policy.md
-          - CORS: 01-browser-and-frontend/cross-origin-resource-sharing.md
-          - Content Security Policy: 01-browser-and-frontend/content-security-policy.md
-          - CSRF: 01-browser-and-frontend/cross-site-request-forgery-csrf.md
-          - Clickjacking: 01-browser-and-frontend/clickjacking.md
-          - Browser storage: 01-browser-and-frontend/browser-storage-security.md
-      - Authentication & sessions:
-          - 02-authentication-and-sessions/README.md
-          - Authentication methods: 02-authentication-and-sessions/all-auth-types.md
-          - OAuth 2.0, OIDC & PKCE: 02-authentication-and-sessions/oauth2-oidc-pkce.md
-          - JWT security: 02-authentication-and-sessions/jwt-security.md
-          - Session management: 02-authentication-and-sessions/session-management-and-fixation.md
-          - Refresh-token rotation: 02-authentication-and-sessions/refresh-token-rotation-and-reuse-detection.md
-      - Authorization:
-          - 03-authorization/README.md
-          - IDOR & BOLA: 03-authorization/idor-bola.md
-          - RBAC, ABAC & ReBAC: 03-authorization/rbac-abac-rebac.md
-          - BFLA & tenant isolation: 03-authorization/bfla-and-tenant-isolation.md
-      - API security:
-          - 04-api-security/README.md
-          - Rate limiting: 04-api-security/rate-limiting-and-throttling.md
-          - Idempotency: 04-api-security/idempotent-requests.md
-          - WebSockets, SSE & Kafka: 04-api-security/websockets-sse-and-kafka-realtime.md
-          - OpenAPI & Node.js: 04-api-security/openapi-swagger-nodejs-integration.md
-          - Load balancing: 04-api-security/load-balancing.md
-          - API performance: 04-api-security/api-performance-and-optimization.md
-      - Injection attacks:
-          - 05-injection-attacks/README.md
-          - XSS: 05-injection-attacks/xss-deep-dive.md
-          - SQL injection: 05-injection-attacks/sqli-and-orm-leaks.md
-          - SSRF: 05-injection-attacks/ssrf-deep-dive.md
-      - HTTP & network:
-          - 06-http-network-and-headers/README.md
-          - TLS, PKI & browser trust: 06-http-network-and-headers/https-tls-pki-browser-trust.md
-          - NGINX reverse proxy: 06-http-network-and-headers/nginx-reverse-proxy-and-hardening.md
-      - Data & database:
-          - 07-data-and-database/README.md
-          - Database types & indexing: 07-data-and-database/database-types-and-indexing-deep-dive.md
-          - Redis & caching: 07-data-and-database/redis-architecture-caching-and-node-integration.md
-          - Zero-downtime migrations: 07-data-and-database/zero-downtime-database-migrations.md
-      - File handling:
-          - 08-file-upload-and-serialization/README.md
-      - Cloud & DevSecOps:
-          - 09-cloud-infrastructure-devsecops/README.md
-      - Modern applications:
-          - 10-modern-apps-and-microfrontends/README.md
-      - Security testing:
-          - 11-security-testing-and-tools/README.md
-      - Prevention checklists:
-          - 12-prevention-checklists/README.md
-  - Frontend system design:
-      - 13-frontend-system-design/README.md
-      - 15-day study plan: 13-frontend-system-design/15-day-study-plan.md
-      - Communication patterns: 13-frontend-system-design/communication-patterns.md
-      - High-level design: 13-frontend-system-design/high-level-design.md
-      - Low-level design: 13-frontend-system-design/low-level-design.md
-      - Performance & caching: 13-frontend-system-design/performance-and-caching.md
-      - Offline, accessibility & observability: 13-frontend-system-design/offline-accessibility-observability.md
-  - DevOps & deployment:
-      - 14-devops-and-deployment/README.md
-      - GitHub Actions CI/CD: 14-devops-and-deployment/github-actions-cicd-fullstack.md
-      - Full-stack deployment: 14-devops-and-deployment/how-to-deploy-fullstack-app.md
-      - Multi-cloud deployment: 14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
-      - PM2, RabbitMQ & serverless: 14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
-  - Learning & reference:
+  - Module 1 · Attack & Web Security:
+      - Start here: docs/MODULE-1-ATTACK-SECURITY-PATH.md
+      - Attack catalog: docs/ATTACK-CATALOG.md
+      - Attack playbook template: docs/ATTACK-PLAYBOOK-TEMPLATE.md
+      - 01 · Foundations: 00-foundations/README.md
+      - 02 · Browser & frontend security: 01-browser-and-frontend/README.md
+      - 03 · Authentication & sessions: 02-authentication-and-sessions/README.md
+      - 04 · Authorization: 03-authorization/README.md
+      - 05 · API security: 04-api-security/README.md
+      - 06 · Injection attacks: 05-injection-attacks/README.md
+      - 07 · HTTP & network security: 06-http-network-and-headers/README.md
+      - 08 · Data & database security: 07-data-and-database/README.md
+      - 09 · File handling & serialization: 08-file-upload-and-serialization/README.md
+      - 10 · Cloud infrastructure & DevSecOps: 09-cloud-infrastructure-devsecops/README.md
+      - 11 · Modern applications: 10-modern-apps-and-microfrontends/README.md
+      - 12 · Security testing: 11-security-testing-and-tools/README.md
+      - 13 · Prevention checklists: 12-prevention-checklists/README.md
       - Security bootcamp: bootcamp/README.md
+  - Module 2 · Full-Stack & Interview Prep:
+      - Start here: 15-fullstack-interview/README.md
+      - 01 · HTTP & Web Fundamentals: 15-fullstack-interview/01-http-and-web-fundamentals.md
+      - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
+      - 03 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
+      - 04 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
+      - 05 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
+      - 06 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
+      - 07 · Full-Stack & System Design: 15-fullstack-interview/07-system-design.md
+      - 08 · Interview Question Bank: 15-fullstack-interview/08-interview-question-bank.md
+      - Existing frontend system design deep dives:
+          - Overview: 13-frontend-system-design/README.md
+          - Communication patterns: 13-frontend-system-design/communication-patterns.md
+          - High-level design: 13-frontend-system-design/high-level-design.md
+          - Low-level design: 13-frontend-system-design/low-level-design.md
+          - Performance & caching: 13-frontend-system-design/performance-and-caching.md
+          - Offline, accessibility & observability: 13-frontend-system-design/offline-accessibility-observability.md
+      - Existing deployment references:
+          - DevOps & deployment: 14-devops-and-deployment/README.md
+          - GitHub Actions CI/CD: 14-devops-and-deployment/github-actions-cicd-fullstack.md
+          - Full-stack deployment: 14-devops-and-deployment/how-to-deploy-fullstack-app.md
+          - Multi-cloud deployment: 14-devops-and-deployment/multi-cloud-deployment-hostinger-gcp-aws.md
+          - PM2, RabbitMQ & serverless: 14-devops-and-deployment/pm2-rabbitmq-and-serverless.md
+  - Reference:
       - Security topic map: docs/SECURITY-MAP.md
-      - Coverage matrix: docs/SECURITY-COVERAGE-MATRIX.md
+      - Security coverage matrix: docs/SECURITY-COVERAGE-MATRIX.md
       - Information architecture: docs/INFORMATION-ARCHITECTURE.md
       - Official references: resources/OFFICIAL_REFERENCES.md
       - Glossary: resources/GLOSSARY.md
