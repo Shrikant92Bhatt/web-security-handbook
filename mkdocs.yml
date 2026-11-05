@@ -76,6 +76,15 @@ nav:
       - Core interview curriculum: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/README.md
       - 01 · HTTP & Web Fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/01-http-and-web-fundamentals.md
       - 02 · JavaScript & TypeScript: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/02-javascript-typescript.md
+      - TypeScript deep dive:
+          - Subject index: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/README.md
+          - Foundations: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/01-foundations.md
+          - Objects & collections: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/02-objects-and-collections.md
+          - Functions & generics: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/03-functions-and-generics.md
+          - Interfaces & classes: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/04-interfaces-aliases-and-classes.md
+          - Narrowing & utility types: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/05-narrowing-and-utility-types.md
+          - Advanced type building: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/06-advanced-type-building.md
+          - Project setup & tooling: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/07-project-setup-modules-and-tooling.md
       - 03 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
       - 04 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
       - 05 · Databases & Caching: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/05-databases-and-caching.md
