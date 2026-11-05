@@ -1,5 +1,7 @@
 # 05 — Databases and Caching
 
+**In simple words:** A database stores information for later. A cache keeps a short-lived copy of popular information so the app can answer faster. Example: the shop stores orders in a database and keeps popular product details in Redis for a short time.
+
 [Module 2 home](README.md) · [Previous: Backend](04-backend-nodejs.md) · **Chapter 5 of 8**
 
 **In simple words:** A database stores information so an application can find it later. A cache keeps a copy of often-used information so the app can answer faster.
