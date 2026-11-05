@@ -12,7 +12,7 @@ This module complements the primary security module. It covers engineering funda
 | 2 | [JavaScript & TypeScript](02-javascript-typescript.md) | Language fundamentals, runtime, event loop, promises, closures and types |
 | 3 | [Core Web Development](core-web-development/README.md) | HTML, CSS, DOM, browser APIs, rendering, network, storage, performance and accessibility |
 | 4 | [Frontend — React, Angular & Browser](03-frontend-react-angular.md) | Components, rendering, state, hooks, RxJS, forms, framework architecture |
-| 5 | [Backend — Node.js & API Design](04-backend-nodejs.md) | Event loop, streams, concurrency, APIs, queues, scaling |
+| 5 | [Backend — Node.js & API Design](04-backend-nodejs.md) | Runtime, npm, APIs, streams, frameworks, testing, queues and production operations |
 | 6 | [Databases & Caching](05-databases-and-caching.md) | SQL, indexes, transactions, isolation, NoSQL, Redis |
 | 7 | [Cloud, DevOps & Operations](06-cloud-devops.md) | Containers, CI/CD, cloud, observability, reliability |
 | 8 | [Full-Stack & System Design](07-system-design.md) | HLD/LLD, scalability, realtime, caching, consistency |
