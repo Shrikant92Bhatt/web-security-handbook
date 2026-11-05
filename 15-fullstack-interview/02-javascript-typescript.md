@@ -89,6 +89,77 @@ function showPrice(product: Product): string {
 
 A type or interface describes data. A union says a value can be one of several types. A generic lets code work with more than one data type. Unknown means you must check a value before using it.
 
+
+## Deeper JavaScript topics to master
+
+The list above is a starting point. For senior frontend interviews, study these areas as separate concepts and practise explaining the output of small programs.
+
+### Values, types and coercion
+- Primitive values: string, number, bigint, boolean, undefined, symbol and null.
+- Objects, arrays, functions, dates, maps, sets and other reference values.
+- typeof, Array.isArray, Number.isNaN, Object.is and safe type checks.
+- Truthy/falsy values, strict equality, loose equality, implicit conversion and explicit conversion.
+- Number precision, NaN, Infinity, safe integers, BigInt and floating-point limitations.
+- Nullish coalescing, optional chaining and logical assignment.
+
+### Declarations, scope and execution
+- var, let and const; global, function and block scope.
+- Hoisting, temporal dead zone and declaration initialization.
+- Lexical environment, scope chain and variable lookup.
+- Execution context, call stack, function invocation and return.
+- Strict mode and differences in behavior.
+- Global object and top-level declarations in scripts versus modules.
+
+### Functions and function behavior
+- Function declarations, expressions, arrow functions and methods.
+- Parameters, arguments, default values, rest parameters and spread syntax.
+- this binding: default, implicit, explicit, constructor and arrow lexical this.
+- call, apply and bind; borrowing methods and partial application.
+- Higher-order functions, callbacks, pure functions and side effects.
+- Recursion, tail-call concept, stack limits and iterative alternatives.
+- Function composition, currying, memoization, debounce and throttle.
+- Closures, private state, module patterns and common memory-retention mistakes.
+
+### Objects and prototypes
+- Object creation, property access, computed keys and property descriptors.
+- Own versus inherited properties; enumerable, writable and configurable.
+- Object.keys, values, entries, assign, freeze, seal and preventExtensions.
+- Prototype chain, Object.create, getPrototypeOf and setPrototypeOf.
+- Constructor functions, new, instanceof and class syntax.
+- Static members, getters/setters, private class fields, inheritance and composition.
+- Property lookup, shadowing and prototype pollution awareness.
+
+### Arrays, collections and iteration
+- Mutating versus non-mutating methods.
+- map, filter, reduce, find, findIndex, some, every, flat and flatMap.
+- sort comparator, stable sorting, localeCompare and copying before sorting.
+- Iterables, iterators, generators, yield, for...of and for...in differences.
+- Map, Set, WeakMap and WeakSet; key identity and garbage-collection behavior.
+- Destructuring, rest/spread, shallow copy and deep-copy limitations.
+
+### Asynchronous JavaScript
+- Synchronous code, tasks, microtasks, event loop, call stack and rendering opportunities.
+- Promise states, chaining, error propagation and thenable assimilation.
+- Promise.all, allSettled, race and any; choosing the right combinator.
+- async/await, sequential versus parallel work and error handling.
+- Timers, queueMicrotask, AbortController and cancellation patterns.
+- Race conditions, stale responses, concurrency limits, retries and backoff.
+- Browser event loop versus Node.js event loop: do not assume they are identical.
+
+### Errors, modules and runtime behavior
+- Error, TypeError, RangeError, custom errors, cause and stack traces.
+- try/catch/finally, throwing, rejected promises and unhandled rejections.
+- ES modules, named/default exports, dynamic import, live bindings and circular dependencies.
+- CommonJS require/module.exports and how it differs from ESM.
+- JSON parsing/stringifying, reviver/replacer and serialization limits.
+- Regular expressions: literals, groups, character classes, quantifiers, flags, anchors, lookarounds and greedy/lazy matching.
+- Memory basics: reachability, garbage collection, leaks and profiling.
+
+## Browser JavaScript is a separate subject
+
+Do not mix browser-provided APIs into the definition of the JavaScript language. DOM, window, fetch, localStorage, WebSocket, Canvas and Service Worker are Web Platform APIs, not core ECMAScript features. Study them in [Core Web Development](core-web-development/README.md). This distinction matters because Node.js supports the JavaScript language but does not provide a normal browser document or window.
+
+
 ## Interview questions
 
 - What is the difference between var, let and const?
