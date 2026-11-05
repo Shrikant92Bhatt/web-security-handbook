@@ -87,6 +87,14 @@ nav:
           - Advanced type building: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/06-advanced-type-building.md
           - Project setup & tooling: Module-2-Full-Stack-and-Interview-Preparation/02-javascript-and-typescript/07-project-setup-modules-and-tooling.md
       - 04 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
+      - React deep dive:
+          - Overview & coverage map: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/README.md
+          - 01 · Core basics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/01-react-core-basics.md
+          - 02 · Core intermediate: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/02-react-core-intermediate.md
+          - 03 · Core advanced: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/03-react-core-advanced.md
+          - 04 · Ecosystem basics & intermediate: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/04-ecosystem-basics-and-intermediate.md
+          - 05 · Ecosystem advanced: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/05-ecosystem-advanced.md
+          - 06 · Bonus topics: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/react/06-bonus-topics.md
       - 05 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
       - Node.js deep dive:
           - Learning path: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/nodejs/README.md
