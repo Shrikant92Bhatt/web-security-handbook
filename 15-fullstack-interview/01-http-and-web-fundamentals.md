@@ -1,5 +1,7 @@
 # 01 — HTTP and How the Web Works
 
+**In simple words:** HTTP is how a browser and a server talk. When you open a website, the browser finds the server, asks for a page or data, and shows the reply. Example: your browser asks the shop website for product 42, and the server sends back its name and price.
+
 [Module 2 home](README.md) · **Chapter 1 of 8**
 
 **In simple words:** HTTP is how a browser and a server talk. When you open a website, the browser finds the server, connects to it, asks for a page or data, and shows the reply.
