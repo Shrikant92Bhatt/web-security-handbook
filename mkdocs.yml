@@ -74,6 +74,14 @@ nav:
   - Module 2 · Full-Stack & Interview Prep:
       - Start here: Module-2-Full-Stack-and-Interview-Preparation/README.md
       - Core interview curriculum: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/README.md
+      - 01 · HTTP & Web Fundamentals: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/01-http-and-web-fundamentals.md
+      - 02 · JavaScript & TypeScript: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/02-javascript-typescript.md
+      - 03 · Frontend — React & Angular: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/03-frontend-react-angular.md
+      - 04 · Backend — Node.js & APIs: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/04-backend-nodejs.md
+      - 05 · Databases & Caching: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/05-databases-and-caching.md
+      - 06 · Cloud, DevOps & Operations: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/06-cloud-devops.md
+      - 07 · Full-Stack & System Design: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/07-system-design.md
+      - 08 · Interview Question Bank: Module-2-Full-Stack-and-Interview-Preparation/15-fullstack-interview/08-interview-question-bank.md
       - Frontend system design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/README.md
       - Communication patterns: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/communication-patterns.md
       - High-level design: Module-2-Full-Stack-and-Interview-Preparation/13-frontend-system-design/high-level-design.md
