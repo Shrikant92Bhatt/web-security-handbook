@@ -76,11 +76,19 @@ nav:
       - 02 · JavaScript & TypeScript: 15-fullstack-interview/02-javascript-typescript.md
       - 03 · Core Web Development: 15-fullstack-interview/core-web-development/README.md
       - 04 · Frontend — React & Angular: 15-fullstack-interview/03-frontend-react-angular.md
-      - 04 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
-      - 05 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
-      - 06 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
-      - 07 · Full-Stack & System Design: 15-fullstack-interview/07-system-design.md
-      - 08 · Interview Question Bank: 15-fullstack-interview/08-interview-question-bank.md
+      - 05 · Backend — Node.js & APIs: 15-fullstack-interview/04-backend-nodejs.md
+      - Node.js deep dive:
+          - Learning path: 15-fullstack-interview/nodejs/README.md
+          - Runtime fundamentals: 15-fullstack-interview/nodejs/01-nodejs-fundamentals-and-runtime.md
+          - npm, CLI & modules: 15-fullstack-interview/nodejs/02-npm-cli-modules-and-packages.md
+          - Node APIs & networking: 15-fullstack-interview/nodejs/03-node-apis-networking-and-async.md
+          - Architecture, testing & scale: 15-fullstack-interview/nodejs/04-backend-architecture-testing-and-scale.md
+          - Backend frameworks: 15-fullstack-interview/nodejs/05-backend-frameworks-and-api-design.md
+          - Production & advanced topics: 15-fullstack-interview/nodejs/06-production-security-and-advanced-topics.md
+      - 06 · Databases & Caching: 15-fullstack-interview/05-databases-and-caching.md
+      - 07 · Cloud, DevOps & Operations: 15-fullstack-interview/06-cloud-devops.md
+      - 08 · Full-Stack & System Design: 15-fullstack-interview/07-system-design.md
+      - 09 · Interview Question Bank: 15-fullstack-interview/08-interview-question-bank.md
       - Existing frontend system design deep dives:
           - Overview: 13-frontend-system-design/README.md
           - Communication patterns: 13-frontend-system-design/communication-patterns.md
