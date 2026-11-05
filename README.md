@@ -19,7 +19,7 @@ Start with the [Module 1 reading path](Module-1-Attack-and-Web-Security/docs/MOD
 
 ## Module 2 — Full-Stack & Interview Preparation
 
-Read the curriculum in order. It covers HTTP, JavaScript/TypeScript, frontend, backend, databases, cloud/DevOps, system design and interview revision. Existing deep dives are kept in their own topic folders.
+Read the curriculum in order. It covers HTTP, JavaScript/TypeScript, Core Web Development, frontend, backend, databases, cloud/DevOps, system design and interview revision. Detailed JavaScript/TypeScript, browser and Node.js subjects live in their own topic folders.
 
 Start with the [Module 2 learning path](Module-2-Full-Stack-and-Interview-Preparation/README.md).
 
