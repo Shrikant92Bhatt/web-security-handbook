@@ -1,63 +1,43 @@
-# Web Security Handbook — Content & Quality Standards
+# Handbook Content Rules
 
-You are upgrading and expanding topics in the Web Security and Frontend System Design Handbook. Every topic document must be comprehensive, highly visual, fun to learn, and practical.
+This repository is a one-stop learning and interview-preparation handbook with two modules:
 
-## Core Content Standards
+1. **Module 1 — Attack & Web Security:** the main security learning path.
+2. **Module 2 — Full-Stack & Interview Preparation:** HTTP, JavaScript, frontend, backend, databases, cloud and system design.
 
-1. Tone & Engagement:
-- Fun, approachable, and engaging.
-- Use intuitive real-world analogies (e.g., comparing cookies to hotel keycards, SOP to passport border control).
-- Use emoji signposts for visual hierarchy (🎯, 🧠, 🎨, 💥, 🛡️, 🧪, 📋, ⚠️).
+Follow [the Chapter Writing Guide](docs/CHAPTER-AUTHORING-GUIDE.md) for every new or updated page.
 
-2. Diagrams & Visuals:
-- Every topic MUST include at least one complete Mermaid diagram (`sequenceDiagram` or `graph TD`) detailing the exact request/response flow between Client, Browser Sandbox, Gateway/Proxy, and Backend/Database.
-- Suggest relevant visual aid placeholders: `> 💡 **Visual Inspection Tip:** [Describe what to inspect in DevTools Network/Application tab]`.
+## Writing style
+- Write in plain, friendly English. Assume the reader knows basic programming but may be new to the topic.
+- Explain the idea before using its technical name.
+- Keep sentences and paragraphs short.
+- Use familiar examples: shopping cart, order, login, profile, chat, file upload and simple customer records.
+- Explain every acronym the first time it appears on a page.
+- Keep correct interview terms, but explain them in everyday words.
+- Avoid unnecessary jargon, marketing language and complicated analogies.
+- Do not use a tool or architecture just to sound advanced. Explain why it is needed.
 
-3. Code Depth (Vulnerable vs. Hardened):
-- Always provide BOTH sides:
-  a) Realistic vulnerable code (Frontend: React/TypeScript; Backend: Node.js/Express).
-  b) Exploit payload showing how an attacker exploits the flaw.
-  c) Production-ready hardened fix with explanatory inline comments.
+## Examples and code
+- Start with the smallest example that teaches the idea.
+- Explain important lines of code.
+- Show the common mistake and safer approach when the topic is about security.
+- Mark unsafe examples clearly as local learning examples only.
+- Never include real credentials, real targets or instructions to attack systems without permission.
+- Prefer TypeScript/JavaScript for frontend and Node.js examples; use simple SQL for database examples.
+- State important assumptions and limitations.
 
-4. Resolutions & Defenses:
-- Include layered defense-in-depth: HTTP security headers, framework APIs, input validation, and sanitization.
+## Chapter order
+Use this teaching order where it fits: what it is; why it matters; how it works; a simple example; common mistakes; how to do it safely; how to test it; interview questions; quick revision; a few useful references.
 
-5. Verification:
-- Provide concrete testing steps (browser DevTools walkthrough, curl command, or test assertions).
+## References and diagrams
+- Teach the topic in the chapter; do not replace the explanation with a pile of links.
+- Prefer official docs and explain what each link helps the reader learn.
+- Only call a video recommended when it has been reviewed. Label unreviewed YouTube searches clearly.
+- Use diagrams when they make a process easier to follow. Keep them small and explain them.
 
----
-
-## Mandatory Chapter Template
-
-Each updated markdown file must follow this exact 6-part structure:
-
-### 1. 🎯 Overview & Intuitive Mental Model
-- Hook: Why this matters in production and high-scale frontend systems.
-- Fun Analogy: Real-world mental model.
-- Severity & Impact: OWASP category, Common Weakness Enumeration (CWE), and blast radius.
-
-### 2. 🎨 Interactive Visual Architecture
-- Mermaid sequence diagram showing the normal flow vs. attack vector.
-- Clear actor labels: Attacker, Victim Browser, Legitimate App, and Target API.
-
-### 3. 💥 Real-World Exploit Walkthrough
-- Realistic vulnerable code snippet (React / Node.js).
-- Attacker payload / step-by-step execution.
-- Browser behavior breakdown (cookie handling, DOM rendering, or CORS headers).
-
-### 4. 🛡️ Resolution & Defense-in-Depth
-- Complete hardened code implementation.
-- Configuration blueprints (e.g., Helmet headers, CSP policies, SameSite cookie settings).
-- Best practices and antipatterns to avoid.
-
-### 5. 🧪 Hands-On Verification & Lab
-- How to test locally (DevTools inspection or curl command).
-- Automated test snippet (Jest / Vitest or supertest).
-
-### 6. 📋 Code Review Checklist
-- Quick bulleted audit checklist for pull requests.
-
-### 7. 🎥 Curated Video Walkthroughs & Primary References
-- High-impact curated videos (PortSwigger, Computerphile, Hussein Nasser, OWASP, LiveOverflow).
-- Primary official specifications (IETF RFCs, MDN Web Docs, W3C, OWASP Cheat Sheet Series).
-- Hands-on interactive lab exercises (PortSwigger Web Security Academy lab links).
+## Before submitting
+- Check spelling, Markdown links and code formatting.
+- Make sure examples are simple and correct.
+- Explain new technical terms or add them to resources/GLOSSARY.md.
+- Keep the sequential reading path and Previous/Next links working.
+- Run the documentation build and link checker when available. Do not claim tests passed unless they were run.
