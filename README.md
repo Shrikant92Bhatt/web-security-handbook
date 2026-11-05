@@ -1,5 +1,7 @@
 # Web Security & Full-Stack Engineering Interview Handbook
 
+**How to use this handbook:** start with a module, read each chapter in order and follow the Next link. Each topic should explain the idea first, use a small example and then introduce the technical terms. See the [Simple-Word Glossary](resources/GLOSSARY.md) for quick explanations.
+
 A sequential, one-stop learning and revision handbook with two distinct modules.
 
 - **Module 1 — Attack & Web Security (primary):** understand attacks first, then families, techniques, variants, root causes, impact, defenses and verification.

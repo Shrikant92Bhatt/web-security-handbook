@@ -1,5 +1,7 @@
 # Attack catalog & taxonomy
 
+**In simple words:** this page is a map of common ways an application can be attacked. First find the part of the app being targeted, then learn the attack, see a simple example and understand how to prevent it. Technical names are included because they are used in interviews.
+
 This is the attack-first entry point. Classify each topic as **domain → attack family → attack type → variant**. Then study its root cause, impact, defenses, verification and learning resources.
 
 > Taxonomy is for navigation, not a claim that an attack has only one cause. OWASP Top 10 categories are a separate risk lens: map techniques to one or more OWASP risks rather than forcing a one-to-one hierarchy.
