@@ -6,6 +6,59 @@ Transport security and response headers reduce exposure but do not replace appli
 - 📖 [HTTPS, TLS 1.3 & PKI: How Browsers Verify Website Security](./https-tls-pki-browser-trust.md) — Step-by-step cryptographic walkthrough of Root CA stores, X.509 chains of trust, OCSP stapling, Certificate Transparency, and why browser warnings trigger.
 - 📖 [NGINX Masterclass: Architecture, Reverse Proxy, Microcaching & Hardening](./nginx-reverse-proxy-and-hardening.md) — Exhaustive masterclass on epoll event loop architecture, location matching priority, trailing-slash proxying, microcaching, WebSockets/SSE, rate limiting, and troubleshooting 502/504 errors.
 
+## HTTP methods: safe and idempotent
+
+An HTTP method describes what the client wants the server to do. Two important properties are:
+
+- **Safe:** the request is intended to read information, not change server state.
+- **Idempotent:** repeating the same request one or more times has the same intended effect on server state as sending it once. The response can still differ (for example, the first DELETE may return `204`, while a later one returns `404`).
+
+### Quick comparison
+
+| Method | Typical purpose | Safe? | Idempotent? |
+|---|---|---:|---:|
+| GET | Read a resource | Yes | Yes |
+| HEAD | Read headers only | Yes | Yes |
+| OPTIONS | Discover supported communication options | Yes | Yes |
+| PUT | Create or replace a resource at a known URL | No | Yes |
+| DELETE | Remove a resource | No | Yes |
+| POST | Submit data or trigger an operation | No | No (not by default) |
+| PATCH | Partially update a resource | No | Not guaranteed |
+
+> **Remember:** Safe does not mean “no logs or analytics are written.” It means the requested operation should not change the resource's state. Idempotent does not mean “the response is identical”; it means the intended state change is not multiplied by retries.
+
+### Diagram: what happens when a request is repeated?
+
+```mermaid
+flowchart TD
+    A[Client sends HTTP request] --> B{Which method?}
+    B -->|GET / HEAD / OPTIONS| C[Read or inspect]
+    B -->|PUT / DELETE| D[Apply the requested state]
+    B -->|POST / PATCH| E[Submit or modify data]
+    C --> F[Repeat the same request]
+    D --> F
+    E --> F
+    F --> G{Idempotent semantics?}
+    G -->|Yes| H[Same intended server state as one request]
+    G -->|No / not guaranteed| I[May create another effect or change state again]
+```
+
+### Simple examples
+
+- `GET /users/42` repeated five times should not update the user.
+- `PUT /users/42` with the same representation repeated five times should leave the user in the same intended state.
+- `DELETE /users/42` repeated five times should leave the user deleted; later responses may say it is already missing.
+- `POST /payments` repeated five times could create five payments. For payment APIs, use an **idempotency key** (for example, `Idempotency-Key: order-123`) and enforce it on the server to prevent duplicate processing.
+- `PATCH` is not automatically idempotent. Setting `{"status":"paid"}` can be idempotent; incrementing `{"$inc":{"quantity":1}}` is not.
+
+### Retry rule for API clients
+
+A network timeout does not tell the client whether the server completed the operation. Automatically retry safe/idempotent requests when appropriate. For non-idempotent operations such as payment creation, retry only when the API provides a server-enforced idempotency mechanism or another reliable duplicate-protection strategy.
+
+References: [MDN — HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods), [RFC 9110 — Safe and Idempotent Methods](https://www.rfc-editor.org/rfc/rfc9110.html#section-9.2).
+
+---
+
 ## Review
 - Enforce HTTPS and configure TLS through a supported platform; evaluate HSTS before rollout.
 - Set CSP, frame-ancestors, nosniff, and an appropriate referrer policy according to application needs.
