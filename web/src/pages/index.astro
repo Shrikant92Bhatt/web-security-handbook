@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getNav, emojiOf, plainTitle } from '../lib/nav';
+
+const { modules } = await getNav();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const total = modules.reduce((n, m) => n + m.sections.reduce((k, s) => k + s.pages.length, 0), 0);
+const sectionCount = modules.reduce((n, m) => n + m.sections.length, 0);
+const chart = modules.flatMap((m) => m.sections.map((s) => ({ label: plainTitle(s.title).slice(0, 26), value: s.pages.length, hue: s.hue })));
+---
+
+<Layout title="Home" hue={262}>
+  <div class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <span class="pill">🚀 Learn · Practice · Crack interviews</span>
+    <h1>Master <span class="grad-text">Web Security</span> &amp; Full-Stack Engineering</h1>
+    <p>Attack-first security lessons, deep-dive diagrams and interview prep — written in plain, friendly English.</p>
+    <a class="btn primary" href={modules[0]?.url ?? '#'}>Start learning →</a>
+    <a class="btn ghost" href="#modules">Browse topics</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b data-count={total}>0</b><span>Lessons</span></div>
+    <div class="stat"><b data-count={sectionCount}>0</b><span>Topic groups</span></div>
+    <div class="stat"><b data-count={modules.length}>0</b><span>Modules</span></div>
+    <div class="stat"><b>∞</b><span>Room to grow</span></div>
+  </div>
+
+  <div class="wrap" id="modules">
+    {modules.map((m) => (
+      <>
+        <div class="module-banner" style={`--h:${m.hue}`}>
+          <div>
+            <h2>{m.url ? <a href={m.url} style="color:inherit">{m.title}</a> : m.title}</h2>
+            {m.blurb && <p>{m.blurb}</p>}
+          </div>
+        </div>
+        <div class="cards">
+          {m.sections.map((s) => {
+            const first = s.url ?? s.pages[0]?.url;
+            const emoji = emojiOf(s.title);
+            return (
+              <a class="card" href={first} style={`--h:${s.hue}`}>
+                <div class="ico">{emoji}</div>
+                <h3>{plainTitle(s.title)}</h3>
+                <p>{s.pages.slice(0, 3).map((p) => plainTitle(p.title)).join(' · ')}</p>
+                <div class="count">{s.pages.length} lesson{s.pages.length === 1 ? '' : 's'} →</div>
+              </a>
+            );
+          })}
+        </div>
+      </>
+    ))}
+
+    <h2>📊 Content map</h2>
+    <p class="sub">Lessons per topic group — this chart grows automatically as you add content.</p>
+    <div class="chart-box"><canvas id="chart" data-chart={JSON.stringify(chart)}></canvas></div>
+  </div>
+</Layout>
+
+<script>
+  // Animated particle network behind the hero
+  const cv = document.getElementById('hero-canvas') as HTMLCanvasElement;
+  const ctx = cv.getContext('2d')!;
+  const colors = ['#7c3aed', '#ec4899', '#f97316', '#eab308', '#22c55e', '#06b6d4', '#3b82f6'];
+  let W = 0, H = 0;
+  const pts = Array.from({ length: 70 }, (_, i) => ({ x: Math.random(), y: Math.random(), vx: (Math.random() - .5) * .0004, vy: (Math.random() - .5) * .0004, c: colors[i % colors.length] }));
+  function size() { W = cv.width = cv.offsetWidth; H = cv.height = cv.offsetHeight; }
+  size(); addEventListener('resize', size);
+  function frame() {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      p.x = (p.x + p.vx + 1) % 1; p.y = (p.y + p.vy + 1) % 1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot((a.x - b.x) * W, (a.y - b.y) * H);
+      if (d < 140) { ctx.strokeStyle = a.c; ctx.globalAlpha = (1 - d / 140) * .35; ctx.beginPath(); ctx.moveTo(a.x * W, a.y * H); ctx.lineTo(b.x * W, b.y * H); ctx.stroke(); }
+    }
+    ctx.globalAlpha = .9;
+    for (const p of pts) { ctx.fillStyle = p.c; ctx.beginPath(); ctx.arc(p.x * W, p.y * H, 3, 0, 7); ctx.fill(); }
+    requestAnimationFrame(frame);
+  }
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) frame();
+
+  // Count-up numbers
+  document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
+    const target = +el.dataset.count!; let n = 0;
+    const t = setInterval(() => { n += Math.max(1, Math.ceil(target / 30)); if (n >= target) { n = target; clearInterval(t); } el.textContent = String(n); }, 30);
+  });
+
+  // Bar chart on a canvas (no libraries)
+  const c = document.getElementById('chart') as HTMLCanvasElement;
+  const data: { label: string; value: number; hue: number }[] = JSON.parse(c.dataset.chart!);
+  function draw() {
+    const dpr = devicePixelRatio || 1, w = c.offsetWidth, h = c.offsetHeight;
+    c.width = w * dpr; c.height = h * dpr;
+    const g = c.getContext('2d')!; g.scale(dpr, dpr); g.clearRect(0, 0, w, h);
+    const css = getComputedStyle(document.documentElement);
+    const muted = css.getPropertyValue('--muted').trim();
+    const max = Math.max(...data.map((d) => d.value), 1);
+    const left = 10, bottom = 110, top = 20, bw = (w - left * 2) / data.length;
+    data.forEach((d, i) => {
+      const bh = ((h - bottom - top) * d.value) / max, x = left + i * bw + bw * .18, y = h - bottom - bh, ww = bw * .64;
+      const gr = g.createLinearGradient(0, y, 0, h - bottom);
+      gr.addColorStop(0, `hsl(${d.hue} 95% 65%)`); gr.addColorStop(1, `hsl(${d.hue + 60} 90% 50%)`);
+      g.fillStyle = gr; g.beginPath(); g.roundRect(x, y, ww, bh, 8); g.fill();
+      g.fillStyle = muted; g.font = '700 12px system-ui'; g.textAlign = 'center'; g.fillText(String(d.value), x + ww / 2, y - 6);
+      g.save(); g.translate(x + ww / 2, h - bottom + 12); g.rotate(Math.PI / 4); g.textAlign = 'left'; g.font = '11px system-ui'; g.fillText(d.label, 0, 0); g.restore();
+    });
+  }
+  draw(); addEventListener('resize', draw);
+  new MutationObserver(draw).observe(document.documentElement, { attributes: true });
+</script>
