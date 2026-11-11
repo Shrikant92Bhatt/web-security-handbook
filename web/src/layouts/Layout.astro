@@ -1,0 +1,207 @@
+---
+import '../styles/global.css';
+import { getNav } from '../lib/nav';
+
+interface Props {
+  title: string;
+  hue?: number;
+  headings?: { depth: number; slug: string; text: string }[];
+  currentId?: string;
+}
+const { title, hue = 262, headings = [], currentId } = Astro.props;
+const { modules } = await getNav();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Handbook</title>
+    <link rel="icon" href={`${base}/favicon.svg`} />
+    <script is:inline>
+      const t = localStorage.getItem('theme');
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+  </head>
+  <body style={`--h:${hue}`} data-base={base}>
+    <div id="progress"></div>
+    <header class="header">
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu">☰</button>
+      <a class="brand" href={`${base}/`}><div class="logo">🛡️</div><span>Dev<b>Handbook</b></span></a>
+      <nav class="nav-links">
+        {modules.map((m) => <a href={m.url ?? `${base}/`}>{m.id === 'extras' ? 'Resources' : m.id.match(/^Module-(\d+)/) ? `Module ${m.id.match(/^Module-(\d+)/)![1]}` : m.title}</a>)}
+      </nav>
+      <div class="spacer"></div>
+      <button class="search-btn" id="search-open"><span>🔍 Search topics…</span><kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" id="theme-btn" aria-label="Toggle theme">🌓</button>
+    </header>
+
+    <div class:list={['shell', { 'no-toc': toc.length === 0 }]}>
+      <aside class="sidebar" id="sidebar">
+        {modules.map((m) => (
+          <div>
+            <div class="mod-title"><a href={m.url ?? '#'}>{m.title}</a></div>
+            {m.sections.map((s) => (
+              <details class="sec" style={`--sh:${s.hue}`} open={s.pages.some((p) => p.id === currentId)}>
+                <summary><span class="dot"></span>{s.title.replace(/^[^\p{L}\p{N}]+/u, '')}</summary>
+                <ul>
+                  {s.pages.map((p) => (
+                    <li><a href={p.url} class:list={{ active: p.id === currentId }}>{p.title.replace(/^[^\p{L}\p{N}]+/u, '')}</a></li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+        ))}
+      </aside>
+
+      <main class="main"><slot /></main>
+
+      {toc.length > 0 && (
+        <aside class="toc">
+          <h4>On this page</h4>
+          {toc.map((h) => <a href={`#${h.slug}`} class={h.depth === 3 ? 'l3' : ''}>{h.text}</a>)}
+        </aside>
+      )}
+    </div>
+
+    <footer class="footer">Made with Astro · Content lives in Markdown — add a file and it shows up here. 🌈</footer>
+
+    <div id="search-modal">
+      <div class="search-box">
+        <input id="search-input" placeholder="Search XSS, JWT, Redis, CORS…" autocomplete="off" />
+        <div class="results" id="search-results"></div>
+      </div>
+    </div>
+
+    <script>
+      const base = document.body.dataset.base ?? '';
+      const $ = (s: string) => document.querySelector(s) as HTMLElement | null;
+
+      // Theme
+      $('#theme-btn')?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+        renderMermaid();
+      });
+
+      // Mobile menu
+      $('#menu-btn')?.addEventListener('click', () => $('#sidebar')?.classList.toggle('open'));
+
+      // Reading progress
+      const bar = $('#progress')!;
+      addEventListener('scroll', () => {
+        const h = document.documentElement;
+        bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight || 1)) * 100 + '%';
+      }, { passive: true });
+
+      // Scroll sidebar to active link
+      document.querySelector('.sidebar a.active')?.scrollIntoView({ block: 'center' });
+
+      // Wrap tables, add copy buttons
+      document.querySelectorAll('.prose table').forEach((t) => {
+        const w = document.createElement('div');
+        w.className = 'table-wrap';
+        t.replaceWith(w);
+        w.appendChild(t);
+      });
+      document.querySelectorAll('.prose pre.astro-code').forEach((pre) => {
+        const b = document.createElement('button');
+        b.className = 'copy-btn';
+        b.textContent = 'Copy';
+        b.onclick = () => {
+          navigator.clipboard.writeText(pre.textContent ?? '');
+          b.textContent = 'Copied ✓';
+          setTimeout(() => (b.textContent = 'Copy'), 1500);
+        };
+        pre.appendChild(b);
+      });
+
+      // TOC scroll-spy
+      const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc a')];
+      if (links.length) {
+        const map = new Map(links.map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+        const io = new IntersectionObserver((es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              links.forEach((l) => l.classList.remove('on'));
+              map.get(e.target.id)?.classList.add('on');
+            }
+          });
+        }, { rootMargin: '-80px 0px -70% 0px' });
+        map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+      }
+
+      // Mermaid diagrams (loaded only when a page has one)
+      const sources = new Map<Element, string>();
+      async function renderMermaid() {
+        const nodes = [...document.querySelectorAll('pre.mermaid')];
+        if (!nodes.length) return;
+        const { default: mermaid } = await import('mermaid');
+        const dark = document.documentElement.dataset.theme !== 'light';
+        mermaid.initialize({
+          startOnLoad: false,
+          theme: 'base',
+          themeVariables: dark
+            ? { primaryColor: '#4c1d95', primaryTextColor: '#fff', primaryBorderColor: '#a78bfa', lineColor: '#f472b6', secondaryColor: '#9d174d', tertiaryColor: '#0e7490', background: '#12122a', noteBkgColor: '#854d0e', noteTextColor: '#fff', actorBkg: '#4c1d95', actorTextColor: '#fff', signalColor: '#e9e9f7', signalTextColor: '#e9e9f7' }
+            : { primaryColor: '#ede9fe', primaryBorderColor: '#7c3aed', lineColor: '#db2777', secondaryColor: '#fce7f3', tertiaryColor: '#cffafe' },
+        });
+        for (const n of nodes) {
+          if (!sources.has(n)) sources.set(n, n.textContent ?? '');
+          n.removeAttribute('data-processed');
+          n.textContent = sources.get(n)!;
+        }
+        try { await mermaid.run({ nodes: nodes as HTMLElement[] }); } catch (e) { console.warn(e); }
+      }
+      renderMermaid();
+
+      // Search
+      type Doc = { t: string; u: string; s: string; h: string; x: string };
+      let docs: Doc[] | null = null;
+      const modal = $('#search-modal')!;
+      const input = $('#search-input') as HTMLInputElement;
+      const out = $('#search-results')!;
+      async function open() {
+        modal.classList.add('open');
+        input.focus();
+        if (!docs) docs = await (await fetch(`${base}/search.json`)).json();
+        run();
+      }
+      const close = () => modal.classList.remove('open');
+      function run() {
+        const q = input.value.toLowerCase().trim();
+        const words = q.split(/\s+/).filter(Boolean);
+        const scored = (docs ?? [])
+          .map((d) => {
+            const title = d.t.toLowerCase(), heads = d.h.toLowerCase(), text = d.x.toLowerCase();
+            let score = 0;
+            for (const w of words) {
+              if (title.includes(w)) score += 10;
+              else if (heads.includes(w)) score += 4;
+              else if (text.includes(w)) score += 1;
+              else return { d, score: -1 };
+            }
+            return { d, score };
+          })
+          .filter((r) => r.score >= 0 && (words.length || true))
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 12);
+        out.innerHTML = scored.length
+          ? scored.map(({ d }) => `<a href="${d.u}">${d.t}<small>${d.s}</small></a>`).join('')
+          : '<div class="empty">No results</div>';
+      }
+      $('#search-open')?.addEventListener('click', open);
+      input.addEventListener('input', run);
+      modal.addEventListener('click', (e) => e.target === modal && close());
+      addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); open(); }
+        if (e.key === 'Escape') close();
+        if (e.key === 'Enter' && modal.classList.contains('open')) (out.querySelector('a') as HTMLAnchorElement | null)?.click();
+      });
+    </script>
+  </body>
+</html>
