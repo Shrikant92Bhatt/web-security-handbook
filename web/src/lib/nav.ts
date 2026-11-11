@@ -1,7 +1,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-export type Page = { id: string; title: string; url: string; section: string };
-export type Section = { id: string; title: string; url?: string; pages: Page[]; hue: number; index: number };
+export type Page = { id: string; title: string; url: string; section: string; file: string };
+export type Section = { id: string; dir: string; title: string; url?: string; pages: Page[]; hue: number; index: number };
 export type Module = { id: string; title: string; url?: string; sections: Section[]; hue: number; blurb: string };
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -74,6 +74,7 @@ export async function getNav() {
     if (!sec) {
       sec = {
         id: secId,
+        dir: isModule ? parts[1] : 'resources',
         title: isModule ? prettify(parts[1]) : 'Resources, Labs & Diagrams',
         pages: [],
         hue: HUES[hueIdx++ % HUES.length],
@@ -81,7 +82,9 @@ export async function getNav() {
       };
       mod.sections.push(sec);
     }
-    const page: Page = { id: e.id, title, url: urlFor(e.id), section: secId };
+    const last = parts[parts.length - 1];
+    const file = isModule && e.id === secId ? 'README.md' : `${parts.slice(isModule ? 2 : 1).join('/') || last}.md`;
+    const page: Page = { id: e.id, title, url: urlFor(e.id), section: secId, file };
     // A README for a section: its id equals the section id.
     if (isModule && e.id === secId) {
       sec.title = title;
