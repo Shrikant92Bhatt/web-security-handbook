@@ -1,0 +1,15 @@
+{
+  "name": "web-security-handbook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "preview": "npm --prefix web run preview"
+  },
+  "dependencies": {
+    "astro": "^5.18.2",
+    "mermaid": "^12.3.0"
+  }
+}
