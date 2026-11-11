@@ -2,7 +2,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
-const BASE = (process.env.BASE || '/web-security-handbook').replace(/\/$/, '');
+const defaultBase = process.env.VERCEL ? '/' : '/web-security-handbook';
+const BASE = (process.env.BASE || defaultBase).replace(/\/$/, '');
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
