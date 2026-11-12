@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { getNav } from '../lib/nav';
+import { iconFor, folderIcon } from '../lib/icons';
 
 interface Props {
   title: string;
@@ -15,28 +16,28 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title} · Handbook</title>
     <link rel="icon" href={`${base}/favicon.svg`} />
     <script is:inline>
-      const t = localStorage.getItem('theme');
-      if (t) document.documentElement.dataset.theme = t;
+      const t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
     </script>
   </head>
-  <body style={`--h:${hue}`} data-base={base}>
+  <body data-base={base}>
     <div id="progress"></div>
     <header class="header">
       <button class="icon-btn menu-btn" id="menu-btn" aria-label="Menu">☰</button>
-      <a class="brand" href={`${base}/`}><div class="logo">🛡️</div><span>Dev<b>Handbook</b></span></a>
+      <a class="brand" href={`${base}/`}><Fragment set:html={iconFor("owasp")} /><span>Dev Handbook</span></a>
       <nav class="nav-links">
         {modules.map((m) => <a href={m.url ?? `${base}/`}>{m.id === 'extras' ? 'Resources' : m.id.match(/^Module-(\d+)/) ? `Module ${m.id.match(/^Module-(\d+)/)![1]}` : m.title}</a>)}
       </nav>
       <div class="spacer"></div>
-      <button class="search-btn" id="search-open"><span>🔍 Search topics…</span><kbd>Ctrl K</kbd></button>
-      <button class="icon-btn" id="theme-btn" aria-label="Toggle theme">🌓</button>
+      <button class="search-btn" id="search-open"><span>Search docs…</span><kbd>Ctrl K</kbd></button>
+      <button class="icon-btn" id="theme-btn" aria-label="Toggle theme">◐</button>
     </header>
 
     <div class:list={['shell', { 'no-toc': toc.length === 0 }]}>
@@ -45,11 +46,11 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
           <div>
             <div class="mod-title"><a href={m.url ?? '#'}>{m.title}</a></div>
             {m.sections.map((s) => (
-              <details class="sec" style={`--sh:${s.hue}`} open={s.pages.some((p) => p.id === currentId)}>
-                <summary><span class="dot"></span>{s.title.replace(/^[^\p{L}\p{N}]+/u, '')}</summary>
+              <details class="sec" open={s.pages.some((p) => p.id === currentId)}>
+                <summary><Fragment set:html={folderIcon()} /><span class="dir">{s.dir}/</span><span class="chev">›</span></summary>
                 <ul>
                   {s.pages.map((p) => (
-                    <li><a href={p.url} class:list={{ active: p.id === currentId }}>{p.title.replace(/^[^\p{L}\p{N}]+/u, '')}</a></li>
+                    <li><a href={p.url} class:list={{ active: p.id === currentId }} title={p.title}><Fragment set:html={iconFor(p.file + ' ' + p.title)} /><span>{p.file}</span></a></li>
                   ))}
                 </ul>
               </details>
@@ -68,7 +69,7 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
       )}
     </div>
 
-    <footer class="footer">Made with Astro · Content lives in Markdown — add a file and it shows up here. 🌈</footer>
+    <footer class="footer">Content lives in Markdown files — add a .md file and it shows up here.</footer>
 
     <div id="search-modal">
       <div class="search-box">
@@ -147,8 +148,8 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
           startOnLoad: false,
           theme: 'base',
           themeVariables: dark
-            ? { primaryColor: '#4c1d95', primaryTextColor: '#fff', primaryBorderColor: '#a78bfa', lineColor: '#f472b6', secondaryColor: '#9d174d', tertiaryColor: '#0e7490', background: '#12122a', noteBkgColor: '#854d0e', noteTextColor: '#fff', actorBkg: '#4c1d95', actorTextColor: '#fff', signalColor: '#e9e9f7', signalTextColor: '#e9e9f7' }
-            : { primaryColor: '#ede9fe', primaryBorderColor: '#7c3aed', lineColor: '#db2777', secondaryColor: '#fce7f3', tertiaryColor: '#cffafe' },
+            ? { primaryColor: '#1e3a5f', primaryTextColor: '#e6edf5', primaryBorderColor: '#6ea8ff', lineColor: '#8b98a9', secondaryColor: '#243447', tertiaryColor: '#151b23', noteBkgColor: '#2a3342', noteTextColor: '#e6edf5', actorBkg: '#1e3a5f', actorTextColor: '#e6edf5', signalColor: '#dde3ea', signalTextColor: '#dde3ea' }
+            : { primaryColor: '#eaf1ff', primaryBorderColor: '#2563eb', lineColor: '#637083', secondaryColor: '#f6f8fa', tertiaryColor: '#ffffff' },
         });
         for (const n of nodes) {
           if (!sources.has(n)) sources.set(n, n.textContent ?? '');
