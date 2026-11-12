@@ -17,6 +17,8 @@ Technical words are useful in interviews, but first understand the idea. This gl
 | CSRF | Tricking a signed-in browser into sending a request | A hidden page tries to submit a transfer |
 | Database index | A lookup list that helps find rows faster | Find a customer by email |
 | Event loop | The system that decides which waiting JavaScript callback runs next | Handle a completed network request |
+| SRI | A hash in a tag so the browser blocks a changed third-party file | `integrity="sha384-..."` on a CDN script |
+| SSJI | User input run as JavaScript on the server | `eval` on a typed formula |
 | Hook | A React function starting with `use` that adds state or other features to a component | `useState` remembers the cart count |
 | Horizontal scaling | Add more servers to share the work | Run four copies of an API instead of one |
 | Hydration | React attaching click handlers to HTML that the server already sent | A server-rendered product page becomes clickable |

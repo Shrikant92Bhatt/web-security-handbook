@@ -11,6 +11,7 @@ Dive into dedicated deep-dive guides for each major injection vector:
 - 👾 [**Cross-Site Scripting (XSS) Deep-Dive**](xss-deep-dive.md) — Stored, Reflected, and DOM-based XSS, React `dangerouslySetInnerHTML`, `javascript:` protocol exploits, SVG vectors, and DOMPurify sanitization.
 - 🗄️ [**SQL Injection & ORM Leaks**](sqli-and-orm-leaks.md) — Classic SQLi, Blind/Time-based SQLi, ORM injection vectors (Prisma, TypeORM raw queries), and parameterized prepared statements.
 - 🌐 [**Server-Side Request Forgery (SSRF)**](ssrf-deep-dive.md) — AWS/GCP cloud metadata extraction (`169.254.169.254`), internal network scanning, DNS rebinding attacks, and egress network isolation.
+- 🧨 [**Server-Side JavaScript Injection (SSJI)**](ssji-server-side-javascript-injection.md) — `eval`, `new Function`, `vm` and MongoDB `$where` turning user input into server code, and safer fixed-option designs.
 
 ---
 
