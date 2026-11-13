@@ -12,28 +12,113 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const { page, section, module, prev, next } = await getEntryMeta(entry.id);
-const title = page?.title ?? entry.id;
-const hue = section?.hue ?? 262;
+const title = page?.title ?? module?.title ?? entry.id;
 const words = (entry.body ?? '').split(/\s+/).length;
 const minutes = Math.max(1, Math.round(words / 200));
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+// Check if this page is a top-level Module overview (e.g., Module-1 or Module-2 README)
+const isModuleLanding = Boolean(module && module.id === entry.id);
+// Check if this page is a Section README that has sub-lessons
+const subLessons = section && page?.isOverview ? section.pages.filter((p) => !p.isOverview) : [];
 ---
 
-<Layout title={plainTitle(title)} hue={hue} headings={headings} currentId={entry.id}>
+<Layout title={plainTitle(title)} headings={isModuleLanding ? [] : headings} currentId={entry.id}>
   <article>
     <div class="crumbs">
       <a href={`${base}/`}>Home</a><i>/</i>
-      {module && <><a href={module.url ?? '#'}>{plainTitle(module.title)}</a><i>/</i></>}
-      {section && <span>{plainTitle(section.title)}</span>}
+      {module && !isModuleLanding && (
+        <>
+          <a href={module.url ?? '#'}>{module.shortTitle}</a>
+          <i>/</i>
+        </>
+      )}
+      {section && <span>{section.label}</span>}
+      {isModuleLanding && <span>{module?.shortTitle}</span>}
     </div>
+
     <header class="page-head">
-      <h1><Fragment set:html={iconFor((page?.file ?? '') + ' ' + title)} />{plainTitle(title)}</h1>
-      <div class="meta">{page?.file} · {minutes} min read</div>
+      {section && <div class="section-badge">{section.label}</div>}
+      <h1>
+        <span class="head-ico">
+          <Fragment set:html={iconFor((page?.file ?? entry.id) + ' ' + title)} />
+        </span>
+        <span>{plainTitle(title)}</span>
+      </h1>
+      <div class="meta">
+        {isModuleLanding ? (
+          <span>{module?.sections.length} topic groups · Structured learning track</span>
+        ) : (
+          <span>⏱ {minutes} min read · {words.toLocaleString()} words</span>
+        )}
+      </div>
     </header>
-    <div class="prose"><Content /></div>
+
+    {isModuleLanding && module ? (
+      <div class="subtopics-box">
+        {module.blurb && <p style="color:var(--text-secondary);font-size:1.02rem;margin:0 0 20px">{module.blurb}</p>}
+        <div class="cards">
+          {module.sections.map((s) => {
+            const lessonPages = s.pages.filter((p) => !p.isOverview);
+            const previewList = (lessonPages.length ? lessonPages : s.pages).slice(0, 3);
+            return (
+              <a class="card" href={s.url ?? s.pages[0]?.url}>
+                <div class="ico">
+                  <Fragment set:html={iconFor(s.dir + ' ' + s.title, 'folder')} />
+                </div>
+                <div>
+                  <h3>{s.label}</h3>
+                  <p>{previewList.map((p) => p.label).join(' · ')}</p>
+                  <div class="count">{s.pages.length} {s.pages.length === 1 ? 'lesson' : 'lessons'} →</div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    ) : (
+      <>
+        {subLessons.length > 0 && (
+          <div class="subtopics-box">
+            <h2>Lessons in this section</h2>
+            <div class="cards">
+              {subLessons.map((p) => (
+                <a class="card" href={p.url}>
+                  <div class="ico">
+                    <Fragment set:html={iconFor(p.file + ' ' + p.title)} />
+                  </div>
+                  <div>
+                    <h3>{p.label}</h3>
+                    <div class="count">Read lesson →</div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+        <div class="prose">
+          <Content />
+        </div>
+      </>
+    )}
+
     <nav class="pager">
-      {prev ? <a href={prev.url} class="prev"><small>← Previous</small>{prev.title}</a> : <span />}
-      {next ? <a href={next.url} class="next"><small>Next →</small>{next.title}</a> : <span />}
+      {prev ? (
+        <a href={prev.url} class="prev">
+          <small>← Previous lesson</small>
+          {prev.label}
+        </a>
+      ) : (
+        <span />
+      )}
+      {next ? (
+        <a href={next.url} class="next">
+          <small>Next lesson →</small>
+          {next.label}
+        </a>
+      ) : (
+        <span />
+      )}
     </nav>
   </article>
 </Layout>

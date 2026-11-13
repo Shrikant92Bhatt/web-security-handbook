@@ -1,44 +1,71 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getNav, plainTitle } from '../lib/nav';
-import { iconFor, folderIcon } from '../lib/icons';
+import { getNav } from '../lib/nav';
+import { iconFor } from '../lib/icons';
 
 const { modules } = await getNav();
 const total = modules.reduce((n, m) => n + m.sections.reduce((k, s) => k + s.pages.length, 0), 0);
-const chart = modules.flatMap((m) => m.sections.map((s) => ({ label: s.dir.replace(/^\d+-/, '').slice(0, 24), value: s.pages.length })));
+const chart = modules
+  .filter((m) => m.id !== 'extras')
+  .flatMap((m) =>
+    m.sections.map((s) => ({
+      label: s.label.slice(0, 22),
+      value: s.pages.length,
+    }))
+  );
 ---
 
 <Layout title="Home">
   <div class="home">
-    <h1>Web Security &amp; Full-Stack Handbook</h1>
-    <p class="lead">{total} lessons on web security, JavaScript, backend, databases, cloud and interview preparation — in plain English.</p>
-    <a class="btn primary" href={modules[0]?.url ?? '#'}>Start learning</a>
-    <a class="btn ghost" href="#topics">Browse topics</a>
+    <section class="home-hero">
+      <h1>Web Security &amp; Full-Stack Engineering Handbook</h1>
+      <p class="lead">
+        A structured, attack-first guide to modern web security, JavaScript &amp; TypeScript, Node.js, databases, cloud architecture, and technical interview preparation — written in plain English.
+      </p>
+      <div>
+        <a class="btn primary" href={modules[0]?.sections[0]?.url ?? modules[0]?.url ?? '#'}>Start Module 1 →</a>
+        <a class="btn ghost" href="#curriculum">Browse Curriculum ({total} lessons)</a>
+      </div>
+    </section>
 
-    <div id="topics">
-    {modules.map((m) => (
-      <>
-        <h2>{m.url ? <a href={m.url} style="color:inherit">{m.title}</a> : m.title}</h2>
-        {m.blurb && <p class="sub">{m.blurb}</p>}
-        <div class="cards">
-          {m.sections.map((s) => (
-            <a class="card" href={s.url ?? s.pages[0]?.url}>
-              <div class="ico"><Fragment set:html={iconFor(s.dir + ' ' + s.title, 'folder')} /></div>
-              <div>
-                <h3>{plainTitle(s.title)}</h3>
-                <p>{s.pages.slice(0, 3).map((p) => plainTitle(p.title)).join(' · ')}</p>
-                <div class="count">{s.dir}/ · {s.pages.length} file{s.pages.length === 1 ? '' : 's'}</div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </>
-    ))}
+    <div id="curriculum">
+      {modules.map((m) => (
+        <>
+          <div class="mod-header">
+            <h2>{m.url ? <a href={m.url} style="color:inherit">{m.shortTitle}</a> : m.shortTitle}</h2>
+            {m.blurb && <p>{m.blurb}</p>}
+          </div>
+          <div class="cards">
+            {m.sections.map((s) => {
+              const lessonPages = s.pages.filter((p) => !p.isOverview);
+              const previewList = (lessonPages.length ? lessonPages : s.pages).slice(0, 3);
+              return (
+                <a class="card" href={s.url ?? s.pages[0]?.url}>
+                  <div class="ico">
+                    <Fragment set:html={iconFor(s.dir + ' ' + s.title, 'folder')} />
+                  </div>
+                  <div>
+                    <h3>{s.label}</h3>
+                    <p>{previewList.map((p) => p.label).join(' · ')}</p>
+                    <div class="count">
+                      {s.pages.length} {s.pages.length === 1 ? 'lesson' : 'lessons'} →
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </>
+      ))}
     </div>
 
-    <h2>Content overview</h2>
-    <p class="sub">Files per topic folder. Updates automatically as you add content.</p>
-    <div class="chart-box"><canvas id="chart" data-chart={JSON.stringify(chart)}></canvas></div>
+    <div class="mod-header" style="margin-top:44px">
+      <h2>Curriculum Coverage</h2>
+      <p>Number of lessons per topic track — updates automatically when new Markdown files are added.</p>
+    </div>
+    <div class="chart-box">
+      <canvas id="chart" data-chart={JSON.stringify(chart)}></canvas>
+    </div>
   </div>
 </Layout>
 
@@ -46,20 +73,56 @@ const chart = modules.flatMap((m) => m.sections.map((s) => ({ label: s.dir.repla
   const c = document.getElementById('chart') as HTMLCanvasElement;
   const data: { label: string; value: number }[] = JSON.parse(c.dataset.chart!);
   function draw() {
-    const dpr = devicePixelRatio || 1, w = c.offsetWidth, h = c.offsetHeight;
-    c.width = w * dpr; c.height = h * dpr;
-    const g = c.getContext('2d')!; g.scale(dpr, dpr); g.clearRect(0, 0, w, h);
+    const dpr = devicePixelRatio || 1,
+      w = c.offsetWidth,
+      h = c.offsetHeight;
+    c.width = w * dpr;
+    c.height = h * dpr;
+    const g = c.getContext('2d')!;
+    g.scale(dpr, dpr);
+    g.clearRect(0, 0, w, h);
     const css = getComputedStyle(document.documentElement);
-    const muted = css.getPropertyValue('--muted').trim(), accent = css.getPropertyValue('--accent').trim();
+    const muted = css.getPropertyValue('--muted').trim();
+    const accent = css.getPropertyValue('--accent').trim();
+    const border = css.getPropertyValue('--border').trim();
     const max = Math.max(...data.map((d) => d.value), 1);
-    const bottom = 100, top = 20, bw = w / data.length;
+    const bottom = 96,
+      top = 22,
+      bw = w / data.length;
+
+    // Subtle baseline
+    g.strokeStyle = border;
+    g.lineWidth = 1;
+    g.beginPath();
+    g.moveTo(0, h - bottom);
+    g.lineTo(w, h - bottom);
+    g.stroke();
+
     data.forEach((d, i) => {
-      const bh = ((h - bottom - top) * d.value) / max, x = i * bw + bw * .2, y = h - bottom - bh, ww = bw * .6;
-      g.fillStyle = accent; g.globalAlpha = .85; g.beginPath(); g.roundRect(x, y, ww, bh, 4); g.fill(); g.globalAlpha = 1;
-      g.fillStyle = muted; g.font = '600 12px system-ui'; g.textAlign = 'center'; g.fillText(String(d.value), x + ww / 2, y - 6);
-      g.save(); g.translate(x + ww / 2, h - bottom + 12); g.rotate(Math.PI / 4); g.textAlign = 'left'; g.font = '11px system-ui'; g.fillText(d.label, 0, 0); g.restore();
+      const bh = ((h - bottom - top) * d.value) / max;
+      const x = i * bw + bw * 0.22;
+      const y = h - bottom - bh;
+      const ww = Math.max(8, bw * 0.56);
+      g.fillStyle = accent;
+      g.globalAlpha = 0.85;
+      g.beginPath();
+      g.roundRect(x, y, ww, bh, [5, 5, 0, 0]);
+      g.fill();
+      g.globalAlpha = 1;
+      g.fillStyle = muted;
+      g.font = '600 11px system-ui, sans-serif';
+      g.textAlign = 'center';
+      g.fillText(String(d.value), x + ww / 2, y - 6);
+      g.save();
+      g.translate(x + ww / 2, h - bottom + 10);
+      g.rotate(Math.PI / 4.2);
+      g.textAlign = 'left';
+      g.font = '11px system-ui, sans-serif';
+      g.fillText(d.label, 0, 0);
+      g.restore();
     });
   }
-  draw(); addEventListener('resize', draw);
+  draw();
+  addEventListener('resize', draw);
   new MutationObserver(draw).observe(document.documentElement, { attributes: true });
 </script>
