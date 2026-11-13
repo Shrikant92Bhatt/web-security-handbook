@@ -5,6 +5,7 @@ Transport security and response headers reduce exposure but do not replace appli
 ## 📚 Deep Dive Guides in This Section
 - 📖 [HTTPS, TLS 1.3 & PKI: How Browsers Verify Website Security](./https-tls-pki-browser-trust.md) — Step-by-step cryptographic walkthrough of Root CA stores, X.509 chains of trust, OCSP stapling, Certificate Transparency, and why browser warnings trigger.
 - 📖 [NGINX Masterclass: Architecture, Reverse Proxy, Microcaching & Hardening](./nginx-reverse-proxy-and-hardening.md) — Exhaustive masterclass on epoll event loop architecture, location matching priority, trailing-slash proxying, microcaching, WebSockets/SSE, rate limiting, and troubleshooting 502/504 errors.
+- 📖 [Subresource Integrity (SRI)](./subresource-integrity-sri.md) — Use `integrity` hashes so browsers block tampered third-party scripts and styles, with CORS needs, mistakes and tests.
 
 ## HTTP methods: safe and idempotent
 
